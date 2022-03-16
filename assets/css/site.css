@@ -14,6 +14,11 @@ img {
 
 .sidebar .navitem.active {
     @apply text-white;
+    font-weight: bold;
+}
+
+.sidebar .navitem:hover {
+    font-weight: bold;
 }
 
 div.menu li {
@@ -25,7 +30,7 @@ div.menu ul > li:last-child > a {
     max-width: calc(100% - 3px);
 }
 
-div.menu ul > li:last-child::after {
+/*div.menu ul > li:last-child::after {
     visibility: hidden;
     content: "";
     position: relative;
@@ -35,7 +40,7 @@ div.menu ul > li:last-child::after {
     pointer-events: none;
     border-right: solid 2px white;
     transition: top 0.5s ease;
-}
+}*/
 
 @media screen and (max-width: 1280px) {
     div.menu ul > li:last-child::after {

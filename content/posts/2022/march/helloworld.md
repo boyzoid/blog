@@ -3,6 +3,7 @@ title: Hello, World (again)
 date: Created
 image: /assets/images/2022/welcome.jpg
 ---
+
 I would like to welcome you to my little slice of the Interwebs.
 
 You may be wondering why I said 'again'. Well, that is because is the second incarnation of my blog. I had technical issues with the older version and, well, life kind of got in the way of correcting those issues. To be honest, a lot of the content is old and not likely relevant any longer. I do plan on going through the older posts and reposting here if I feel it may be relevant.
