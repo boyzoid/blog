@@ -5,9 +5,9 @@ image: /assets/images/2022/welcome.jpg
 ---
 I would like to welcome you to my little slice of the Interwebs.
 
-You may be wondering why I said 'again'. Well, that is because is the second incarnation of my blog. I had technical issues with the older version and, well, life kind of got in the way of correcting those issues. To be honest, a lot of the content is old nad not liekly relevant any longer. I do plan on going through the older posts and reposting here if I feel it may be relevant.
+You may be wondering why I said 'again'. Well, that is because is the second incarnation of my blog. I had technical issues with the older version and, well, life kind of got in the way of correcting those issues. To be honest, a lot of the content is old and not likely relevant any longer. I do plan on going through the older posts and reposting here if I feel it may be relevant.
 
-You may be curious to know what you can expect to see here. I can assure you there will be a hodgepodge of tecg/coding topics. I may throw in an odd post here or there related to some of my opther passions (my family, golf, NY Giants). I do not plan to focus on any one subject. I like to tinker and I liek to share what I have learned when doing so.
+You may be curious to know what you can expect to see here. I can assure you there will be a hodgepodge of tech/coding topics. I may throw in an odd post here or there related to some of my opther passions (my family, golf, NY Giants). I do not plan to focus on any one subject. I like to tinker and I like to share what I have learned when doing so.
 
 There is also a better than fair chance you will see lots of pictures of my dog. That's him below.
 
