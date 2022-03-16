@@ -63,11 +63,11 @@ div.menu ul > li.navitem:nth-child(3):hover ~ li:last-child::after {
     top: -6rem;
     visibility: visible;
 }
-div.menu ul > li.active:nth-child(4):last-child::after,
+/*div.menu ul > li.active:nth-child(4):last-child::after,
 div.menu ul > li.navitem:nth-child(4):last-child:hover::after {
     top: -3rem;
     visibility: visible;
-}
+}*/
 
 div.menu > * {
     transition: transform 0.4s ease;
