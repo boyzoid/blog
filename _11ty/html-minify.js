@@ -3,23 +3,23 @@
 const htmlmin = require("html-minifier");
 
 const convert = async (rawContent, outputPath) => {
-    const content = rawContent;
+  const content = rawContent;
 
-    if (outputPath && outputPath.endsWith(".html")) {
-        const minified = htmlmin.minify(content, {
-            useShortDoctype: true,
-            removeComments: true,
-            collapseWhitespace: true
-        });
-        return minified;
-    }
+  if (outputPath && outputPath.endsWith(".html")) {
+    const minified = htmlmin.minify(content, {
+      useShortDoctype: true,
+      removeComments: true,
+      collapseWhitespace: true
+    });
+    return minified;
+  }
 
-    return content;
+  return content;
 };
 
 module.exports = {
-    initArguments: {},
-    configFunction: async (eleventyConfig = {}) => {
-        eleventyConfig.addTransform("minifyHTML", convert);
-    }
+  initArguments: {},
+  configFunction: async (eleventyConfig = {}) => {
+    eleventyConfig.addTransform("minifyHTML", convert);
+  }
 };

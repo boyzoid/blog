@@ -32,131 +32,129 @@ const { extname, join } = require("path");
 const widths = [1024, 820, 640, 320];
 
 const extension = {
-    jpeg: "jpg",
-    webp: "webp"
+  jpeg: "jpg",
+  webp: "webp"
 };
 
 // Map filenames to types and width, and then resize
 async function srcset(filename, hash, format, metadataWidth) {
-    // Create a map of all file names
-    const names = await Promise.all(
-        widths.map((width) =>
-            resize(filename, width, hash, format, metadataWidth)
-        )
-    );
-    return names.map((n, i) => `${n} ${widths[i]}w`).join(", ");
+  // Create a map of all file names
+  const names = await Promise.all(
+    widths.map((width) => resize(filename, width, hash, format, metadataWidth))
+  );
+  return names.map((n, i) => `${n} ${widths[i]}w`).join(", ");
 }
 
 async function resize(filename, width, hash, format, metadataWidth) {
-    const out = sizedName(filename, width, hash, format);
-    if (existsSync("_site/" + out)) {
-        return out;
-    }
-
-    const file = join(process.cwd(), filename);
-
-    const resizeWidth = metadataWidth < width ? metadataWidth : width;
-
-    await sharp(file)
-        .resize({ width: resizeWidth })
-        [format]({
-            quality: 80,
-            reductionEffort: 6
-        })
-        .toFile("_site/" + out);
-
+  const out = sizedName(filename, width, hash, format);
+  if (existsSync("_site/" + out)) {
     return out;
+  }
+
+  const file = join(process.cwd(), filename);
+
+  const resizeWidth = metadataWidth < width ? metadataWidth : width;
+
+  await sharp(file)
+    .resize({ width: resizeWidth })
+    [format]({
+      quality: 80,
+      reductionEffort: 6
+    })
+    .toFile("_site/" + out);
+
+  return out;
 }
 
 function sizedName(filename, width, hash, format) {
-    const ext = extension[format];
-    if (!ext) {
-        throw new Error(`Unknown format ${format}`);
-    }
-    return filename.replace(
-        /\.\w+$/,
-        () => "-" + hash + "-" + width + "w." + ext
-    );
+  const ext = extension[format];
+  if (!ext) {
+    throw new Error(`Unknown format ${format}`);
+  }
+  return filename.replace(
+    /\.\w+$/,
+    () => "-" + hash + "-" + width + "w." + ext
+  );
 }
 
 function hashedName(filename, hash) {
-    return filename.replace(extname(filename), "-" + hash + extname(filename));
+  return filename.replace(extname(filename), "-" + hash + extname(filename));
 }
 
 async function setSrcset(img, src, hash, format, metadataWidth) {
-    img.setAttribute("srcset", await srcset(src, hash, format, metadataWidth));
+  img.setAttribute("srcset", await srcset(src, hash, format, metadataWidth));
 }
 
 const processImage = async (el) => {
-    const filename = el.getAttribute("src");
+  const filename = el.getAttribute("src");
 
-    if (/^(https?:\/\/|\/\/)/i.test(filename)) {
-        return;
-    }
+  if (/^(https?:\/\/|\/\/)/i.test(filename)) {
+    return;
+  }
 
-    if (extname(filename.toLowerCase()) === ".svg") {
-        return;
-    }
+  if (extname(filename.toLowerCase()) === ".svg") {
+    return;
+  }
 
-    const file = join(process.cwd(), filename);
+  const file = join(process.cwd(), filename);
 
-    // Generate file hash
-    const hash = MD5(readFileSync(file).toString());
+  // Generate file hash
+  const hash = MD5(readFileSync(file).toString());
 
-    // Get image metadata
-    const metadata = await sharp(file).metadata();
+  // Get image metadata
+  const metadata = await sharp(file).metadata();
 
-    el.setAttribute("decoding", "async");
-    el.setAttribute("loading", "lazy");
-    el.setAttribute("height", metadata.height);
-    el.setAttribute("width", metadata.width);
+  el.setAttribute("decoding", "async");
+  el.setAttribute("loading", "lazy");
+  el.setAttribute("height", metadata.height);
+  el.setAttribute("width", metadata.width);
 
-    const doc = el.ownerDocument;
-    const picture = doc.createElement("picture");
-    const webp = doc.createElement("source");
-    const jpeg = doc.createElement("source");
+  const doc = el.ownerDocument;
+  const picture = doc.createElement("picture");
+  const webp = doc.createElement("source");
+  const jpeg = doc.createElement("source");
 
-    await setSrcset(webp, filename, hash, "webp", metadata.width);
-    webp.setAttribute("type", "image/webp");
-    await setSrcset(jpeg, filename, hash, "jpeg", metadata.width);
-    jpeg.setAttribute("type", "image/jpeg");
+  await setSrcset(webp, filename, hash, "webp", metadata.width);
+  webp.setAttribute("type", "image/webp");
+  await setSrcset(jpeg, filename, hash, "jpeg", metadata.width);
+  jpeg.setAttribute("type", "image/jpeg");
 
-    picture.appendChild(webp);
-    picture.appendChild(jpeg);
-    el.parentElement.replaceChild(picture, el);
-    picture.appendChild(el);
+  picture.appendChild(webp);
+  picture.appendChild(jpeg);
+  el.parentElement.replaceChild(picture, el);
+  picture.appendChild(el);
 
-    copyFileSync(
-        join(process.cwd(), filename),
-        join("_site", hashedName(filename, hash))
-    );
+  copyFileSync(
+    join(process.cwd(), filename),
+    join("_site", hashedName(filename, hash))
+  );
 };
 
 const convert = async (rawContent, outputPath) => {
-    let content = rawContent;
+  let content = rawContent;
 
-    const targetDirectory = "./_site/assets/images";
+  const targetDirectory = "./_site/assets/images";
 
-    if (!existsSync(targetDirectory)) {
-        mkdirSync(targetDirectory, { recursive: true });
+  if (!existsSync(targetDirectory)) {
+    mkdirSync(targetDirectory, { recursive: true });
+  }
+
+  if (outputPath && outputPath.endsWith(".html")) {
+    const dom = new JSDOM(content);
+    const images = [...dom.window.document.querySelectorAll("img")];
+
+    if (images.length > 0) {
+      await Promise.all(images.map((i) => processImage(i, outputPath)));
+      content = dom.serialize();
     }
+  }
 
-    if (outputPath && outputPath.endsWith(".html")) {
-        const dom = new JSDOM(content);
-        const images = [...dom.window.document.querySelectorAll("img")];
-
-        if (images.length > 0) {
-            await Promise.all(images.map((i) => processImage(i, outputPath)));
-            content = dom.serialize();
-        }
-    }
-
-    return content;
+  return content;
 };
 
 module.exports = {
-    initArguments: {},
-    configFunction: async (eleventyConfig = {}) => {
-        eleventyConfig.addTransform("imageConversion", convert);
-    }
+  initArguments: {},
+  configFunction: async (eleventyConfig = {}) => {
+    eleventyConfig.addTransform("imageConversion", convert);
+  }
 };
