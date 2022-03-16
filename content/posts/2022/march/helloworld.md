@@ -1,6 +1,6 @@
 ---
 title: Hello, World (again)
-date: Created
+date: 2022-03-16T06:00:00
 image: /assets/images/2022/welcome.jpg
 ---
 
