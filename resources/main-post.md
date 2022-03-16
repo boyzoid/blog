@@ -1,6 +1,7 @@
 ---
 title: Your first amazing blog post
 date: 2021-01-27
+draft: true
 image: /assets/images/2021/coolimage.jpg
 ---
 
