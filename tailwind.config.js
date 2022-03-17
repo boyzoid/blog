@@ -42,7 +42,7 @@ module.exports = {
       backgroundImage: () => ({
         "sidebar-dark": "radial-gradient(circle, #242424 0%, #1d1f27 100%)",
         "sidebar-light":
-          "radial-gradient(circle,rgba(42, 30, 107, 1) 0%,rgba(35, 37, 46, 1) 100%)"
+          "radial-gradient(circle,rgba(21, 2, 122, 1) 0%,rgba(35, 37, 46, 1) 100%)"
       }),
       borderWidth: (theme) => ({
         ...theme("width"),
@@ -70,7 +70,26 @@ module.exports = {
       },
       textColor: {
         "orange-hover": "#d2603a"
-      }
+      },
+      colors: {
+        "myblue": {
+          "50": "#4734ac",
+          "100": "#3d2aa2",
+          "200": "#332098",
+          "300": "#29168e",
+          "400": "#1f0c84",
+          "500": "#15027a",
+          "600": "#0b0070",
+          "700": "#010066",
+          "800": "#00005c",
+          "900": "#000052"
+        }
+      },
+      fontFamily: {
+        sans: ['Graphik', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
     }
+    
   }
 };

@@ -131,7 +131,7 @@ module.exports = function (eleventyConfig) {
   });
   
   eleventyConfig.addCollection('posts', collection => {
-    return collection.getAllSorted().filter(livePosts).reverse();
+    return collection.getAllSorted().filter(livePosts);
   });
 
  

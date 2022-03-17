@@ -1,7 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
 layout: base.njk
-title: Posts
+title: Home
 pagination:
   data: collections.posts
   size: 10
@@ -16,7 +16,7 @@ meta:
     {% for post in posts %}
     <div>
     	<div class="pb-4 pt-4">
-			<a class="text-indigo-900 dark:text-indigo-300 text-xl dark:font-light font-normal postlistheading" href="{{ post.url | url }}">{{ post.data.title }}</a>
+			<a class="text-myblue-500 dark:text-indigo-300 text-xl dark:font-light font-normal postlistheading" href="{{ post.url | url }}">{{ post.data.title }}</a>
 		</div>
       	<div class="pb-4 text-gray-900 dark:text-gray-400">{% excerpt post %}</div>
       	<div class="pb-6 text-sm text-gray-500 dark:text-gray-400 border-b-1 border-gray-800 dark:border-gray-700 border-opacity-20 flex">
