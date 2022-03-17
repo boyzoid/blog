@@ -117,24 +117,21 @@ module.exports = function (eleventyConfig) {
     hashes.set(absolutePath, hash);
     return `${absolutePath}?hash=${hash}`;
   });
-  
+
   const now = new Date();
-  
-  
-  const livePosts = function( p ){
+
+  const livePosts = function (p) {
     return p.date <= now;
-  }
-  
+  };
+
   // Create custom collection for getting the newest 5 updates
   eleventyConfig.addCollection("recents", function (collectionApi) {
     return collectionApi.getAllSorted().filter(livePosts).reverse().slice(0, 5);
   });
-  
-  eleventyConfig.addCollection('posts', collection => {
+
+  eleventyConfig.addCollection("posts", (collection) => {
     return collection.getAllSorted().filter(livePosts);
   });
-
- 
 
   // Plugin for setting _blank and rel=noopener on external links in markdown content
   eleventyConfig.addPlugin(require("./_11ty/external-links.js"));

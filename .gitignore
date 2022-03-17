@@ -44,3 +44,4 @@ assets/js/min.*
 .netlify
 /assets/images/2022/.picasa.ini
 /assets/images/2022/.picasaoriginals/
+/.idea/

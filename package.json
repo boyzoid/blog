@@ -15,7 +15,7 @@
     "dev:js": "rollup -c scripts/rollup.config.js -w",
     "lint": "npm run lint:markdown && npm run lint:js",
     "lint:markdown": "npx markdownlint-cli2 \"./content/**/*.md\"",
-    "lint:js": "eslint '**/*.js'",
+    "lint:js": "eslint \"**/*.js\"",
     "postinstall:": "husky install",
     "precommit": "npm run prettier && npm run lint",
     "prettier": "prettier --write \"**/*.{css,html,js,json,md,yaml,yml}\"",
