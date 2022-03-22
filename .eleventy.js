@@ -7,6 +7,7 @@ const { readFileSync } = require("fs");
 const siteconfig = require("./content/_data/siteconfig.js");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
   // Set Markdown library
@@ -102,6 +103,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter("readableDate", function (date) {
     return format(date, "MMM dd, yyyy");
   });
+  
+  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+  });
+  
+  //Set text to lower case
+  eleventyConfig.addNunjucksFilter("lowercase", function (text) {
+    return text.toLowerCase();
+  });
+  //Set text to upper case
+  eleventyConfig.addNunjucksFilter("uppercase", function (text) {
+    return text.toUpperCase();
+  });
 
   // Add custom hash for cache busting
   const hashes = new Map();
@@ -131,6 +145,22 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("posts", (collection) => {
     return collection.getAllSorted().filter(livePosts);
+  });
+  
+  function filterTagList(tags) {
+    return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+  }
+
+  eleventyConfig.addFilter("filterTagList", filterTagList)
+
+  // Create an array of all tags
+  eleventyConfig.addCollection("tagList", function(collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach(item => {
+      (item.data.tags || []).forEach(tag => tagSet.add(tag));
+    });
+
+    return filterTagList([...tagSet]);
   });
 
   // Plugin for setting _blank and rel=noopener on external links in markdown content

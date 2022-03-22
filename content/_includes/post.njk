@@ -4,7 +4,7 @@ layout: base.njk
 
 <div class="content post border-solid border-b-1 border-gray-700 pb-6">
   	<h1>{{ title }}</h1>
-  	<div class="mb-12 flex text-sm font-light dark:font-extralight">
+  	<div class="mb-3 flex text-sm font-light dark:font-extralight">
 		<div class="flex">
         	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.112 600.111" class="h-5 w-4 mr-2">
 	    		<path d="M537.423,52.563h-59.836V21.92c0-11.83-9.591-21.42-21.42-21.42c-11.83,0-21.42,9.59-21.42,21.42v30.642H165.364V21.92
@@ -31,7 +31,7 @@ layout: base.njk
         	</svg>
         	{{ page.date | readableDate }}
 		</div>
-		<div class="flex readingtime" data-words="{{ content | striptags | wordcount | formatWords }} words">
+		<div class="flex readingtime">
         	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 472.615 472.615" class="h-5 w-8 mr-2 ml-12">
   	    		<path d="M472.615,205.774h-25.344c-12.797-37.99-48.686-65.462-90.935-65.462c-43.224,0-79.837,28.73-91.823,68.087
         					c-7.582-5.011-17.305-8.115-28.211-8.115c-10.903,0-20.624,3.103-28.207,8.114c-11.989-39.357-48.608-68.085-91.831-68.085
@@ -44,9 +44,17 @@ layout: base.njk
         					c0-42.077,34.231-76.308,76.298-76.308c42.077,0,76.308,34.231,76.308,76.308C432.644,278.38,398.413,312.611,356.337,312.611z" />
         	</svg>
         	{{ content | striptags | wordcount | readingTime }}
-			<span></span>
 		</div>
+
 	</div>
+	{% if tags.length > 0 %}
+		<p>
+			{% for tag in tags %}
+				{% set tagUrl %}/tags/{{ tag | lowercase }}/{% endset %}
+				<span class="tag mr-1"><a href="{{ tagUrl }}">{{ tag }}</a></span>
+			{% endfor %}
+		</p>
+	{% endif %}
 	{% if image %}
 	<img src="{{ image }}" alt="{{ imageAlt }}" />
 	{% endif %}

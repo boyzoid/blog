@@ -143,6 +143,7 @@ html:not(.dark) svg.lighttoggle {
 
 .content a {
   @apply text-myblue-500 dark:text-indigo-300 underline;
+  font-weight: bold;
 }
 
 .content p {
@@ -249,44 +250,15 @@ html:not(.dark) svg.lighttoggle {
   position: relative;
 }
 
-.readingtime::before {
-  content: attr(data-words);
-  position: absolute;
-  transform: translateY(-50%);
-  bottom: -49px;
-  right: 1px;
-  width: 100px;
-  padding: 4px;
-  background: #000;
-  border-radius: 0.3rem;
-  color: #fff;
-  text-align: center;
-  opacity: 0;
-  font-size: 12px;
-}
 
-div.readingtime:hover::before {
-  opacity: 1;
-  display: block;
-}
-
-.readingtime:hover > span::after {
-  content: " ";
-  position: absolute;
-  top: 11px;
-  right: 41px;
-  margin-bottom: -5px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: transparent transparent black transparent;
-}
 
 .content.post > p > a:hover,
 .content.page a:hover,
 a.postlistheading:hover,
 .postlist a:hover,
 #recents a:hover,
-#top-bar a:hover {
+#top-bar a:hover,
+.tag a:hover {
   @apply text-red-500 underline;
 }
 
