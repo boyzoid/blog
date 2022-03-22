@@ -250,8 +250,6 @@ html:not(.dark) svg.lighttoggle {
   position: relative;
 }
 
-
-
 .content.post > p > a:hover,
 .content.page a:hover,
 a.postlistheading:hover,

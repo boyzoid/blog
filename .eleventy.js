@@ -103,11 +103,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter("readableDate", function (date) {
     return format(date, "MMM dd, yyyy");
   });
-  
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
-  
+
   //Set text to lower case
   eleventyConfig.addNunjucksFilter("lowercase", function (text) {
     return text.toLowerCase();
@@ -146,18 +146,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("posts", (collection) => {
     return collection.getAllSorted().filter(livePosts);
   });
-  
+
   function filterTagList(tags) {
-    return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+    return (tags || []).filter(
+      (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
+    );
   }
 
-  eleventyConfig.addFilter("filterTagList", filterTagList)
+  eleventyConfig.addFilter("filterTagList", filterTagList);
 
   // Create an array of all tags
-  eleventyConfig.addCollection("tagList", function(collection) {
+  eleventyConfig.addCollection("tagList", function (collection) {
     let tagSet = new Set();
-    collection.getAll().forEach(item => {
-      (item.data.tags || []).forEach(tag => tagSet.add(tag));
+    collection.getAll().forEach((item) => {
+      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
 
     return filterTagList([...tagSet]);
