@@ -43,8 +43,8 @@ Further down the file, we see a property named `preprocessors`.
 
 ```javascript
 preprocessors: {
-      'js/*.js' : [ 'coverage' ]
-    }
+  'js/*.js' : [ 'coverage' ]
+}
 ```
 
 With Karma we can use preprocessors to do something with files before they are served to the browser (more on that in a bit). Here we are using the `coverage` preprocessor. For more information on preprocessors, checkout the [Karma documentation](https://karma-runner.github.io/6.3/config/preprocessors.html).

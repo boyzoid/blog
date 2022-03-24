@@ -148,6 +148,7 @@ html:not(.dark) svg.lighttoggle {
 
 .content p {
   @apply pb-4 pt-2 font-light dark:font-extralight;
+  line-height: 35px;
 }
 
 .content blockquote {
