@@ -4,11 +4,12 @@ date: 2022-03-24T06:00:00
 image: /assets/images/2022/medena-rosa-OhH_xOExaGk-unsplash.jpg
 tags: ["JavaScript", "TDD", "Karma", "Jasmine", "BetterTests"]
 ---
+
 This is the first in a [series of posts](/tags/bettertests) that will help ease the transition to TDD and how we can make sure we write tests that actually verify the code we write is correct.
 
 ## What is coverage?
 
-In this post, we are going to talk about something that is probably more useful if you already have code that you want to write tests for - 'coverage'. Put simply, checking 'coverage' means we analyze our code and verify that every bit of it is covered by tests.  That may seem like a daunting task, but many test runners offer this feature and make it easier to accomplish.
+In this post, we are going to talk about something that is probably more useful if you already have code that you want to write tests for - 'coverage'. Put simply, checking 'coverage' means we analyze our code and verify that every bit of it is covered by tests. That may seem like a daunting task, but many test runners offer this feature and make it easier to accomplish.
 
 The sample code for this post can be found on [GitHub](https://github.com/boyzoid/karma-coverage) and uses the [Karma](https://karma-runner.github.io/6.3/index.html) test runner and [Jasmine](https://jasmine.github.io/) testing framework. I will assume you already executed `npm install`.
 
@@ -25,7 +26,7 @@ Follow the prompts, provide the requested information (or don't - you can always
 The first important bit of information is the `framework` property. In our file it looks like this
 
 ```javascript
-frameworks: ['jasmine']
+frameworks: ["jasmine"];
 ```
 
 This simply tells Karma we are using the Jasmine testing framework. Support for this was added to your project when you ran `npm install`.
@@ -33,10 +34,7 @@ This simply tells Karma we are using the Jasmine testing framework. Support for 
 Next, we tell Karma where to find our files.
 
 ```javascript
-files: [
-      'js/*.js',
-      'tests/*.js'
-    ]
+files: ["js/*.js", "tests/*.js"];
 ```
 
 This tells Karma where to find the files we need. This should include paths to all the JavaScript files we want to test as well as all of our test files. We are telling Karma to include all JavaScript files in the `/js` directory and the `/tests` directory. You can view more information about the `files` property in the [documentation](https://karma-runner.github.io/6.3/config/files.html).
@@ -67,7 +65,7 @@ The `coverageReporter` property tells Karma how to prepare the results of the co
 The last bit of configuration that is of interest is the `browsers` property.
 
 ```javascript
-browsers: ['ChromeHeadless']
+browsers: ["ChromeHeadless"];
 ```
 
 Karma runs our tests in a browser and this is simply telling Karma what browser to run them in. I prefer using headless Chrome so that my desktop is not cluttered with more windows. You can find out more information about what browsers are supported by checking out the [docs](https://karma-runner.github.io/6.3/config/browsers.html) for the `browsers` property.
@@ -102,30 +100,38 @@ Here are what the headers for the table represent
 - `Uncovered Line #s` - reveals specific lines that are not covered by our tests.
 
 The difference between `statements` and `lines` of code can be summed up with a very simple example
+
 ```javascript
-let i = 0; console.log( i );
+let i = 0;
+console.log(i);
 ```
-This is 2 statements but only 1 line. 
+
+This is 2 statements but only 1 line.
 
 ## Getting the Tests to Behave
+
 As you can see, we currently do not have a lot of coverage for our existing code. Let's change that. Open up the file named `my-code-spec.js` and take a peak.
 
 The second test we are running looks like this
+
 ```javascript
-it( 'testing doubleNumber()', function (){
-	let testNumber = Math.floor( Math.random() ) * 10000;
-	//let testResult = demo.doubleNumber( testNumber )
-	//expect( testResult ).toEqual( testNumber * 2 )
-})
+it("testing doubleNumber()", function () {
+  let testNumber = Math.floor(Math.random()) * 10000;
+  //let testResult = demo.doubleNumber( testNumber )
+  //expect( testResult ).toEqual( testNumber * 2 )
+});
 ```
+
 As you can probably guess, the reason why the `doubleNumber()` function does not have any test coverage is because the call to that method is commented out. If we remove those comments, we should see different results in our coverage report.
+
 ```javascript
-it( 'testing doubleNumber()', function (){
-	let testNumber = Math.floor( Math.random() ) * 10000;
-	let testResult = demo.doubleNumber( testNumber )
-	expect( testResult ).toEqual( testNumber * 2 )
-})
+it("testing doubleNumber()", function () {
+  let testNumber = Math.floor(Math.random()) * 10000;
+  let testResult = demo.doubleNumber(testNumber);
+  expect(testResult).toEqual(testNumber * 2);
+});
 ```
+
 Karma should re-run the tests automatically and you should see something similar to the image below.
 
 ![Coverage results 2](/assets/images/2022/karma-coverage/coverage-2.png "Coverage Results 2")
@@ -133,41 +139,43 @@ Karma should re-run the tests automatically and you should see something similar
 w00t!! We now have some better coverage on our tests as 50% of our statements, functions, and lines are covered by our tests. If you uncomment other lines of code that call methods on the `demo` object, you will see the results of the coverage report change.
 
 Let's uncomment all of these except the last test, so our test file looks like this
+
 ```javascript
-describe( 'My Code tests', function(){
-	var demo
-	beforeEach( function(){
-		demo = new TestDemo()
-	})
-	it( 'was initiated', function(){
-		expect( demo ).not.toBeNull()
-	})
-	it( 'testing doubleNumber()', function (){
-		let testNumber = Math.floor( Math.random() ) * 10000;
-		let testResult = demo.doubleNumber( testNumber )
-		expect( testResult ).toEqual( testNumber * 2 )
-	})
-	it( 'testing multiplyNumbers()', function(){
-		let number1 = Math.floor( Math.random() ) * 10000;
-		let number2 = Math.floor( Math.random() ) * 10000;
-		let testResult = demo.multiplyNumbers( number1, number2 );
-		expect( testResult ).toEqual( number1 * number2 );
-	})
-	describe( 'testing divideNumbers()', function(){
-		it( 'Can divide valid numbers', function(){
-			let number1 = Math.floor( Math.random() ) * 10000;
-			let number2 = Math.floor( Math.random() ) * 10000;
-			let testResult = demo.divideNumbers( number1, number2 );
-			expect( testResult ).toEqual( number1 / number2 );
-		})
-		it( 'Cannot divide by 0', function(){
-			let number1 = Math.floor( Math.random() ) * 10000;
-			//let testResult = demo.divideNumbers( number1, 0 );
-			//expect( testResult ).toEqual( NaN );
-		})
-	})
-})
+describe("My Code tests", function () {
+  var demo;
+  beforeEach(function () {
+    demo = new TestDemo();
+  });
+  it("was initiated", function () {
+    expect(demo).not.toBeNull();
+  });
+  it("testing doubleNumber()", function () {
+    let testNumber = Math.floor(Math.random()) * 10000;
+    let testResult = demo.doubleNumber(testNumber);
+    expect(testResult).toEqual(testNumber * 2);
+  });
+  it("testing multiplyNumbers()", function () {
+    let number1 = Math.floor(Math.random()) * 10000;
+    let number2 = Math.floor(Math.random()) * 10000;
+    let testResult = demo.multiplyNumbers(number1, number2);
+    expect(testResult).toEqual(number1 * number2);
+  });
+  describe("testing divideNumbers()", function () {
+    it("Can divide valid numbers", function () {
+      let number1 = Math.floor(Math.random()) * 10000;
+      let number2 = Math.floor(Math.random()) * 10000;
+      let testResult = demo.divideNumbers(number1, number2);
+      expect(testResult).toEqual(number1 / number2);
+    });
+    it("Cannot divide by 0", function () {
+      let number1 = Math.floor(Math.random()) * 10000;
+      //let testResult = demo.divideNumbers( number1, 0 );
+      //expect( testResult ).toEqual( NaN );
+    });
+  });
+});
 ```
+
 When the test are run again, we should see this result.
 
 ![Coverage results 3](/assets/images/2022/karma-coverage/coverage-3.png "Coverage Results 3")
@@ -175,14 +183,13 @@ When the test are run again, we should see this result.
 You may be asking, how can we have 100% coverage of function, but not lines or statements? The answer is because in one of our methods, `divideNumbers()`, we have an `if()` statement and none of our tests trigger the `else` portion of that statement.
 
 ```javascript
-this.divideNumbers = ( a, b ) => {
-	if( b !== 0 ){
-		return a/b;
-	}
-	else{
-		return NaN
-	}
-}
+this.divideNumbers = (a, b) => {
+  if (b !== 0) {
+    return a / b;
+  } else {
+    return NaN;
+  }
+};
 ```
 
 This feature of coverage is extremely helpful when you have complex nested logic inside a function as it helps you easily identify some conditions you may have missed.
