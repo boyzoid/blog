@@ -80,7 +80,6 @@ pre[class*="language-"]:before {
   width: 40%;
   height: 20%;
   max-height: 13em;
-  box-shadow: 0 13px 8px #979797;
   -webkit-transform: rotate(-2deg);
   -moz-transform: rotate(-2deg);
   -ms-transform: rotate(-2deg);
