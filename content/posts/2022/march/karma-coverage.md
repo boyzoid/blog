@@ -100,6 +100,7 @@ Here are what the headers for the table represent:
 - `Uncovered Line #s` - reveals specific lines that are not covered by our tests.
 
 The difference between `statements` and `lines` of code can be summed up with a very simple example:
+
 ```javascript
 let i = 0;
 console.log(i);
