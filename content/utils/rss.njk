@@ -5,7 +5,7 @@ permalink: /feed.xml
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ siteconfig.title }}</title>
-  <subtitle>{{ siteconfig.description }}</subtitle>
+  <subtitle>{{ siteconfig.descriptionNoTags }}</subtitle>
   <link href="{{ '/feed.xml' | absoluteUrl }}" rel="self"/>
   <link href="{{ siteconfig.url }}/"/>
   <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>

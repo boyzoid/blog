@@ -14,6 +14,7 @@ module.exports = {
   // Site description, shown below site image (optional)
   description:
     "Husband. Father. Coder.<br/>Golfer. Gamer.<br />Die-hard Giants fan.",
+  descriptionNoTags: "Husband. Father. Coder. Golfer. Gamer. Die-hard Giants fan.",
   // OpenGraph default image, in case you don't have an `image`
   // set in your Markdown frontmatter; relevant for social
   // sharing.
