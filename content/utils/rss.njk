@@ -7,7 +7,7 @@ permalink: /feed.xml
   <title>{{ siteconfig.title }}</title>
   <subtitle>{{ siteconfig.description }}</subtitle>
   <link href="{{ '/feed.xml' | absoluteUrl }}" rel="self"/>
-  <link href="{{ siteconfig.url }}"/>
+  <link href="{{ siteconfig.url }}/"/>
   <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
   <id>{{ siteconfig.url }}</id>
   <author>
