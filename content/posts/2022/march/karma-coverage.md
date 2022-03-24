@@ -88,7 +88,7 @@ That shows a lot of red, but this was by design. Let's break down what we are lo
 
 ## Dissecting the Results
 
-The red arrow shows us how many tests were run and how many passed. A failure means that we received an unexpected result or there was an error.
+The red arrows in the image above indicate how many tests were run and how many passed. A failure means that we received an unexpected result or there was an error.
 
 Here are what the headers for the table represent:
 
