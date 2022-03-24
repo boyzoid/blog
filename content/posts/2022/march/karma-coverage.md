@@ -102,7 +102,8 @@ Here are what the headers for the table represent:
 The difference between `statements` and `lines` of code can be summed up with a very simple example:
 
 ```javascript
-let i = 0; console.log(i);
+let i = 0;
+console.log(i);
 ```
 
 This is 2 statements but only 1 line.
