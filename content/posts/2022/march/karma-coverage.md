@@ -15,7 +15,7 @@ The sample code for this post can be found on [GitHub](https://github.com/boyzoi
 
 ## Inspecting the Configuration File
 
-When starting fresh, Karma can get you started with setting up a configuration file. Simply execute the following command
+When starting fresh, Karma can get you started with setting up a configuration file. Simply execute the following command:
 
 ```bash
 karma init { filename }
@@ -23,7 +23,7 @@ karma init { filename }
 
 Follow the prompts, provide the requested information (or don't - you can always edit the file later), and Karma will generate a configuration file for you with the name you provide. We already have a configuration file named `my.conf.js`. Let's look at some parts of that file.
 
-The first important bit of information is the `framework` property. In our file it looks like this
+The first important bit of information is the `framework` property. In our file it looks like this:
 
 ```javascript
 frameworks: ["jasmine"];
@@ -74,7 +74,7 @@ Karma runs our tests in a browser and this is simply telling Karma what browser 
 
 Now that we have our configuration file and understand what some parts represent, let's run the tests and see what happens.
 
-In your command window, execute the following command
+In your command window, execute the following command:
 
 ```bash
 karma start my.conf.js
@@ -90,7 +90,7 @@ That shows a lot of red, but this was by design. Let's break down what we are lo
 
 The red arrow shows us how many tests were run and how many passed. A failure means that we received an unexpected result or there was an error.
 
-Here are what the headers for the table represent
+Here are what the headers for the table represent:
 
 - `File` - shows the files that were analyzed, and we also see an aggregate for all files in the top row
 - `% Stmts` - tells us what percentage of statements are covered by tests.
@@ -99,8 +99,7 @@ Here are what the headers for the table represent
 - `% Lines` - represents the percentage of lines of code that are covered by our tests
 - `Uncovered Line #s` - reveals specific lines that are not covered by our tests.
 
-The difference between `statements` and `lines` of code can be summed up with a very simple example
-
+The difference between `statements` and `lines` of code can be summed up with a very simple example:
 ```javascript
 let i = 0;
 console.log(i);
@@ -112,7 +111,7 @@ This is 2 statements but only 1 line.
 
 As you can see, we currently do not have a lot of coverage for our existing code. Let's change that. Open up the file named `my-code-spec.js` and take a peak.
 
-The second test we are running looks like this
+The second test we are running looks like this:
 
 ```javascript
 it("testing doubleNumber()", function () {
@@ -132,13 +131,13 @@ it("testing doubleNumber()", function () {
 });
 ```
 
-Karma should re-run the tests automatically and you should see something similar to the image below.
+Karma should re-run the tests automatically, and you should see something similar to the image below.
 
 ![Coverage results 2](/assets/images/2022/karma-coverage/coverage-2.png "Coverage Results 2")
 
 w00t!! We now have some better coverage on our tests as 50% of our statements, functions, and lines are covered by our tests. If you uncomment other lines of code that call methods on the `demo` object, you will see the results of the coverage report change.
 
-Let's uncomment all of these except the last test, so our test file looks like this
+Let's uncomment all of these except the last test, so our test file looks like this:
 
 ```javascript
 describe("My Code tests", function () {
@@ -202,6 +201,6 @@ Uncomment out those last 2 lines of code, and you should see the following indic
 
 The concept of 'coverage' is not unique to Karma. Other test runners, such as [Jest](https://jestjs.io/), also have this functionality. Using this feature is a great way to help you start to testing your code. It is also invaluable when you need to test code that is complex and/or has several layers of nested logic.
 
-If you did not fully understand the syntax of some of the test code, fear not, I will have more on that in the near future.
+If you did not fully understand the syntax of some test code, fear not, I will have more on that in the near future.
 
 Photo by [Medena Rosa](https://unsplash.com/@daisy66?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/covered?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
