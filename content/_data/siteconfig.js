@@ -22,7 +22,7 @@ module.exports = {
   // GitHub ID (optional, remove it not needed), used for link in the left sidebar
   socialGitHub: "boyzoid",
   // LinkedIn ID  (optional, remove it not needed), used for link in the left sidebar
-  socialLinkedIn: "boyzoid",
+  socialLinkedIn: "scott-stroz",
   // Twitter ID  (optional, remove it not needed), used for link in the left sidebar, and for OpenGraph sharing information
   socialTwitter: "boyzoid",
   // YouTube ID/Channel  (optional, remove it not needed), used for link in the left sidebar
