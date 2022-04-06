@@ -2,7 +2,7 @@ require("dotenv").config();
 
 module.exports = {
   // Website title, shown in left sidebar and in page title
-  title: "Scott's Stuff",
+  title: "The Stroz",
   // Site URL to generate absolute URLs. Used across the board.
   url: process.env.URL || "https://www.scottstroz.com",
   // Profile image for left sidebar
