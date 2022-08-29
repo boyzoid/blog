@@ -9,7 +9,6 @@ if (isProduction) {
 
 module.exports = {
   purge,
-  darkMode: "class",
   plugins: [
     function ({ addUtilities }) {
       const extendUnderline = {
@@ -40,7 +39,7 @@ module.exports = {
         "dark-heading": "#27282B"
       }),
       backgroundImage: () => ({
-        "sidebar-dark": "radial-gradient(circle, #242424 0%, #1d1f27 100%)",
+        "sidebar-dark": "radial-gradient(circle,rgba(21, 2, 122, 1) 0%,rgba(35, 37, 46, 1) 100%)",
         "sidebar-light":
           "radial-gradient(circle,rgba(21, 2, 122, 1) 0%,rgba(35, 37, 46, 1) 100%)"
       }),
