@@ -2,7 +2,7 @@
 title: Where Have I Been?
 date: 2022-08-29T06:00:00
 image: /assets/images/2022/been.jpg
-tags: ["MySQL", "About Me"]
+tags: ["MySQL", "About-Me"]
 ---
 
 If it seems like this space was neglected for a while, well...that is because it was.

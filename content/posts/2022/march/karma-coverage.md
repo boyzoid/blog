@@ -2,7 +2,7 @@
 title: Verifying Code Coverage With Karma
 date: 2022-03-24T06:00:00
 image: /assets/images/2022/medena-rosa-OhH_xOExaGk-unsplash.jpg
-tags: ["JavaScript", "TDD", "Karma", "Jasmine", "BetterTests"]
+tags: ["JavaScript", "TDD", "Karma", "Jasmine", "Better-Tests"]
 ---
 
 This is the first in a [series of posts](/tags/bettertests) that will help ease the transition to TDD and how we can make sure we write tests that actually verify the code we write is correct.

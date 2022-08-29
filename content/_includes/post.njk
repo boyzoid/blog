@@ -50,8 +50,10 @@ layout: base.njk
 	{% if tags.length > 0 %}
 		<p>
 			{% for tag in tags %}
+			    {% if tag != 'posts'%}
 				{% set tagUrl %}/tags/{{ tag | lowercase }}/{% endset %}
-				<span class="tag mr-1"><a href="{{ tagUrl }}">{{ tag }}</a></span>
+				<span class="tag mr-1"><a href="{{ tagUrl }}">{{ tag | replace('-', ' ') }}</a></span>
+				{% endif %}
 			{% endfor %}
 		</p>
 	{% endif %}
