@@ -129,7 +129,7 @@ SELECT `full_name`,
 FROM `player`
 ORDER BY player_overall_rank;
 ```
-The image below shows the results of using `DENSE_RANK()`. Note that Bernita Yundt has a ranking of `5` rather than `6` as in the previous example.
+The image below shows the results of using `DENSE_RANK()`. Note that Bernita Yundt has a ranking of `5` rather than `6` as in the first example.
 
 ![Ranking_players_dense](/assets/images/2022/window-functions/img1b.png "Ranking All Players using RANK_DENSE()")
 
