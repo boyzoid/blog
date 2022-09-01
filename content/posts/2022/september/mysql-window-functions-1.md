@@ -1,6 +1,6 @@
 ---
 title: MySQL Window Functions Part 1
-date: 2022-08-29T06:00:00
+date: 2022-09-01T06:00:00
 image: /assets/images/2022/window-function.jpg
 tags: ["MySQL", "Window Functions"]
 ---
