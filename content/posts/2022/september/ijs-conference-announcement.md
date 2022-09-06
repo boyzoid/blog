@@ -2,7 +2,7 @@
 title: Speaking in NYC This Month
 date: 2022-09-02T06:00:00
 image: /assets/images/2022/brooklyn.jpg
-tags: ["MySQL", "Node", "NoSQL", "Document Store"]
+tags: ["MySQL", "Node", "NoSQL", "Document Store", "Conferences"]
 ---
 
 I am speaking at the [International JavaScript Conference](https://javascript-conference.com/new-york/) at the end of this month in Brooklyn, NY.
