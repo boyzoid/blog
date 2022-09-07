@@ -12,7 +12,7 @@ As we progress through these examples, we should remember that most (if not all)
 
 Two window functions that are very closely related allow us to look at a row of data *n* rows before or *n* rows after the current row. These are `LAG()` and `LEAD()` respectively.
 
-If we want to show how many points the
+If we want to show the sum of the points for the current player and the previous and next players, we would use this query:
 
 ```sql
 SELECT `full_name`,
