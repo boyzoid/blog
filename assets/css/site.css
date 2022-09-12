@@ -474,3 +474,7 @@ div .code-toolbar{
   max-height: 500px;
   overflow: auto;
 }
+
+b, strong{
+  font-weight: bold;
+}
