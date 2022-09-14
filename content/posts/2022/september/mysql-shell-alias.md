@@ -26,8 +26,8 @@ C:\Users\{username}\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 Once we have this file path, open that file in a text editor and add the following lines:
 
 ```powershell
-Function myshell{ mysqlsh --sql mysql://localhost }
-Function myshellx{ mysqlsh --js mysql://localhost}
+Function myshell{ mysqlsh --sql mysqlx://localhost }
+Function myshellx{ mysqlsh --js mysqlx://localhost}
 
 Set-Alias -Name mysql -Value myshell
 Set-Alias -Name mysqlx -Value myshellx
@@ -37,8 +37,8 @@ Breaking these down, we see that running `mysql` from a PowerShell prompt will r
 As Fred noted, by default MySQL Shell will try to log in to the MySQL server with the user running the command. If you want to use a different user, `root` for example (but this is frowned upon, especially outside a development environment), you could modify the function definitions to look like this:
 
 ```powershell
-Function myshell{ mysqlsh --sql mysql://root@localhost }
-Function myshellx{ mysqlsh --js mysql://root@localhost}
+Function myshell{ mysqlsh --sql mysqlx://root@localhost }
+Function myshellx{ mysqlsh --js mysqlx://root@localhost}
 ```
 I have my local development environment set up for MySQL with a user that matches the username of my Windows user, so I can use the first examples.
 
