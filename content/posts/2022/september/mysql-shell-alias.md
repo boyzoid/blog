@@ -2,7 +2,7 @@
 title: MySQL Shell Alias For PowerShell
 date: 2022-09-09T06:00:00
 image: /assets/images/2022/mysql-alias.jpg
-tags: ["MySQL", "MySQL Shell", "PowerShell"]
+tags: ["MySQL", "MySQL-Shell", "PowerShell"]
 ---
 
 Yesterday, my colleague, [Fred (AKA LeFred)](https://lefred.be/), shared a [blog post](https://lefred.be/content/always-use-mysql-shell/) that discusses setting up aliases that allow us to run [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/) when we enter `mysql` at a command prompt.
