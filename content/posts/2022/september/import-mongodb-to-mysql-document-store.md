@@ -1,5 +1,5 @@
 ---
-title: Import a MongoDB Into MySQL Document Store with MySQL Shell
+title: Importing a MongoDB Into MySQL Document Store with MySQL Shell
 date: 2022-09-22T06:00:00
 image: /assets/images/2022/mongo-to-doc-store.jpg
 tags: ["MySQL", "MySQL-Shell", "MySQL-Document-Store", "MongoDB", "NoSQL"]
@@ -113,12 +113,13 @@ We can see that the import was successful and that we imported 2548 documents in
 Now that we have our data imported, we can use the MySQL Document Store CRUD API.
 Before we start doing more advanced queries, we should ensure the data was imported the data as we expected.
 
+### Set the Schema to Use
+
 Let's start by telling MySQL Shell to use the new schema by running the following command:
 ```javascript
 \u import_demo
 ```
 
-### Set the Schema to Use
 We should see a message similar to the following:
 ![MySQL Shell Use Schema](/assets/images/2022/mongo-import/img6.png "MySQL Shell Use Schema")
 
