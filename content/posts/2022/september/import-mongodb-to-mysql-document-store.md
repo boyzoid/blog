@@ -4,7 +4,6 @@ date: 2022-09-22T06:00:00
 image: /assets/images/2022/mongo-to-doc-store.jpg
 tags: ["MySQL", "MySQL-Shell", "MySQL-Document-Store", "MongoDB", "NoSQL"]
 ---
-Photo by [Wesley Tingey](https://unsplash.com/@wesleyphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/documents?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 [MySQL Document Store](https://www.mysql.com/products/enterprise/document_store.html) is a "NoSQL" database built on top of [MySQL](https://www.mysql.com/).
 The [X Dev API](https://dev.mysql.com/doc/x-devapi-userguide/en/) provides basic CRUD operations that allow developers to manage JSON document collections.
@@ -192,6 +191,7 @@ You can see there are three columns:
 * `_json_schema` - which is also of type `json`  and contains information used to validate the JSON schema stored in the `doc` column.
 
 Upon looking at that last column you may be saying...'*Wait...what?*'
+
 While one advantage of JSON document storage is the fact it can be schemaless, there may be times when you need to validate the schema.
 For example, we may have a property that should be required or should only be an array. Then, we can use the `_json_schema` column to define that validation and enforce that schema.
 I plan on covering how to set up schema validation for MySQL Document Store in a future post.
@@ -200,3 +200,5 @@ I plan on covering how to set up schema validation for MySQL Document Store in a
 MySQL Document Store offers all the advantages of a "NoSQL" solution with the bonus of the benefits of a relational database.
 By using the import functionality of MySQL Shell, we can quickly import data from an existing MongoDB database and start querying our data using the CRUD API or by using raw SQL commands.
 In future posts, I plan on showing more detailed examples of how we can leverage the power of SQL with our "NoSQL" data. 
+
+Photo by [Wesley Tingey](https://unsplash.com/@wesleyphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/documents?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
