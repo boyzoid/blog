@@ -4,7 +4,7 @@ date: 2022-10-07T06:00:00
 image: /assets/images/2022/doc-store-indexes/header.jpg
 tags: ["MySQL", "MySQL-Shell", "MySQL-Document-Store", "NoSQL"]
 ---
-MySQL Document Store is a JSON document storage solution built on top of MySQL. One feature of MySQL Document Store that can help speed up searches is the ability to create indexes of data contained within our JSON documents. In this post, we will demonstrate creating an index and look at the changes made to our collection after we create the index.
+[MySQL Document Store](https://www.mysql.com/products/enterprise/document_store.html) is a JSON document storage solution built on top of [MySQL](https://www.mysql.com/). One feature of MySQL Document Store that can help speed up searches is the ability to create indexes of data contained within our JSON documents. In this post, we will demonstrate creating an index and look at the changes made to our collection after we create the index.
 
 ## Getting Started
 
