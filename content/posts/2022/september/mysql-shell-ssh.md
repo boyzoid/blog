@@ -23,7 +23,7 @@ This will start MySQL Shell in JS mode. You should see something similar to the 
 Now that we are in Js mode of MySQL Shell, we use the `shell.connect()` command to connect to a MySQL server tunneled through an SSH connection.
 
 ```shell
-shell.connect({uri : "mysql://{user}:{password}!363@127.0.0.1:3306", ssh : "{ssh user}@{remote server}:22", "ssh-identity-file":"{absolute path to SSH key}" })
+shell.connect({uri : "mysql://{user}:{password}@127.0.0.1:3306", ssh : "{ssh user}@{remote server}:22", "ssh-identity-file":"{absolute path to SSH key}" })
 ```
 
 Let's break down the different bits of information we are using.
