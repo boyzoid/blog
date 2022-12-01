@@ -34,11 +34,11 @@ Set-Alias -Name mysqlx -Value myshellx
 ```
 Breaking these down, we see that running `mysql` from a PowerShell prompt will run `mysqlsh` in 'SQL mode', and running `mysqlx` will run `mysqlsh` in 'JS Mode'. In both cases, it will attempt to connect to MySQL on the local system.
 
-As Fred noted, by default MySQL Shell will try to log in to the MySQL server with the user running the command. If you want to use a different user, `root` for example (but this is frowned upon, especially outside a development environment), you could modify the function definitions to look like this:
+As Fred noted, by default MySQL Shell will try to log in to the MySQL server with the user running the command. If you want to use a different user, `my_user` for example (but this is frowned upon, especially outside a development environment), you could modify the function definitions to look like this:
 
 ```powershell
-Function myshell{ mysqlsh --sql mysqlx://root@localhost }
-Function myshellx{ mysqlsh --js mysqlx://root@localhost}
+Function myshell{ mysqlsh --sql mysqlx://my_user@localhost }
+Function myshellx{ mysqlsh --js mysqlx://my_user@localhost}
 ```
 I have my local development environment set up for MySQL with a user that matches the username of my Windows user, so I can use the first examples.
 
@@ -58,6 +58,6 @@ If we want to start MySQL Shell in JS mode, we use the `mysqlx` command.
 
 ![MySQL Shell JS mode example](/assets/images/2022/mysql-shell-alias/mysqlx.png "MySQL Shell JS Mode Example")
 
-I have become a big fan of MySQL Shell, and these aliases allow me to open MySQL Shell in the mode I want much quicker.
+I am a big fan of MySQL Shell, and these aliases allow me to open MySQL Shell in the mode I want much quicker.
 
 Photo by [Stéphan Valentin](https://unsplash.com/@valentinsteph?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/power-shell?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
