@@ -34,7 +34,7 @@ Set-Alias -Name mysqlx -Value myshellx
 ```
 Breaking these down, we see that running `mysql` from a PowerShell prompt will run `mysqlsh` in 'SQL mode', and running `mysqlx` will run `mysqlsh` in 'JS Mode'. In both cases, it will attempt to connect to MySQL on the local system.
 
-As Fred noted, by default MySQL Shell will try to log in to the MySQL server with the user running the command. If you want to use a different user, `my_user` for example (but this is frowned upon, especially outside a development environment), you could modify the function definitions to look like this:
+As Fred noted, by default MySQL Shell will try to log in to the MySQL server with the user running the command. If you want to use a different user, `my_user` for example, you could modify the function definitions to look like this:
 
 ```powershell
 Function myshell{ mysqlsh --sql mysqlx://my_user@localhost }
