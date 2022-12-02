@@ -4,9 +4,9 @@ date: 2022-09-12T06:00:00
 image: /assets/images/2022/ssh.jpg
 tags: ["MySQL", "MySQL-Shell", "SSH"]
 ---
-As I mentioned in my [last post](/posts/2022/september/mysql-shell-alias/), I have become quite smitten with [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/). Until recently, I have only used MySQL Shell to connect to a local instance of MySQL running on my development machine.
+As I mentioned in my [last post](/posts/2022/september/mysql-shell-alias/), I am a big fan of [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/). Until recently, I have only used MySQL Shell to connect to a local instance of MySQL running on my development machine.
 
-I recently needed to connect to a MySQL database on a Compute Instance in [OCI](https://www.oracle.com/cloud/). I wanted to use MySQL Shell but realized I needed to connect to the database using SSH. Fortunately, there is a way to tell MySQL Shell to connect using SSH.
+I recently needed to connect to a MySQL database running on a remote server. I wanted to use MySQL Shell but realized I needed to connect to the database using SSH. Fortunately, there is a way to tell MySQL Shell to connect using SSH.
 
 **Note:** This post assumes you already have SSH access set up for your remote server using a private key.
 
