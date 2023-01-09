@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginToc);
 
   // Define 11ty template formats
-  eleventyConfig.setTemplateFormats(["njk", "md", "svg", "jpg", "css", "png"]);
+  eleventyConfig.setTemplateFormats(["njk", "md", "svg", "jpg", "png"]);
 
   // Generate excerpt from first paragraph
   eleventyConfig.addShortcode("excerpt", (article) => extractExcerpt(article));
