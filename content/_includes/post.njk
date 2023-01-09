@@ -63,6 +63,15 @@ layout: base.njk
 	<div class="line-numbers">
   	{{ content | safe }}
 	</div>
+	{% if related %}
+		<h2>Related Entries</h2>
+		{% set relatedEntries = related | getRelated(collections.all) %}
+		<ul>
+			{% for entry in relatedEntries %}
+				<li><a href="{{ entry.filePathStem }}">{{ entry.data.title }}</a></li>
+			{% endfor %}
+		</ul>
+	{% endif %}
   	{% include "social.njk" %}
 	<div class="block w-full h-1 border-solid border-b-1 border-gray-700"></div>
 	<div class="additions flex flex-col sm:flex-row gap-3 mt-6 px-4 w-full">
@@ -81,19 +90,21 @@ layout: base.njk
 			</div>
 		</a>
 	</div>
-	{% set relatedPosts = related %}
-	{% if relatedPosts %}
-	<div class="block w-full h-1 border-solid border-b-1 border-gray-700"></div>
-	<span class="content text-gray-800 ">Related</span>
-	<div class="content additions flex mt-6 border-solid border-b-1 border-gray-700 mr-8 lg:mr-24">
-	  	{% for post in relatedPosts %}
-	  	<a href="{{ post.url }}"  class="flex-1">
-		  	<div class="h-24 m-1 border-1 border-gray-700 leading-pagination text-center hover:bg-myblue-900 hover:text-gray-200 rounded">
-			  	<span class="text-xs block mt-1 mb-3">Recommended</span>
-				<span class="text-xl">{{ post.title }}</span>
-			</div>
-		</a>
-	  	{% endfor %}
-	</div>
-	{% endif %}
+
+	{#{% if related %}
+		{% set relatedPosts = related | getRelated(collections.all) %}
+		<div class="block w-full h-1 border-solid border-b-1 border-gray-700"></div>
+		<span class="content text-gray-800 ">Related</span>
+		<div class="content additions flex mt-6 border-solid border-b-1 border-gray-700 mr-8 lg:mr-24">
+			{% for entry in relatedPosts %}
+			<a href="{{ entry.filePathStem }}"  class="flex-1">
+				<div class="h-24 m-1 border-1 border-gray-700 leading-pagination text-center hover:bg-myblue-900 hover:text-gray-200 rounded">
+					<span class="text-xs block mt-1 mb-3">Recommended</span>
+					<span class="text-xl">{{ entry.data.title }}</span>
+				</div>
+			</a>
+			{% endfor %}
+		</div>
+	{% endif %}#}
+
 </div>

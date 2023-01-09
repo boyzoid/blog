@@ -165,6 +165,18 @@ module.exports = function (eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
+  eleventyConfig.addFilter("getRelated", function(relatedPosts, all) {
+    /*
+    relatedPosts is an array of filePathStems, return an array
+    of page obs that match
+    */
+
+    return all.filter(p => {
+      return relatedPosts.includes(p.filePathStem);
+    });
+
+  });
+
   // Plugin for setting _blank and rel=noopener on external links in markdown content
   eleventyConfig.addPlugin(require("./_11ty/external-links.js"));
 
