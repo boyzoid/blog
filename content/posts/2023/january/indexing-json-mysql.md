@@ -192,7 +192,7 @@ We can see that `possible_key` and `key` now have a value indicating that our ne
 
 ## Wrap up
 
-Storing JSOSN data in a relational database is something developers have been doing long before a `JSON` data type existed.
+Storing JSON data in a relational database is something developers have been doing long before a `JSON` data type existed.
 The JSON data type allows us to store valid JSON data and run queries based on the values in the JSON object.
 By using functional indexes, we can help the performance of those queries in the same way an index on other data types helps boost performance.
 
