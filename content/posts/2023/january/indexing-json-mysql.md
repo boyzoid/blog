@@ -2,7 +2,7 @@
 title: Indexing JSON Data in MySQL
 date: 2023-01-10T06:00:00
 image: /assets/images/2023/index-json/header.jpg
-tags: [ "MySQL", "JSON" ]
+tags: [ "MySQL", "JSON", "Indexes" ]
 ---
 Storing JSON in a relational database is something developers have done for quite some time. There are a variety of reasons why you would want to store JSON in a database table - user preferences and configuration data are two good examples.   The [JSON Data Type](https://dev.mysql.com/doc/refman/8.0/en/json.html) was introduced to MySQL in version 5.7.8. This data type allows us to store valid JSON in a database column and run queries based on the values in the JSON.
 
