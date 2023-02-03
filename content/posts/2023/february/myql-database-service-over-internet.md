@@ -200,7 +200,7 @@ In the second step of creating a network load balancer, we need to create our li
 ![Load Balancer Part 3](/assets/images/2023/mds-balancer/img23.png "Load Balancer Part 3")
 
 ### Set up a Backend Set
-For step 3, to create a network load balancer, we need to specify and backend set.
+For step 3, we need to specify a backend set.
 1. Enter a name for the backend set.
 2. Make sure the 'Preserve source IP' checkbox is selected.
 3. Do not add any backends at this point. We will get to that in a bit.
