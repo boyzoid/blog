@@ -109,7 +109,7 @@ The interesting thing to note in the result set is that there is no score where 
 
 ## Using `SUM()` as a Window Function
 
-As I noted in [Part 1](http://localhost:8080/posts/2022/september/mysql-window-functions-1/#definition) of this series, some aggregate functions can be used as window functions if we add an `OVER()` clause. So let's take a look at how we can do that.
+As I noted in [Part 1](/posts/2022/september/mysql-window-functions-1/#definition) of this series, some aggregate functions can be used as window functions if we add an `OVER()` clause. So let's take a look at how we can do that.
 
 If we wanted to show what percentage of the total group points a given player's points equals. To accomplish this, we could use the query below:
 

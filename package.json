@@ -11,7 +11,7 @@
     "dev": "concurrently \"npm:dev:*\"",
     "dev:css:prism": "postcss assets/css/prism.css -o assets/css/prism-build.css --watch",
     "dev:css:site": "postcss assets/css/site.css -o assets/css/site-build.css --watch",
-    "dev:eleventy": "eleventy --serve",
+    "dev:eleventy": "eleventy --serve --port 8181",
     "dev:js": "rollup -c scripts/rollup.config.js -w",
     "lint": "npm run lint:markdown && npm run lint:js",
     "lint:markdown": "npx markdownlint-cli2 \"./content/**/*.md\"",
