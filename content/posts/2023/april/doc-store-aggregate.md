@@ -181,7 +181,7 @@ We can use aggregate functions such as `avg()` to return the average of simple v
 To return this same value for properties stored in an array in our document while still using the Document Store API, we need to create user-defined functions to handle aggregating the data for us.
 Yes, we still need to write our own SQL commands to define the user-defined functions, but at least we can use those functions in the API.
 
-
+*P.S. - For those who may not understand why I chose the header image for this post: The rock around railroad ties is called 'aggregate'.*
 
 
 Photo by <a href="https://unsplash.com/es/@orrbarone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">James Orr</a> on <a href="https://unsplash.com/photos/u3ToHqQFrT4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
