@@ -327,7 +327,7 @@ Recreating indexes - done
 ## Dump/Load Options
 
 Besides the options we discussed, there are quite a few that help us tailor the dumping and loading of data.
-Perhaps the most intriguing options are ones that allow us to dump and load data directly to an [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/) (OCI) storage bucket, an Amazon AWS S3 compatible service, or Microsoft Azure Blog Storage.
+Perhaps the most intriguing options are ones that allow us to dump and load data directly to an [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/) (OCI) storage bucket, an Amazon AWS S3 compatible service, or Microsoft Azure Blob Storage.
 For more information about these options and others, check out the documentation at the links below.
 
 * [MySQL Shell Dump Utiliyt](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-dump-instance-schema.html)
