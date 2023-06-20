@@ -15,7 +15,7 @@ There are a few things we will need before we can get started.
 1. An OCI account. If you do not have one, you can sign up for an account [here](https://www.oracle.com/cloud/free/).
 2. A [MySQL HeatWave Database](https://www.mysql.com/cloud/) instance.
 3. The [OCI Command Line Interface](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm) (CLI) installed and configured for your OCI user.
-   * This is used when we load the data from AWS to our MySQL HeatWave DDatabase instance.
+   * This is used when we load the data from AWS to our MySQL HeatWave Database instance.
 4. [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/) installed on the system from which you will run the commands.
 5. An AWS account with the following:
    * An RDS MySQL database that will be dumped.
@@ -52,7 +52,7 @@ Our first argument here is an array of schema names we want to dump.
 The second argument is the name of the folder that will be created in our S3 bucket.
 The third argument is the options JSON object.
 Let's break down what the different arguments represent:
-* `s3BucketName` - The name of the S3 bucket to where we will dump our data.
+* `s3BucketName` - The name of the S3 bucket where we will dump our data.
 * `threads` - The number of threads we want to use to perform the dump. The default is 4.
 * `ocimds` - Since we will eventually load this database into a MySQL HeatWave instance in OCI, we set this to true. By setting it to true, MySQL Shell will perform compatibility checks to ensure the database can run in OCI.
 * `compatibility` - When we dump MySQL databases, we can specify options to determine the database's compatibility. In this example, we use the `strip_definers` compatibility option. This option removes `definer` for stored procedures, user-defined functions, etc., from the dump. When the data is loaded, the `definer` will be the user that MySQL Shell is connected as.
