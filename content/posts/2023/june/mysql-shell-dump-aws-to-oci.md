@@ -6,7 +6,7 @@ tags: [ "MySQL", "MySQL-Shell", "Oracle-Cloud-Infrastructure" ]
 
 ---
 
-In previous posts, we talked about how we can use [MySQL Shell to dump and load databases](posts/2023/may/mysql-shell-threaded-dump/) and how we can dump data to and from [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/) (OCI) buckets. In this post, we are going to show how you can use [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/) to dump data from a MySQL RDS database to an S3 bucket and then load that data to a [MySQL HeatWave Database](https://www.mysql.com/cloud/) instance running in OCI - and with only two commands.
+In previous posts, we talked about how we can use [MySQL Shell to dump and load databases](posts/2023/may/mysql-shell-threaded-dump/) and how we can dump data to and from [Oracle Cloud Infrastructure](/posts/2023/june/mysql-shell-dump-to-oci/) (OCI) buckets. In this post, we are going to show how you can use [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/) to dump data from a MySQL RDS database to an S3 bucket and then load that data to a [MySQL HeatWave Database](https://www.mysql.com/cloud/) instance running in OCI - and with only two commands.
 
 ## Prerequisites
 
