@@ -2,7 +2,7 @@
 title: Using MySQL Shell to Dump Data To And Read Data From OCI Storage Buckets
 date: 2023-06-08T06:00:00
 image: /assets/images/2023/mysql-shell-dump-to-oci/header.jpeg
-tags: [ "MySQL", "MySQL-Shell" ]
+tags: [ "MySQL", "MySQL-Shell", "Oracle-Cloud-Infrastructure" ]
 
 ---
 In a [previous post](posts/2023/may/mysql-shell-threaded-dump/), we discussed how you could use [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/) to dump and load data using a multithreaded process. At the end of the post, I mentioned it was possible to dump data to and load data from cloud services such as [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/) (OCI). In this post, I will show you how to perform these data dumps and loads using OCI Storage Buckets.

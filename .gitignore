@@ -45,3 +45,4 @@ assets/js/min.*
 /assets/images/2022/.picasa.ini
 /assets/images/2022/.picasaoriginals/
 /.idea/
+/aws dump load.md
