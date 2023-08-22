@@ -240,7 +240,7 @@ The private variables are named `#connectionUrl` and `#pool`. These are used to 
 
 In our constructor, we expect arguments for the `dbUser`, `dbPassword`, `dbHost`, `dbPort`, and `schemaName`. These values are used to build out our connection string.
 
-Note that we use `mysqlx` as the protocol in the connection string. This is so because we need to connect over the X Protocol to use the X DevAPI.
+Note that we use `mysqlx` as the protocol in the connection string. This is because we need to connect over the X Protocol to use the X DevAPI.
 
 Next, we set up a connection pool by calling `mysqlx.getClient()` and passing in `#connectionUrl` and a configuration block for the connection pool.
 
