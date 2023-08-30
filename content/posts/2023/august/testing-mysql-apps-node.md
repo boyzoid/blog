@@ -18,7 +18,7 @@ There are quite a few issues with this setup when writing tests for code that wi
 * A developer working on a new DDL script could 'break' the database for everyone else.
   * This happened more times than I care to remember.
 
-The solution put into place before I joined the project was only marginally better - we ran all of our tests for database interactivity against an H2 database. While this addressed many issues we encountered, it caused other issues. For example, the version of H@ we were using did not support stored procedures or custom/stored functions. So, if we needed to write a new stored procedure or custom/stored function, we could only test that a particular error was thrown by the testing framework.
+The solution put into place before I joined the project was only marginally better - we ran all of our tests for database interactivity against an H2 database. While this addressed many issues we encountered, it caused other issues. For example, the version of H2 we were using did not support stored procedures or custom/stored functions. So, if we needed to write a new stored procedure or custom/stored function, we could only test that a particular error was thrown by the testing framework.
 
 It would have made everyone's life easier if we ran our tests against the same database system the project used. For various reasons, standing up copies of the database in our development environment was not an option. So, we were left with the less-than-ideal architecture that had been cobbled together over a few iterations of the codebase.
 

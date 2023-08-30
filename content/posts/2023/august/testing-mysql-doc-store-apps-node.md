@@ -43,7 +43,7 @@ The command to clone the repo from the command line over SSH is:
 git clone git@github.com:boyzoid/Test-Containers.git
 ```
 
-Next, Change the directory for this demo.
+Next, change the directory for this demo.
 
 ```shell
 cd Test-Containers/Node/Node_Test_Runner_Doc_Store
@@ -69,7 +69,7 @@ Let's talk about some of these files/directories.
   * I named the single file in this directory `document_store.js` because it is used to execute code that sets up our Document Store collection. It is also used for code used to test that our repository methods function as expected.
 In a future post, I plan on integrating database migration scripts to show how we can track database changes more easily.
 * The `test` directory holds all of our test files - or file in this case.
-  * a single file named `restaurant-repository.test.js` contains our tests for the restaurant repository.
+  * A single file named `restaurant-repository.test.js` contains our tests for the restaurant repository.
   * By naming the directory `test`, the Node Test Runner detects that test files are in this directory.
 * The `utils` directory contains files with code I would reuse often.
   * The `testUtils.js` file contains code I often use when running tests - such as methods that will generate a random string of a given length, a random integer in a given range, and a test `restaurant` JSON object.
@@ -128,7 +128,7 @@ let container;
 let restaurantRepo;
 ```
 
-Since much of the X DevAPI database interaction is asynchronous, we use `async` in the test definition. Also, not that we pass an argument named `t` into the callback function.
+Since much of the X DevAPI database interaction is asynchronous, we use `async` in the test definition. Also, note that we pass an argument named `t` into the callback function.
 
 When setting up a test suite, we can define code that gets run before the suite is run. In Node Test Runner, we define this code inside `before()`. Anything in this block is run at the start of the test suite. We use `before()` in this example to set up our `container` and create an instance of `RestaurantRepo`. Finally, we execute some code in the `docStoreSetup` module to set up our database.
 
@@ -171,7 +171,7 @@ await t.test('Container should be running', async (t)=>{
 
 We define individual tests using the `t.test()` method. This takes two arguments:
 
-1. The name of the test. This should be descriptive but not overly verbose, as reading could be challenging.
+1. The name of the test. This should be descriptive but not overly verbose, as reading it in the output could be challenging.
 2. A callback function that does the actual testing. Note we add `t` to this function just like we did for `test()`.
 
 On the first line of our test, we use functionality built into our container to run a simple query. On the second line, we use `assert.equal()` to verify that the query results match what we expect. The test would fail if the call to `assert.equal()` returned `false`.
