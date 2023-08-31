@@ -9,7 +9,7 @@ As all developers know, one of the most critical parts of any project is trackin
 
 ## The Problem
 
-We needed to manage database changes on every project I have worked on. I've used several libraries for this and even worked on one project where we rolled a homegrown solution (yeah, I know...yikes). Managing database changes can be challenging, especially when multiple developers and/or you are working on a new project where database changes tend to be commonplace. A DBA would be available to help manage these changes in an ideal world. Only some projects have this luxury, though, and developers are often tasked with managing these changes independently. This is where libraries like Knex come into play.
+We needed to manage database changes on every project I have worked on. I've used several libraries for this and even worked on one project where we rolled a homegrown solution (yeah, I know...yikes). Managing database changes can be challenging, especially when there are multiple developers on the project and/or you are working on a new project where database changes tend to be commonplace. A DBA would be available to help manage these changes in an ideal world. Only some projects have this luxury, though, and developers are often tasked with managing these changes independently. This is where libraries like Knex come into play.
 
 ## The Solution
 
