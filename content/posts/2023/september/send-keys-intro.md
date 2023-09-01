@@ -3,7 +3,6 @@ title: A Tool For Poor Typists - SendKeys
 date: 2023-09-04T06:00:00
 image: /assets/images/2023/send-keys-intro/header.jpg
 tags: [ "Tools", "Node.js", "SendKeys" ]
-
 ---
 
 Ask anyone who has had a conversation with me over IM or email, and they will tell you I am a horrible typist. I was never a great typist, but was much better in high school. After graduating, it would be about 13 years before I would need to type again. So, it was like learning all over again.
