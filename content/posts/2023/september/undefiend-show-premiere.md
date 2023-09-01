@@ -1,5 +1,5 @@
 ---
-title: The Undefined Show - Comign Soon
+title: The Undefined Show - Coming Soon
 date: 2023-09-01T06:00:00
 image: /assets/images/2023/undefined-show/header.jpg
 tags: [ "Tech", "Friends", "Streaming" ]
