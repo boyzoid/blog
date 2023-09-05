@@ -13,7 +13,7 @@ I have gotten better at typing, and usually, my issues stem from trying to type 
 
 ## The Solution
 
-SendKeys is a library that runs on Mac OS (Sorry, Windows users) and allows you to programmatically send keystrokes to apps running on your computer. This was the help I needed. However, I found it cumbersome to set up the commands for SendKeys and then run them while trying to do screen recordings. After some digging around, I discovered that SendKeys has a Mode module. I decided to write a wrapper in Node.js, using Express, so I can run my commands from a web browser. I am now making the project known to the public to help all the other poor typists.
+SendKeys is a library that runs on Mac OS (Sorry, Windows users) and allows you to programmatically send keystrokes to apps running on your computer. This was the help I needed. However, I found it cumbersome to set up the commands for SendKeys and then run them while trying to do screen recordings. After some digging around, I discovered that SendKeys has a Node module. I decided to write a wrapper in Node.js, using Express, so I can run my commands from a web browser. I am now making the project known to the public to help all the other poor typists.
 
 ## Getting the Code
 
