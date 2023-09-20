@@ -3,6 +3,8 @@ title: Managing MySQL Database Changes with Knex
 date: 2023-08-31T06:00:00
 image: /assets/images/2023/managing-database-changes-knex/header.jpeg
 tags: [ "MySQL", "Node.js", "Migrations" ]
+related:
+  - /posts/2023/september/mysql-testing-knex-testcontainers/
 ---
 
 As all developers know, one of the most critical parts of any project is tracking database changes (or migrations). These changes will likely need to be applied in a particular order, and they need to be applied to every environment in the development workflow. We should also be able to roll back these changes should things not go as expected. [Knex](https://knexjs.org/) (pronounced like `konnex`) can help us manage these migrations, roll back changes, and assist in applying them to different environments.

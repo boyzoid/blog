@@ -4,7 +4,7 @@ date: 2022-09-01T06:00:00
 image: /assets/images/2022/window-function.jpg
 tags: ["MySQL", "Window-Functions"]
 related:
-    -/posts/2022/september/mysql-window-functions-2
+    - /posts/2022/september/mysql-window-functions-2/
 ---
 First introduced as part of the SQ:2003 Standard and available in MySQL 8.0, window functions in MySQL are compelling, but the syntax can also be a little intimidating when you first start using them. This post is the first in a series where we will discuss window functions – including breaking down the syntax and using examples of different window functions.
 

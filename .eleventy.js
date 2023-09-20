@@ -165,15 +165,18 @@ module.exports = function (eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
-  eleventyConfig.addFilter("getRelated", function(relatedPosts, all) {
-    /*
-    relatedPosts is an array of filePathStems, return an array
-    of page obs that match
-    */
+  eleventyConfig.addFilter("getRelated", function(relatedPosts, posts) {
 
-    return all.filter(p => {
-      return relatedPosts.includes(p.filePathStem);
-    });
+    let related = []
+    if(Array.isArray(relatedPosts)){
+      posts.forEach(p => {
+          if(relatedPosts.includes(p.data.page.url)) {
+            related.push(p);
+          }
+      });
+
+    }
+    return related;
 
   });
 

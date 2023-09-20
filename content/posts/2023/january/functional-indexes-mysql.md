@@ -4,7 +4,7 @@ date: 2023-01-12T06:00:00
 image: /assets/images/2023/functional-indexes/header.jpg
 tags: [ "MySQL", "Indexes" ]
 related:
-  -/posts/2023/january/indexing-json-mysql.md
+    - /posts/2023/january/indexing-json-mysql.md/
 ---
 Database indexes are used to help query performance. Database indexes typically contain information about data in a specific column of the database table. With the introduction of [functional indexes](https://dev.mysql.com/doc/refman/8.0/en/create-index.html#create-index-functional-key-parts) in [MySQL](https://www.mysql.com/downloads/) 8.0.13, we can now create indexes based on the result of an expression or function.
 

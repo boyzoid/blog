@@ -4,7 +4,7 @@ date: 2022-04-05T06:00:00
 image: /assets/images/2022/zach-vessels-ZNTPlG050tk-unsplash.jpg
 tags: [ "TDD", "Better-Tests" ]
 related:
-    -/posts/2022/april/better-tests-02
+    - /posts/2022/april/better-tests-02/
 ---
 This is the first part in a series of posts that will help us write better tests...and this is a big one for me - the use of static data in our tests. Keep in mind that while the sample code below is written in JavaScript, the concept would be the same in any language.
 

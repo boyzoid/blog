@@ -4,7 +4,8 @@ date: 2023-08-23T06:00:00
 image: /assets/images/2023/testing-mysql-doc-store-apps-node/header.jpg
 tags: [ "MySQL", "MySQL-Document-Store", "Node.js", "TDD", "Better-Tests", "Testcontainers" ]
 related:
-    -/posts/2023/august/testing-mysql-apps-node/
+    - /posts/2023/august/testing-mysql-apps-node/
+    - /posts/2023/september/mysql-testing-knex-testcontainers/
 
 ---
 In a [previous post](/posts/2023/august/testing-mysql-apps-node/), I talked about how we can use [Testcontainers](https://testcontainers.com/) to help make it easier to write tests for Node applications that interact with a MySQL database. In this post, we are going to discuss how we can write tests for Node applications that interact with [MySQL Document Store](https://www.mysql.com/products/enterprise/document_store.html) - again using the [MySQL Module](https://testcontainers.com/modules/mysql/) for Testcontainers.

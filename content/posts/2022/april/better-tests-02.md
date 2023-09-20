@@ -4,7 +4,7 @@ date: 2022-04-29T06:00:00
 image: /assets/images/2022/fahrul-razi-BR6lrzCPYPk-unsplash.jpg
 tags: [ "TDD", "Better-Tests" ]
 related:
-    -/posts/2022/april/better-tests-01
+    - /posts/2022/april/better-tests-01/
 ---
 This is the second part of a series of posts that will help us write better tests...and this one should seem kind of obvious - making sure we test every logical condition in our code.
 

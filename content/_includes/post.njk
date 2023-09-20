@@ -65,7 +65,7 @@ layout: base.njk
 	</div>
 	{% if related %}
 		<h2>Related Entries</h2>
-		{% set relatedEntries = related | getRelated(collections.all) %}
+		{% set relatedEntries = related | getRelated(collections.posts) %}
 		<ul>
 			{% for entry in relatedEntries %}
 				<li><a href="{{ entry.filePathStem }}">{{ entry.data.title }}</a></li>
