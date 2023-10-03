@@ -7,6 +7,7 @@ related:
 - /posts/2023/august/testing-mysql-apps-node/
 - /posts/2023/august/testing-mysql-doc-store-apps-node/
 - /posts/2023/august/managing-database-changes-knex/
+- /posts/2023/october/github-actions-mysql-tests.md
 ---
 
 In previous posts, I discussed how we can use [Testcontainers](https://testcontainers.com/) to more easily test [code that interacts with a MySQL Database](/posts/2023/august/testing-mysql-apps-node/) and [code that interacts with MySQL Document Store](/posts/2023/august/testing-mysql-doc-store-apps-node/). In yet another post, I demonstrated [how to manage database migrations](/posts/2023/august/managing-database-changes-knex/) using [Knex](https://knexjs.org/). This post will show how we can leverage Knex to incorporate database migrations into our testing workflow.

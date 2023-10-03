@@ -4,8 +4,9 @@ date: 2023-08-11T06:00:00
 image: /assets/images/2023/testing-mysql-apps-node/header.jpg
 tags: [ "MySQL", "Node.js", "TDD", "Better-Tests", "Testcontainers" ]
 related:
-    - /posts/2023/august/testing-mysql-doc-store-apps-node/
-    - /posts/2023/september/mysql-testing-knex-testcontainers/
+  - /posts/2023/august/testing-mysql-doc-store-apps-node/
+  - /posts/2023/september/mysql-testing-knex-testcontainers/
+  - /posts/2023/october/github-actions-mysql-tests.md
 ---
 Over the years, I have become obsessed with writing code tests. One big pain point with writing tests is testing code that interacts with a database. In this post, we are going to talk about some of the difficulties that may be encountered when writing tests for database interaction and how we can use [Testcontainers](https://testcontainers.com/) to mitigate those issues.
 
