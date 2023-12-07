@@ -1,6 +1,6 @@
 ---
 title: Capturing GPS Data on a Raspberry Pi and Storing It as JSON
-date: 2023-12-06T06:00:00
+date: 2023-12-09T06:00:00
 image: /assets/images/2023/capturing-storing-gps/header.jpg
 tags: [ "MySQL-Document-Store", "Node.js", "Raspberry-Pi" ]
 related:
