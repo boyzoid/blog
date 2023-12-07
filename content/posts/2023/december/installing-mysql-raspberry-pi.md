@@ -105,6 +105,62 @@ The version number we see should align with the package we installed in the prev
 
 ![Verifying the MySQL Version](/assets/images/2023/installing-mysql-raspberry-pi/img_06.png)
 
+## Creating a MySQL User
+
+To avoid using the `root` user, we will create a new MySQL user. When MySQL was installed, a random password for the `root` user was created. To get this password, execute the command:
+
+```shell
+cat /var/log/mysqld.log
+```
+
+And look for a line that contains the text `[Server] A temporary password is generated for root@localhost` and note the password that was set.
+
+We log in to MySQL using the command:
+
+```shell
+mysql -u root -p
+```
+
+Before we can do anything else, we need to change the password of the `root` user. The command to do this is:
+
+```sql
+alter user 'root'@'localhost' identified by '{password}';
+```
+
+In this case, `{password}` is the new password for `root`.
+
+To create a new MySQL user with access from any host, execute the following command:
+
+```sql
+create user '{username}'@'%' identified by '{password}';
+```
+
+Where `{username}` is the name of the new user and `{password}` is the password for the user.
+
+Next, we need to grant permissions to this new user. In this case, we are going to grant all permissions to our new user. Normally, we would not want to give all these permissions to a user, but for use in this demo, it makes it easier to connect to and use MySQl on the Pi. The command for this is:
+
+```sql
+GRANT ALL PRIVILEGES ON *.* TO '{username}'@'%' WITH GRANT OPTION;
+```
+
+Again, `{username}` is the name of the new user.
+
+Then we exit MySQL as `root` by using:
+
+```sql
+exit
+```
+
+Lastly, we check to that we can log in as the new user.
+
+```shell
+mysql -u {user} -p
+```
+
+Where `{user}` is the new user we just created. 
+
+Provide the password, and we should have access to MySQL with the new user.
+
 You are now ready to use MySQL on your Raspberry Pi as on any other server.
 
 In my case, I am using the Pi to capture GPS data and store it as JSON in a [MySQL Document Store](https://www.mysql.com/products/enterprise/document_store.html) collection. There will be more about this project in a future post.

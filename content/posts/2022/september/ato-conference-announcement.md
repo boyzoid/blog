@@ -2,7 +2,7 @@
 title: Heading to Raleigh in November
 date: 2022-09-06T06:00:00
 image: /assets/images/2022/raleigh.jpg
-tags: ["MySQL", "Node", "NoSQL", "Document Store", "Conferences"]
+tags: ["MySQL", "Node.js", "NoSQL", "Document Store", "Conferences"]
 ---
 I am excited to announce that I am speaking at [All Things Open](https://2022.allthingsopen.org/) this year.
 
