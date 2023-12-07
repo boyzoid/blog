@@ -440,7 +440,7 @@ parser.on('data', (data)=>{
 })
 ```
 
-This code block sets up an event handler for when the parser has parsed data from the serial port. When data is parsed, we call the `update()` method of the `gps` object and pass in the `data` that was parsed.
+This code block sets up an event handler for when the parser has parsed data from the serial port. When data is parsed, we call the `update()` method of the `gps` object and pass in the `data` that was parsed. The data sent from the GSP module is in a special delimited format and `gps.update()` will parse that data into JSON.
 
 ## Run the Code
 
