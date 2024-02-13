@@ -1,6 +1,6 @@
 ---
 title: Using the Oracle Cloud TypeScript SDK Part 1 - Listing MySQL HeatWave Instances
-date: 2024-02-13T06:00:00
+date: 2024-02-14T06:00:00
 image: /assets/images/2024/typescript-oci-sdk-list/header.jpg
 tags: [ "MySQL", "MySQL-HeatWave", "OCI", "SDK" ]
 
