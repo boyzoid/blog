@@ -5,6 +5,7 @@ image: /assets/images/2024/typescript-oci-sdk-manage-instance/header.jpg
 tags: [ "MySQL", "MySQL-HeatWave", "OCI", "SDK" ]
 related:
   - /posts/2024/february/typescript-oci-sdk-list/
+  - /posts/2024/february/typescript-oci-sdk-waiters/
 
 ---
 This post is the second in a series that will demonstrate how to view and manage MySQL HeatWave instances in [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/) (OCI). Oracle offers several [SKDs](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm) that can be used to view and manage resources in OCI. In this post, we will discuss how to leverage the [TypeScript/JavaScript SDK](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/typescriptsdk.htm#SDK_for_TypeScript_and_JavaScript) to retrieve information about a single [MySQL HeatWave](https://www.oracle.com/mysql/) instance and how we can start and stop the instance programmatically.
