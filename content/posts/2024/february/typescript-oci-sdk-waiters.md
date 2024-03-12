@@ -7,9 +7,10 @@ related:
   - /posts/2024/february/typescript-oci-sdk-list/
   - /posts/2024/february/typescript-oci-sdk-manage-instance/
   - /posts/2024/february/typescript-oci-sdk-backup-list/
+  - /posts/2024/march/typescript-oci-backup-create/
 
 ---
-This post is the third in a series that will demonstrate how to view and manage MySQL HeatWave instances in [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/) (OCI). Oracle offers several [SKDs](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm) that can be used to view and manage resources in OCI. In this post, we will discuss how to leverage the [TypeScript/JavaScript SDK](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/typescriptsdk.htm#SDK_for_TypeScript_and_JavaScript) to use waiters to asynchronously handle when [MySQL HeatWave](https://www.oracle.com/mysql/) instance reaches a given lifecycle state.
+This post is the third in a series that will demonstrate how to view and manage MySQL HeatWave instances in [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/) (OCI). Oracle offers several [SDKs](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm) that can be used to view and manage resources in OCI. In this post, we will discuss how to leverage the [TypeScript/JavaScript SDK](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/typescriptsdk.htm#SDK_for_TypeScript_and_JavaScript) to use waiters to asynchronously handle when [MySQL HeatWave](https://www.oracle.com/mysql/) instance reaches a given lifecycle state.
 
 ## Prerequisites
 
