@@ -9,6 +9,7 @@ related:
   - /posts/2024/february/typescript-oci-sdk-waiters/
   - /posts/2024/february/typescript-oci-backup-list/
   - /posts/2024/march/typescript-oci-backup-create/
+  - /posts/2024/april/typescript-oci-ref-list/
 
 ---
 This post is the sixth in a series that will demonstrate how to view and manage MySQL HeatWave instances in [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/) (OCI). Oracle offers several [SDKs](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdks.htm) that can be used to view and manage resources in OCI. In this post, we will discuss how to leverage the [TypeScript/JavaScript SDK](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/typescriptsdk.htm#SDK_for_TypeScript_and_JavaScript) to programmatically update data of a backup of a  [MySQL HeatWave](https://www.oracle.com/mysql/) instance.
