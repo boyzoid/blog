@@ -104,8 +104,9 @@ const main = async () =>{
     console.log({configLength: configs.items.length, firstConfig: configs.items[0]})
     console.log({shapeLength: shapes.items.length, firstShape: shapes.items[0]})
     console.log({versionLength: versions.items.length, versions: versions.items})
-    console.log({'8.0' : versions.items[0].versions})
-    console.log({'8 - Innovation' : versions.items[1].versions})
+    for(let item of versions.items){
+        console.log(item)
+    }
 }
 
 main()
