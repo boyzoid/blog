@@ -12,7 +12,7 @@ In a [previous series](/posts/2024/february/typescript-oci-sdk-list/), we discus
 
 Before you can run any of the examples below, you need to install the OCI CLI. If you do not have the CLI installed, follow the instructions [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm) to install and configure the CLI.
 
-***Note:** Many examples require a parameter named `--compartment-id`. Because I am part of a tenancy shared by many colleagues, I must ensure I only ever touch resources in my 'sandbox'. To make this easier, I followed the instructions [here]() to set up default values for the CLI - including the `compartment-id` for my 'sandbox'.*
+***Note:** Many examples require a parameter named `--compartment-id`. Because I am part of a tenancy shared by many colleagues, I must ensure I only ever touch resources in my 'sandbox'. To make this easier, I followed the instructions [here](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliconfigure.htm#Configuring_the_CLI) to set up default values for the CLI - including the `compartment-id` for my 'sandbox'.*
 
 ## Listing Reference Data
 
