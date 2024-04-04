@@ -1,5 +1,5 @@
 ---
-title: Using the Oracle Cloud TypeScript SDK Part 6 - Updating a MySQL HeatWave Backup
+title: Updating a MySQL HeatWave Backup - Using the Oracle Cloud TypeScript SDK Part 6
 date: 2024-04-02T06:00:00
 image: /assets/images/2024/typescript-oci-sdk-backup-update/header.jpg
 tags: [ "MySQL", "MySQL-HeatWave", "OCI", "SDK" ]

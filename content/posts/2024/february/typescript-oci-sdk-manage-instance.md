@@ -1,5 +1,5 @@
 ---
-title: Using the Oracle Cloud TypeScript SDK Part 2 - Managing MySQL HeatWave Instances
+title: Managing MySQL HeatWave Instances - Using the Oracle Cloud TypeScript SDK Part 2
 date: 2024-02-16T06:00:00
 image: /assets/images/2024/typescript-oci-sdk-manage-instance/header.jpg
 tags: [ "MySQL", "MySQL-HeatWave", "OCI", "SDK" ]

@@ -1,5 +1,5 @@
 ---
-title: Using the Oracle Cloud TypeScript SDK Part 5 - Creating a MySQL HeatWave Backup
+title: Creating a MySQL HeatWave Backup - Using the Oracle Cloud TypeScript SDK Part 5
 date: 2024-03-13T06:00:00
 image: /assets/images/2024/typescript-oci-sdk-backup-create/header.jpg
 tags: [ "MySQL", "MySQL-HeatWave", "OCI", "SDK" ]
