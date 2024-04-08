@@ -241,8 +241,8 @@ Once the command has reached a state of `SUCCEEDED`, we will see more informatio
 ```json
 {
   "data": {
-    "compartment-id": "ocid1.compartment.oc1..aaaaaaaaxwrxyb6nadr3ir7udsfubcytklfbbe4v4jvk3meodaqwlnfmftna",
-    "id": "ocid1.mysqlworkrequest.oc1.iad.f6272bce-e88b-4dd2-afe1-90a2dc458e42.aaaaaaaauvihcant3livy5t5q6wlbzzc6hrxgk6ryq4lusqdaekonqeoebja",
+    "compartment-id": "ocid1.compartment.oc1.{more text}",
+    "id": "ocid1.mysqlworkrequest.oc1.{more text}",
     "operation-type": "CREATE_DBSYSTEM",
     "percent-complete": 100.0,
     "resources": [
