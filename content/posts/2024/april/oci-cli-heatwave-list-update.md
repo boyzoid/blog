@@ -5,6 +5,7 @@ image: /assets/images/2024/oci-cli-heatwave-list-update/header.jpg
 tags: [ "MySQL", "MySQL-HeatWave", "OCI", "CLI" ]
 related:
   - /posts/2024/april/oci-cli-create-heatwave-instance/
+  - /posts/2024/april/oci-cli-backup-create-restore/
 ---
 
 This is the second post in a series dedicated to showing how to use the [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm) to manage [MySQL HeatWave](https://www.oracle.com/mysql/) resources. In this post we will discuss how to list MySQL HeatWaves instances in a compartment and how to update some of the information pertaining to the instance.
@@ -20,10 +21,10 @@ Before you can run any of the examples below, you need to install the OCI CLI. I
 The command to list MySQL HeatWave instances follows similar syntax to the examples we discussed in a [previous post](/posts/2024/april/oci-cli-create-heatwave-instance/). In this example, we are going to list the instances that are in an `ACTIVE` state (mostly because I have a LOT of instances in this compartment that were kind of 'throw away' and they will all be returned if I don;t filter the list). The command to run is:"
 
 ```commandline
-oci mysql db-system list --compartment-id {compoartment Id} --lifecycle-state Active
+oci mysql db-system list --compartment-id {compartment Id} --lifecycle-state Active
 ```
 
-Here is the oputput when I run this command:
+Here is the output when I run this command:
 
 ```json
 {
