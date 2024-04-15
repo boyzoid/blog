@@ -6,6 +6,7 @@ tags: [ "MySQL", "MySQL-HeatWave", "OCI", "CLI" ]
 related:
   - /posts/2024/april/oci-cli-create-heatwave-instance/
   - /posts/2024/april/oci-cli-heatwave-list-update/
+  - /posts/2024/april/oci-cli-create-replica/
 ---
 
 This is the third post in a series dedicated to showing how to use the [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm) to manage [MySQL HeatWave](https://www.oracle.com/mysql/) resources. In this post, we will discuss how to create a backup of a MySQL HeatWave instance and create a new MySQL HeatWave instance from that backup.
@@ -131,79 +132,30 @@ The file `backup-restore.json` will look like the following:
 
 ```json
 {
-  "adminPassword": "string",
-  "adminUsername": "string",
-  "availabilityDomain": "string",
-  "backupPolicy": {
-    "definedTags": {
-      "tagNamespace1": {
-        "tagKey1": "tagValue1",
-        "tagKey2": "tagValue2"
+  "data": {
+    "compartment-id": "ocid1.compartment.oc1.{more text}",
+    "id": "ocid1.mysqlworkrequest.oc1.{more text}",
+    "operation-type": "CREATE_REPLICA",
+    "percent-complete": 100.0,
+    "resources": [
+      {
+        "action-type": "CREATED",
+        "entity-type": "mysqlreplica",
+        "entity-uri": "/replicas/ocid1.mysqlreplica.oc1.{more text}",
+        "identifier": "ocid1.mysqlreplica.oc1.{more text}"
       },
-      "tagNamespace2": {
-        "tagKey1": "tagValue1",
-        "tagKey2": "tagValue2"
+      {
+        "action-type": "UPDATED",
+        "entity-type": "mysqldbsystem",
+        "entity-uri": "/dbSystems/ocid1.mysqldbsystem.oc1.{more text}",
+        "identifier": "ocid1.mysqldbsystem.oc1.{more text}"
       }
-    },
-    "freeformTags": {
-      "tagKey1": "tagValue1",
-      "tagKey2": "tagValue2"
-    },
-    "isEnabled": true,
-    "pitrPolicy": {
-      "isEnabled": true
-    },
-    "retentionInDays": 0,
-    "windowStartTime": "string"
-  },
-  "compartmentId": "string",
-  "configurationId": "string",
-  "crashRecovery": "ENABLED|DISABLED",
-  "dataStorageSizeInGbs": 0,
-  "databaseManagement": "ENABLED|DISABLED",
-  "definedTags": {
-    "tagNamespace1": {
-      "tagKey1": "tagValue1",
-      "tagKey2": "tagValue2"
-    },
-    "tagNamespace2": {
-      "tagKey1": "tagValue1",
-      "tagKey2": "tagValue2"
-    }
-  },
-  "deletionPolicy": {
-    "automaticBackupRetention": "string",
-    "finalBackup": "string",
-    "isDeleteProtected": true
-  },
-  "description": "string",
-  "displayName": "string",
-  "faultDomain": "string",
-  "freeformTags": {
-    "tagKey1": "tagValue1",
-    "tagKey2": "tagValue2"
-  },
-  "hostnameLabel": "string",
-  "ipAddress": "string",
-  "isHighlyAvailable": true,
-  "maintenance": {
-    "windowStartTime": "string"
-  },
-  "maxWaitSeconds": 0,
-  "mysqlVersion": "string",
-  "port": 0,
-  "portX": 0,
-  "secureConnections": {
-    "certificateGenerationType": "string",
-    "certificateId": "string"
-  },
-  "shapeName": "string",
-  "sourceBackupId": "string",
-  "subnetId": "string",
-  "waitForState": [
-    "ACCEPTED|IN_PROGRESS|FAILED|SUCCEEDED|CANCELING|CANCELED"
-  ],
-  "waitIntervalSeconds": 0
+    ],
+    "status": "SUCCEEDED",
+    "time-accepted": "2024-04-10T15:08:57.173000+00:00",
+    "time-finished": "2024-04-10T15:27:37.825000+00:00",
+    "time-started": "2024-04-10T15:09:05.201000+00:00"
+  }
 }
 ```
 

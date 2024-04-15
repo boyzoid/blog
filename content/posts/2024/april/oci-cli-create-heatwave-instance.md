@@ -6,6 +6,7 @@ tags: [ "MySQL", "MySQL-HeatWave", "OCI", "CLI" ]
 related:
   - /posts/2024/april/oci-cli-heatwave-list-update/
   - /posts/2024/april/oci-cli-backup-create-restore/
+  - /posts/2024/april/oci-cli-create-replica/
 ---
 
 In a [previous series](/posts/2024/february/typescript-oci-sdk-list/), we discussed how we can leverage the [TypeScript/JavaScript SDK](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/typescriptsdk.htm#SDK_for_TypeScript_and_JavaScript) for [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/) (OCI) to manage MySQL HeatWave instances. This new series demonstrates how to use the [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm) to complete similar tasks. In this post, we will show how to create a MySQL HeatWave instance and retrieve reference information that can help create this new instance.
