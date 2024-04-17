@@ -7,6 +7,7 @@ related:
   - /posts/2024/april/oci-cli-create-heatwave-instance/
   - /posts/2024/april/oci-cli-heatwave-list-update/
   - /posts/2024/april/oci-cli-backup-create-restore/
+  - /posts/2024/april/oci-cli-create-configuration/
 ---
 
 This is the fourth post in a series dedicated to showing how to use the [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm) to manage [MySQL HeatWave](https://www.oracle.com/mysql/) resources. This post will discuss how to create a read replica of a MySQL HeatWave instance.
@@ -94,7 +95,7 @@ We set the `dbSystemId` property to the OCID for the HeatWave instance we want t
 
 ### Run the Command
 
-To create a new backup using this JSON config file, we run the command:
+To create a new replica using this JSON config file, we run the command:
 
 ```commandline
 oci mysql replica create --from-json file://{path to file}
