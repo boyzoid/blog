@@ -8,6 +8,7 @@ related:
   - /posts/2024/april/oci-cli-heatwave-list-update/
   - /posts/2024/april/oci-cli-backup-create-restore/
   - /posts/2024/april/oci-cli-create-replica/
+  - /posts/2024/april/oci-cli-create-channel/
 ---
 
 This is the fifth post in a series dedicated to showing how to use the [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm) to manage [MySQL HeatWave](https://www.oracle.com/mysql/) resources. This post will discuss how to create a configuration for MySQL HeatWave instances and how to create a new instance using this configuration.
@@ -23,13 +24,13 @@ Configurations are helpful when you want to quickly spin up multiple instances w
 
 ### Generating Command JSON
 
-As we have done throughout this series, we cre first going to generate a template JSON file to create our new configuration. The command to create this JSON file is:
+As we have done throughout this series, we are first going to generate a template JSON file to create our new configuration. The command to create this JSON file is:
 
 ```commandline
 oci mysql configuration create --generate-full-command-json-input > config-create.json
 ```
 
-When this command completes, teh file named `config-create.json` will resemble the following:
+When this command completes, the file named `config-create.json` will resemble the following:
 
 ```json
 {

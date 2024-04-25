@@ -8,6 +8,7 @@ related:
   - /posts/2024/april/oci-cli-backup-create-restore/
   - /posts/2024/april/oci-cli-create-replica/
   - /posts/2024/april/oci-cli-create-configuration/
+  - /posts/2024/april/oci-cli-create-channel/
 ---
 
 This is the second post in a series dedicated to showing how to use the [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm) to manage [MySQL HeatWave](https://www.oracle.com/mysql/) resources. In this post we will discuss how to list MySQL HeatWaves instances in a compartment and how to update some of the information pertaining to the instance.

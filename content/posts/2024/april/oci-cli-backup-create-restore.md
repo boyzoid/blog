@@ -8,6 +8,7 @@ related:
   - /posts/2024/april/oci-cli-heatwave-list-update/
   - /posts/2024/april/oci-cli-create-replica/
   - /posts/2024/april/oci-cli-create-configuration/
+  - /posts/2024/april/oci-cli-create-channel/
 ---
 
 This is the third post in a series dedicated to showing how to use the [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm) to manage [MySQL HeatWave](https://www.oracle.com/mysql/) resources. In this post, we will discuss how to create a backup of a MySQL HeatWave instance and create a new MySQL HeatWave instance from that backup.
