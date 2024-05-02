@@ -3,6 +3,10 @@ title: Using JavaScript to Search JSON Arrays in MySQL
 date: 2024-05-02T06:00:00
 image: /assets/images/2024/searching-arrays-in-mysql-with-javascript/header.jpg
 tags: [ "MySQL", "JSON", "JavaScript" ]
+related:
+  - /posts/2024/may/filtering-arrays-javascript-mysql/
+  - /posts/2024/may/using-intl-in-mysql/
+
 
 ---
 
