@@ -6,7 +6,7 @@ tags: [ "MySQL", "JSON", "JavaScript" ]
 related:
   - /posts/2024/may/filtering-arrays-javascript-mysql/
   - /posts/2024/may/using-intl-in-mysql/
-
+  - /posts/2024/may/more-javascript-in-mysql/
 
 ---
 
