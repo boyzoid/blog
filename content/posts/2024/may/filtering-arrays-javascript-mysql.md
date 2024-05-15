@@ -7,6 +7,7 @@ related:
   - /posts/2024/may/searching-arrays-in-mysql-with-javascript/
   - /posts/2024/may/using-intl-in-mysql/
   - /posts/2024/may/more-javascript-in-mysql/
+  - /posts/2024/may/sorting-json-arrays-mysql-javascript/
 ---
 
 In my last [post](/posts/2024/may/searching-arrays-in-mysql-with-javascript/), I discussed using JavaScript to write MySQL stored functions that could search the values in a JSON array to determine if any of the elements matched a given value. In this demonstration, I will show how you can use JavaScript to filter the elements of an array and only return elements that match a value.
@@ -43,7 +44,7 @@ This line defines the function name, `filterArrayByProperty` and its three argum
     returns varchar(10000) language javascript as $$
 ```
 
-The second line defines the data type that will be returned, `varchar(10000)`, and specifies that the language used for the sto5red function is `javascript`. Lastly, we use `$$` to delimit the body of our function from the rest of the statement. Using this method, we do not need to change the delimiter to get MySQL to interpret the function correctly.
+The second line defines the data type that will be returned, `varchar(10000)`, and specifies that the language used for the stored function is `javascript`. Lastly, we use `$$` to delimit the body of our function from the rest of the statement. Using this method, we do not need to change the delimiter to get MySQL to interpret the function correctly.
 
 ```javascript
     const arr = JSON.parse(items)
