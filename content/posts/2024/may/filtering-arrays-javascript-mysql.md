@@ -8,6 +8,7 @@ related:
   - /posts/2024/may/using-intl-in-mysql/
   - /posts/2024/may/more-javascript-in-mysql/
   - /posts/2024/may/sorting-json-arrays-mysql-javascript/
+  - /posts/2024/may/debugging-javascript-stored-functions-mysql/
 ---
 
 In my last [post](/posts/2024/may/searching-arrays-in-mysql-with-javascript/), I discussed using JavaScript to write MySQL stored functions that could search the values in a JSON array to determine if any of the elements matched a given value. In this demonstration, I will show how you can use JavaScript to filter the elements of an array and only return elements that match a value.

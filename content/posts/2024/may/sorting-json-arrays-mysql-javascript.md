@@ -8,6 +8,7 @@ related:
   - /posts/2024/may/filtering-arrays-javascript-mysql/
   - /posts/2024/may/using-intl-in-mysql/
   - /posts/2024/may/more-javascript-in-mysql/
+  - /posts/2024/may/debugging-javascript-stored-functions-mysql/
 
 ---
 
@@ -53,7 +54,7 @@ Inside the function body, we first create a JavaScript array named `arr` from th
     const arr = JSON.parse(items)
 ```
 
-The next block of code might seem a little odd because it defines a JavaScript function inside our stored function. This function, named `compare()` is used to sort our array data. This function is only available inside our stored function and cannot be accessed from any other stored function. The function is a standard method of sorting data. It accepts arguments named `a' and `b` and has logic to return a value based on whether these values are equal or greater than the other.
+The next block of code might seem a little odd because it defines a JavaScript function inside our stored function. This function, named `compare()` is used to sort our array data. This function is only available inside our stored function and cannot be accessed from any other stored function. The function is a standard method of sorting data. It accepts arguments named `a` and `b` and has logic to return a value based on whether these values are equal or greater than the other.
 
 * If `a' is less than `b`, we return `-1`.
 * If `a' is greater than `b`, we return `1`.

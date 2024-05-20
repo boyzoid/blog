@@ -8,6 +8,7 @@ related:
   - /posts/2024/may/using-intl-in-mysql/
   - /posts/2024/may/more-javascript-in-mysql/
   - /posts/2024/may/sorting-json-arrays-mysql-javascript/
+  - /posts/2024/may/debugging-javascript-stored-functions-mysql/
 
 ---
 
