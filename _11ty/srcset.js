@@ -92,7 +92,7 @@ const processImage = async (el) => {
     return;
   }
 
-  if (extname(filename.toLowerCase()) === ".svg") {
+  if (extname(filename.toLowerCase()) === ".svg" || extname(filename.toLowerCase()) === ".gif") {
     return;
   }
 
@@ -142,7 +142,6 @@ const convert = async (rawContent, outputPath) => {
   if (outputPath && outputPath.endsWith(".html")) {
     const dom = new JSDOM(content);
     const images = [...dom.window.document.querySelectorAll("img")];
-
     if (images.length > 0) {
       await Promise.all(images.map((i) => processImage(i, outputPath)));
       content = dom.serialize();
