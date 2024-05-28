@@ -5,6 +5,7 @@ image: /assets/images/2024/mysql-shell-system-commands/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
 related:
   - /posts/2024/may/mysql-shell-run-scripts/
+  - /posts/2024/may/getting-help-mysql-shell/
 
 ---
 

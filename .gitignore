@@ -46,3 +46,4 @@ assets/js/min.*
 /assets/images/2022/.picasaoriginals/
 /.idea/
 /aws dump load.md
+/.eleventyignore
