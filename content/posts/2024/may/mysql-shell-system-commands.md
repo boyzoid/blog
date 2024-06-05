@@ -7,6 +7,7 @@ related:
   - /posts/2024/may/mysql-shell-run-scripts/
   - /posts/2024/may/getting-help-mysql-shell/
   - /posts/2024/june/mysql-shell-sandboxes/
+  - /posts/2024/june/server-upgrade-check-mysql-shell/
 
 ---
 
