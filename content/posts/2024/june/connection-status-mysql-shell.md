@@ -16,7 +16,7 @@ Over the last few years, I have become quite smitten with [MySQL Shell](https://
 
 In the last few posts, I have started by defining a 'problem' that MySQL Shell can help us solve. The feature we will discuss today is not really meant to solve a specific problem but rather to give us information about the state of the current MySQL connection being used with MySQL Shell.
 
-## Starting MySQl Shell
+## Starting MySQL Shell
 
 I am going to start with a basic example. To follow along, start MySQL Shell using the following command:
 
