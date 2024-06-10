@@ -9,6 +9,7 @@ related:
   - /posts/2024/may/getting-help-mysql-shell/
   - /posts/2024/june/mysql-shell-sandboxes/
   - /posts/2024/june/server-upgrade-check-mysql-shell/
+  - /posts/2024/june/managing-mysql-shell-configuration-options/
 
 ---
 
