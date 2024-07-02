@@ -10,6 +10,7 @@ related:
   - /posts/2024/june/mysql-shell-sandboxes/
   - /posts/2024/june/server-upgrade-check-mysql-shell/
   - /posts/2024/june/managing-mysql-shell-configuration-options/
+  - /posts/2024/july/data-dump-load-mysql-shell/
 
 ---
 
