@@ -11,6 +11,7 @@ related:
   - /posts/2024/june/server-upgrade-check-mysql-shell/
   - /posts/2024/june/connection-status-mysql-shell/
   - /posts/2024/june/managing-mysql-shell-configuration-options/
+  - /posts/2024/july/data-load-mysql-shell/
 
 ---
 
@@ -23,8 +24,6 @@ There is no 'problem' for this post, but I wanted to keep the formatting I have 
 ## The Solution
 
 Once again, not really a 'solution', but I want to stick to the formatting of related posts.
-
-### Dumping Options
 
 First, let's take a look at some of the options we can use when dumping data. We can use these options regardless of the function used (`util.dumpInstance()`, `util.dumpSchemas()`, or `util.dumptables()`). The last (and optional) argument for each function is the options configuration block in JSON format. For example, if we wanted to dump our entire instance with options, we would use a command that resembles:
 
@@ -370,7 +369,7 @@ Average uncompressed throughput: 25.69 MB/s
 Average compressed throughput: 3.12 MB/s
 ```
 
-This output shows what changes will be made to the schemas when the dump is created. These changes include adding invisble primary keys to several tables, removing the definer from some objects, and setting the `SQl SECURITY characteristic` to `INVOKER` on others.
+This output shows what changes will be made to the schemas when the dump is created. These changes include adding invisible primary keys to several tables, removing the definer from some objects, and setting the `SQl SECURITY characteristic` to `INVOKER` on others.
 
 By setting these configuration options, we ensure that compatibility will be maintained when we load this data into a HeatWave MySQL instance.
 
