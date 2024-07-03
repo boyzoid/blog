@@ -391,7 +391,7 @@ This image shows the progress file created when we loaded the dump. It was added
 
 ### Creating Invisible Primary Keys
 
-The `createInvisiblePKs` option will add primary keys in invisible columns for every table in the dump that does nto have a primary key defined. If the dump was created using the `createInvisiblePKs` option, the `createInvisiblePKs` option of the load is automatically set to `true`.
+The `createInvisiblePKs` option will add primary keys in invisible columns for every table in the dump that does not have a primary key defined. If the dump was created using the `createInvisiblePKs` option, the `createInvisiblePKs` option of the load is automatically set to `true`.
 
 ```shell
 util.loadDump("~/dumps/example2", {createInvisblePKs: true})
