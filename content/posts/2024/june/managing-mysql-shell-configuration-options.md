@@ -3,15 +3,7 @@ title: Managing MySQL Shell Configuration Options
 date: 2024-06-13T06:00:00
 image: /assets/images/2024/managing-mysql-shell-configuration-options/header.png
 tags: [ "MySQL", "MySQL-Shell" ]
-related:
-  - /posts/2024/may/mysql-shell-run-scripts/
-  - /posts/2024/may/mysql-shell-system-commands/
-  - /posts/2024/may/getting-help-mysql-shell/
-  - /posts/2024/june/mysql-shell-sandboxes/
-  - /posts/2024/june/server-upgrade-check-mysql-shell/
-  - /posts/2024/june/connection-status-mysql-shell/
-  - /posts/2024/july/data-dump-mysql-shell/
-  - /posts/2024/july/data-load-mysql-shell/
+series: mysql-shell-gems
 
 ---
 

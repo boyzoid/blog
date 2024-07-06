@@ -4,14 +4,7 @@ date: 2024-06-06T06:00:00
 image: /assets/images/2024/server-upgrade-check-mysql-shell/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
 related:
-  - /posts/2024/may/mysql-shell-run-scripts/
-  - /posts/2024/may/mysql-shell-system-commands/
-  - /posts/2024/may/getting-help-mysql-shell/
-  - /posts/2024/june/mysql-shell-sandboxes/
-  - /posts/2024/june/connection-status-mysql-shell/
-  - /posts/2024/june/managing-mysql-shell-configuration-options/
-  - /posts/2024/july/data-dump-mysql-shell/
-  - /posts/2024/july/data-load-mysql-shell/
+series: mysql-shell-gems
 ---
 
 Over the last few years, I have become quite smitten with [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/). For those who may not be familiar with MySQL Shell, it is a new(ish) command line interface (CLI) for connecting to and managing MySQL instances. During a recent [episode](https://insidemysql.libsyn.com/mysql-shell-does-all-the-things) of [Inside MySQL: Sakila Speaks](https://insidemysql.libsyn.com/), Fred and I talked to Miguel Araujo about many of the helpful (and lesser known) features of MySQL Shell. This post is the fifth in a series about these "hidden gem" features.

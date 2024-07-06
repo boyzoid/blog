@@ -180,6 +180,21 @@ module.exports = function (eleventyConfig) {
 
   });
 
+  eleventyConfig.addFilter("getSeries", function(series, posts, page) {
+
+    let related = []
+     if( series ){
+       posts.forEach(p =>{
+         if(series === p.data.series){
+           related.push(p)
+         }
+       })
+     }
+
+    return related;
+
+  });
+
   // Plugin for setting _blank and rel=noopener on external links in markdown content
   eleventyConfig.addPlugin(require("./_11ty/external-links.js"));
 

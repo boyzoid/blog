@@ -3,15 +3,7 @@ title: Executing System Commands in MySQL Shell
 date: 2024-05-28T06:00:00
 image: /assets/images/2024/mysql-shell-system-commands/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
-related:
-  - /posts/2024/may/mysql-shell-run-scripts/
-  - /posts/2024/may/getting-help-mysql-shell/
-  - /posts/2024/june/mysql-shell-sandboxes/
-  - /posts/2024/june/server-upgrade-check-mysql-shell/
-  - /posts/2024/june/connection-status-mysql-shell/
-  - /posts/2024/june/managing-mysql-shell-configuration-options/
-  - /posts/2024/july/data-dump-mysql-shell/
-  - /posts/2024/july/data-load-mysql-shell/
+series: mysql-shell-gems
 
 ---
 
