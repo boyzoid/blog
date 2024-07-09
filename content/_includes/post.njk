@@ -76,7 +76,7 @@ layout: base.njk
 	{% endif %}
 	{% if series %}
 	    {% set seriesEntries = series | getSeries(collections.posts) %}
-	    {% if seriesEntries.length > 0 %}
+	    {% if seriesEntries.length > 1 %}
     		<h2>Related Entries</h2>
     		<ul>
     			{% for entry in seriesEntries %}
