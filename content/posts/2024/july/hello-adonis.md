@@ -74,6 +74,8 @@ This time, I saw a message in the console that the server started, and I could a
 
 ![AdonisJS Welcome screen](/assets/images/2024/hello-adonis/img_01.png)
 
+This feels like a good place to stop. I loved how easy it was to install AdonisJS and that it handled configuring all the related libraries. Let's hope my happiness continues!
+
 ## Wrap Up
 
 After years of threatening to do so, I am finally rewriting the web application I wrote to manage my golf league. I decided to use AdonisJS on the backend (the front end is still up in the air) and share my experiences exploring AdonisJS and its related libraries. In future posts, I will discuss database migrations, Lucid object models, and using Inertia to hook into a Vue application.
