@@ -33,9 +33,9 @@
 <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ siteconfig.title }}">
 <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ siteconfig.descriptionNoTags }}{% endif %}">
 {% if image %}
-<meta property="og:image"content="https://stroz.dev{{ image }}">
+<meta property="og:image"content="https://stroz.dev{{ image | addHash }}"/>
 <meta name="og:image" content="https://stroz.dev{{ image }}" />
-<meta name="twitter:image" content="https://stroz.dev{{ image }}" />
+<meta name="twitter:image" content="https://stroz.dev{{ image | addHash }}" />
 {% endif %}
 
 <meta property="twitter:card" content="summary_large_image">
