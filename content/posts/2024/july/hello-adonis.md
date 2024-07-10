@@ -29,7 +29,7 @@ First, let's see what AdonisJS has to say about itself.
 
 > AdonisJS is not yet another micro-framework or a wrapper on top of everything that already exists. Instead, we have written AdonisJS from scratch to be simple, elegant, and opinionated.
 
-***Note*: That 'opinionated' part has already gotten my knickers in a twist a few times—more on that in future posts.**
+***Note**: That 'opinionated' part has already gotten my knickers in a twist a few times—more on that in future posts.*
 
 The way I would describe AdonisJS is "Express on steroids". Out of the box, it includes everything I would need to add to Express - including database support. When I installed everything, I felt a bit overwhelmed. I had a general idea of how Adonis handled requests and used the [Lucid ORM](https://lucid.adonisjs.com/docs/introduction) for database interactivity, but there is so much more. You can set up the latest version of AdonisJS to easily incorporate with a new [Vue](https://vuejs.org/) or [React](https://react.dev/) app. Many of these features are part of additional libraries you can use with Adonis. These include - [Vite](https://vitejs.dev/), [EdgeJS](https://edgejs.dev/docs/introduction), and [Inertia](https://inertiajs.com/).
 
