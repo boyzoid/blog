@@ -3,6 +3,7 @@ title: Regular Expressions in MySQL
 date: 2024-06-27T06:00:00
 image: /assets/images/2024/regular-expressions-mysql/header.jpg
 tags: [ "MySQL", "Regular-Expressions" ]
+series: reg-ex-mysql
 ---
 
 There is an old developer joke: "If you have a problem, and you decide to use regular expressions to solve it...you now have two problems." Regular expressions (regex) often get a bad name because they can be difficult to decipher and implement. However, in skilled hands, regex can be extremely powerful. In this post, we will discuss how to use regular expressions in MySQL.
