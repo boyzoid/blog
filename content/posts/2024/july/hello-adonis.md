@@ -43,12 +43,13 @@ npm init adonisjs@latest my_golf_league -- --db=mysql -K=inertia --adapter=vue -
 
 Let's break this down:
 
-* `npm init adonisjs@latest my_golf_league` - Installs and initializes an AdonisJS app in a folder named `my_golf_league`.
-* `--` - Tells Node to pass the following arguments to the process that builds the app.
-* `--db=mysql` - Configures the database connection to use MySQL.
-* `-K=inertia` - Tells AdonisJS to configure the app to use Inertia.
-* `-adapter=vue` - Specifies that we want to use the Vue adapter with Inertia.
-* `--no-ssr` - Configures the app so it does not use server-side rendering.
+* `npm init adonisjs@latest my_golf_league` : Installs and initializes an AdonisJS app in a folder named `my_golf_league`.
+* `--` : Tells Node to pass the following arguments to the process that builds the app.
+* `--db=mysql` : Configures the database connection to use MySQL.
+* `-K=inertia` : Tells AdonisJS to configure the app to use Inertia.
+  * Inertia is a library that allows us to hook AdonisJS to front end frameworks such as Vue and React.
+* `-adapter=vue` : Specifies that we want to use the Vue adapter with Inertia.
+* `--no-ssr` : Configures the app so it does not use server-side rendering.
 
 During the installation, I was asked to choose what "authentication guard" I wanted to use. The choices were:
 

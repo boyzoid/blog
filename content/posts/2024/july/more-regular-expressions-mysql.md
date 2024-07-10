@@ -1,6 +1,6 @@
 ---
 title: More Regular Expressions in MySQL
-date: 2024-07-10T06:00:00
+date: 2024-07-11T06:00:00
 image: /assets/images/2024/more-regular-expressions-mysql/header.jpg
 tags: [ "MySQL", "Regular-Expressions" ]
 series: reg-ex-mysql
