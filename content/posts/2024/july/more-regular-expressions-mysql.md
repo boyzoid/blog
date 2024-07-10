@@ -4,6 +4,7 @@ date: 2024-07-11T06:00:00
 image: /assets/images/2024/more-regular-expressions-mysql/header.jpg
 tags: [ "MySQL", "Regular-Expressions" ]
 series: reg-ex-mysql
+description: A practical use of regular expressions in MySQL
 ---
 
 Regular expressions are used to match patterns in a given block of text. In a [previous post](/posts/2024/june/regular-expressions-mysql/), I discussed some regular expression features of MySQL. The examples I provided allowed us to return rows based on a pattern match and replace instances of our pattern with another substring. In this post, I will discuss some other regular expression functions.

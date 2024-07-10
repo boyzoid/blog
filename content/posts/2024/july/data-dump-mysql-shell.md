@@ -4,7 +4,7 @@ date: 2024-07-02T06:00:00
 image: /assets/images/2024/data-dump-mysql-shell/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
 series: mysql-shell-gems
-
+description: Advanced data dumping with MySQl Shell.
 ---
 
 Over the last few years, I have become quite smitten with [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/). For those who may not be familiar with MySQL Shell, it is a new(ish) command line interface (CLI) for connecting to and managing MySQL instances. During a recent [episode](https://insidemysql.libsyn.com/mysql-shell-does-all-the-things) of [Inside MySQL: Sakila Speaks](https://insidemysql.libsyn.com/), Fred and I talked to Miguel Araujo about many of the helpful (and lesser known) features of MySQL Shell. This post is the eighth in a series about these "hidden gem" features.
