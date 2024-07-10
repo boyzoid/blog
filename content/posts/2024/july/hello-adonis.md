@@ -11,7 +11,7 @@ For those who do not know me very well, I am an avid golfer. I have managed a lo
 
 ## The Problem
 
-The web app is old. It still works, but it runs on an older tech stack. The code was originally written in [ColdFusion] (https://www.adobe.com/products/coldfusion-family.html) using [FW/1] (https://framework-one.github.io/), and it runs on [Lucee] (https://www.lucee.org/). It also uses Bootstrap 3 for the UI. Lastly, because I often had to add features or address issues quickly, the database schema needs some attention, too. Merely fixing these issues was not enough, I needed a complete rebuild.
+The web app is old. It still works, but it runs on an older tech stack. The code was originally written in [ColdFusion](https://www.adobe.com/products/coldfusion-family.html) using [FW/1](https://framework-one.github.io/), and it runs on [Lucee](https://www.lucee.org/). It also uses Bootstrap 3 for the UI. Lastly, because I often had to add features or address issues quickly, the database schema needs some attention, too. Merely fixing these issues was not enough, I needed a complete rebuild.
 
 I will not lie; this is not the first time I have decided to rewrite the app. Each of those other attempts got derailed for one reason or another. I figured talking about the process and decisions I have made would keep me on track.
 
