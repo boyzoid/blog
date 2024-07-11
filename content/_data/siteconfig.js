@@ -4,7 +4,7 @@ module.exports = {
   // Website title, shown in left sidebar and in page title
   title: "The Stroz",
   // Site URL to generate absolute URLs. Used across the board.
-  url: process.env.URL || "https://stroz.dev",
+  url: "https://stroz.dev",
   // Profile image for left sidebar
   image: "/assets/images/sidebar_profile.jpg",
   // Image alt text for left sidebar

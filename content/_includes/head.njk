@@ -19,23 +19,22 @@
 <link rel="manifest" href="{{ '/assets/favicons/site.webmanifest' | addHash }}" crossorigin="use-credentials">
 <link rel="mask-icon" href="{{ '/assets/favicons/safari-pinned-tab.svg' | addHash }}" color="#5bbad5">
 <link rel="shortcut icon" href="{{ '/assets/favicons/favicon.ico' | addHash }}">
-<link rel="canonical" href="{{ page.url | absoluteUrl }}" />
+<link rel="canonical" href="{{ siteconfig.url }}{{ page.url | absoluteUrl }}" />
 {% for name, item in meta %}
-<meta name="{{ name }}" content="{{ item.value }}">
+<meta name="{{ name }}" content="{{ item.value }}"></meta>
 {% endfor %}
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="{{ '/assets/favicons/browserconfig.xml' | addHash }}">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="msapplication-TileColor" content="#da532c"></meta>
+<meta name="msapplication-config" content="{{ '/assets/favicons/browserconfig.xml' | addHash }}"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 {% set description = description | truncate(55) %}
-<meta name="description" content="{% if description %}{{ description }}{% else %}{{ siteconfig.descriptionNoTags }}{% endif %}">
-<meta property="og:url" content="{{ page.url | absoluteUrl }}">
-<meta property="og:type" content="blog">
-<meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ siteconfig.title }}">
-<meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ siteconfig.descriptionNoTags }}{% endif %}">
+<meta name="description" content="{% if description %}{{ description }}{% else %}{{ siteconfig.descriptionNoTags }}{% endif %}"></meta>
+<meta property="og:url" content="{{ siteconfig.url }}{{ page.url | absoluteUrl }}"></meta>
+<meta property="og:type" content="blog"></meta>
+<meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ siteconfig.title }}"></meta>
+<meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ siteconfig.descriptionNoTags }}{% endif %}"></meta>
 {% if image %}
-<meta property="og:image"content="https://stroz.dev{{ image | addHash }}"/>
-<meta name="og:image" content="https://stroz.dev{{ image | addHash }}" />
-<meta name="twitter:image" content="https://stroz.dev{{ image | addHash }}" />
+<meta name="og:image" content="{{ siteconfig.url }}{{ image | addHash }}" /></meta>
+<meta name="twitter:image" content="{{ siteconfig.url }}{{ image | addHash }}" /></meta>
 {% endif %}
 
 <meta property="twitter:card" content="summary_large_image">
