@@ -52,7 +52,7 @@ Can you see what caused me such angst? Look again...
 
 I used `league` in the command, but the file name includes `leagues`.
 
-Now, people prefer to name things in different ways - not just in databases, but variables, functions, etc. I like singular table names, but others prefer plural ones. What I don't get is why the AdonisJS folks went out of their way to force people to use plural names for database objects (as will see shortly, it is not just in the file name this is done).
+Now, people prefer to name things in different ways - not just in databases, but variables, functions, etc. I like singular table names, but others prefer plural ones. What I don't get is why the AdonisJS folks went out of their way to force people to use plural names for database objects (as we will see shortly, it is not just in the file name this is done).
 
 At the very least, this command should have used the name I gave it and not changed it. For model objects, there is a way you can specify a naming strategy (more on that in a future post), but I could not find a way to force migrations to use the singular form instead of the plural form. This forced naming strategy bothered me so much that I almost abandoned using AdonisJS. After some soul-searching, I realized it was not that big of a deal and easily corrected it.
 
