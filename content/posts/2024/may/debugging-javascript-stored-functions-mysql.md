@@ -1,7 +1,7 @@
 ---
 title: Debugging JavaScript Stored Functions in MySQL
 date: 2024-05-21T06:00:00
-image: /assets/images/2024/debugging-javascript-stored-functions-mysql/header.jpg
+image: 2024/debugging-javascript-stored-functions-mysql/header.jpg
 tags: ["MySQL", "JavaScript", "Debugging"]
 related:
   - /posts/2024/may/searching-arrays-in-mysql-with-javascript/

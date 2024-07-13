@@ -29,10 +29,6 @@ module.exports = function (eleventyConfig) {
   // And to make this work we've to disable the .gitignore usage of eleventy.
   eleventyConfig.setUseGitIgnore(false);
 
-  // Add 3rd party plugins
-  eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginToc);
-
   // Define 11ty template formats
   eleventyConfig.setTemplateFormats(["njk", "md", "svg", "jpg", "png"]);
 
@@ -192,14 +188,30 @@ module.exports = function (eleventyConfig) {
      }
 
     return related;
-
   });
 
+  eleventyConfig.addFilter("imgurl", function (text, type) {
+    let url = ''
+    switch(type){
+      case 'header':
+        url =  siteconfig.cloudinaryHeaderUrl + siteconfig.cloudUrl + text
+        break
+      default:
+        url = siteconfig.cloudinaryUrl + siteconfig.cloudUrl + text
+        break
+    }
+
+    return url
+
+  });
+  // Add 3rd party plugins
+  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(pluginToc);
   // Plugin for setting _blank and rel=noopener on external links in markdown content
   eleventyConfig.addPlugin(require("./_11ty/external-links.js"));
 
   // Plugin for transforming images
-  eleventyConfig.addPlugin(require("./_11ty/srcset.js"));
+ // eleventyConfig.addPlugin(require("./_11ty/srcset.js"));
 
   // Plugin for minifying HTML
   eleventyConfig.addPlugin(require("./_11ty/html-minify.js"));
@@ -207,7 +219,8 @@ module.exports = function (eleventyConfig) {
   return {
     dir: {
       // Consolidating everything below the `content` folder
-      input: "content"
+      input: "content",
+      markdownTemplateEngine: "njk"
     }
   };
 };

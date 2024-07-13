@@ -1,7 +1,7 @@
 ---
 title: Testing MySQL Applications With Java and Testcontainers
 date: 2023-12-17T06:00:00
-image: /assets/images/2023/testing-mysql-apps-java/header.jpg
+image: 2023/testing-mysql-apps-java/header.jpg
 tags: [ "MySQL", "Java", "JUnit", "TDD", "Better-Tests", "Testcontainers" ]
 ---
 Over the years, I have become obsessed with writing code tests. One big pain point with writing tests is testing code that interacts with a database. In this post, we will talk about some of the difficulties encountered when writing tests for database interaction and how we can use [Testcontainers](https://testcontainers.com/) to mitigate those issues.

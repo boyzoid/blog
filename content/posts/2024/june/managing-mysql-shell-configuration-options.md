@@ -1,7 +1,7 @@
 ---
 title: Managing MySQL Shell Configuration Options
 date: 2024-06-13T06:00:00
-image: /assets/images/2024/managing-mysql-shell-configuration-options/header.png
+image: 2024/managing-mysql-shell-configuration-options/header.png
 tags: [ "MySQL", "MySQL-Shell" ]
 series: mysql-shell-gems
 

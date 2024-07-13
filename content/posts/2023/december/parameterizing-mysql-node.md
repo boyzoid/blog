@@ -1,7 +1,7 @@
 ---
 title: Parameterizing MySQL Queries in Node
 date: 2023-12-12T06:00:00
-image: /assets/images/2023/parameterizing-mysql-node/header.jpg
+image: 2023/parameterizing-mysql-node/header.jpg
 tags: [ "MySQL", "Node.js", "Best-Practices" ]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Creating Aliases In MySQL Shell
 date: 2022-10-17T06:00:00
-image: /assets/images/2022/customize-mysql-shell/header.jpg
+image: 2022/customize-mysql-shell/header.jpg
 tags: ["MySQL", "MySQL-Shell"]
 ---
 [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/) is a powerful way to connect to and manage [MySQL](https://www.mysql.com/) instances. Connections can even be made to servers that are behind an SSH connection. In this post, we will discuss how to extend and customize MySQL Shell so that it is easier to initiate those connections.

@@ -1,7 +1,7 @@
 ---
 title: Verifying Code Coverage With Karma
 date: 2022-03-24T06:00:00
-image: /assets/images/2022/medena-rosa-OhH_xOExaGk-unsplash.jpg
+image: 2022/medena-rosa-OhH_xOExaGk-unsplash.jpg
 tags: ["JavaScript", "TDD", "Karma", "Jasmine", "Better-Tests"]
 ---
 

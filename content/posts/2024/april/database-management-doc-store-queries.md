@@ -1,7 +1,7 @@
 ---
 title: Viewing MySQL Document Store Queries in HeatWave Using Database Management
 date: 2024-04-30T06:00:00
-image: /assets/images/2024/database-management-doc-store-queries/header.jpg
+image: 2024/database-management-doc-store-queries/header.jpg
 tags: [ "MySQL", "MySQL-HeatWave", "MySQL-Document-Store", "Database-Management", "Oracle-Cloud" ]
 related:
   - /posts/2023/march/document-store-queries-mds/

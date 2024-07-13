@@ -1,7 +1,7 @@
 ---
 title: Database Seeders Using Lucid ORM
 date: 2024-07-12T06:00:00
-image: /assets/images/2024/database-seeders-with-lucid/header.jpg
+image: 2024/database-seeders-with-lucid/header.jpg
 tags: ["AdonisJs", "Lucid"]
 series: golf-league-rewrite
 description: Populating your database with seeders using Lucid.

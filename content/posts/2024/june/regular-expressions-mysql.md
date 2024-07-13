@@ -1,7 +1,7 @@
 ---
 title: Regular Expressions in MySQL
 date: 2024-06-27T06:00:00
-image: /assets/images/2024/regular-expressions-mysql/header.jpg
+image: 2024/regular-expressions-mysql/header.jpg
 tags: [ "MySQL", "Regular-Expressions" ]
 series: reg-ex-mysql
 ---

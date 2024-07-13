@@ -80,7 +80,7 @@ meta:
 	    <li class="mr-3">
 			<div class="leading-relaxed">
 				{% if not pagination.href.previous %}
-				<span class="block cursor-not-allowed">&lt;</a>
+				<a class="block cursor-not-allowed">&lt;</a>
 				{% else %}
 				<a href="{{ pagination.href.previous }}" class="block hover:no-underline">&lt;</a>
 				{% endif %}

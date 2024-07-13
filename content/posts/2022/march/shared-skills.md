@@ -1,7 +1,7 @@
 ---
 title: EMS & Coding - Shared Skills
 date: 2022-03-29T06:00:00
-image: /assets/images/2022/ems.jpg
+image: 2022/ems.jpg
 tags: ["EMS", "Coding", "About-Me"]
 ---
 Many people close to me (and quite a few who are not that close) know that before I started my career as a developer I worked as a paramedic for almost 15 years. When my family and I left New Jersey in 2004, it was the first time in almost 20 years (dating back to when I was 16) that I did not have a job in the medical profession. I often get asked how I made the switch from being a paramedic to being a developer (a story I will share here at some time) as they seem to be drastically different careers. However, over the years, I have discovered that a lot of the skills I used as a paramedic I still use almost every day.

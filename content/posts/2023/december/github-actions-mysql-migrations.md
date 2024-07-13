@@ -1,7 +1,7 @@
 ---
 title: Applying Database Migrations in MySQL HeatWave With GitHub Actions
 date: 2023-12-03T06:00:00
-image: /assets/images/2023/github-actions-mysql-migrations/header.jpg
+image: 2023/github-actions-mysql-migrations/header.jpg
 tags: [ "MySQL", "Node.js", "Database-Migrations", "Knex", "GitHub-Actions" ]
 related:
 - /posts/2023/august/testing-mysql-apps-node/

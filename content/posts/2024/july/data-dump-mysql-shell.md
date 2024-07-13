@@ -1,7 +1,7 @@
 ---
 title: Advanced Data Dump with MySQL Shell
 date: 2024-07-02T06:00:00
-image: /assets/images/2024/data-dump-mysql-shell/header.jpg
+image: 2024/data-dump-mysql-shell/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
 series: mysql-shell-gems
 description: Advanced data dumping with MySQl Shell.

@@ -1,7 +1,7 @@
 ---
 title: Connecting to a MySQL HeatWave Database Instance Using OpenVPN
 date: 2023-04-26T06:00:00
-image: /assets/images/2023/mds-openvpn/header.jpg
+image: 2023/mds-openvpn/header.jpg
 tags: [ "MySQL", "MySQL-Database-Service", "Oracle-Cloud-Infrastructure" ]
 ---
 [MySQL HeatWave Database](https://docs.oracle.com/en-us/iaas/mysql-database/doc/overview-mysql-database-service.html) is a fully managed service on [Oracle Cloud Infrastructure (OCI)](https://www.oracle.com/cloud/) that is developed, managed, and supported by the MySQL team at Oracle. When you provision a new MySQL instance under OCI, you can only connect to the database from inside the OCI network. While this is a great security feature for production services hosted in OCI, it is more challenging to share a development database among developers. In this post, we will show how you can use OpenVPN, running on an OCI Compute instance, to access a MySQL HeatWave Database instance.

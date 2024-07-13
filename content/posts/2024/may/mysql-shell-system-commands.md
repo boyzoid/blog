@@ -1,7 +1,7 @@
 ---
 title: Executing System Commands in MySQL Shell
 date: 2024-05-28T06:00:00
-image: /assets/images/2024/mysql-shell-system-commands/header.jpg
+image: 2024/mysql-shell-system-commands/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
 series: mysql-shell-gems
 

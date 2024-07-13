@@ -1,7 +1,7 @@
 ---
 title: More JavaScript in MySQL
 date: 2024-05-14T06:00:00
-image: /assets/images/2024/more-javascript-in-mysql/header.jpg
+image: 2024/more-javascript-in-mysql/header.jpg
 tags: [ "MySQL", "JavaScript" ]
 related:
   - /posts/2024/may/searching-arrays-in-mysql-with-javascript/

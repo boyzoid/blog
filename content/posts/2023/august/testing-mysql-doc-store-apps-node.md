@@ -1,7 +1,7 @@
 ---
 title: Writing Tests For MySQL Document Store Apps with Node
 date: 2023-08-23T06:00:00
-image: /assets/images/2023/testing-mysql-doc-store-apps-node/header.jpg
+image: 2023/testing-mysql-doc-store-apps-node/header.jpg
 tags: [ "MySQL", "MySQL-Document-Store", "Node.js", "TDD", "Better-Tests", "Testcontainers" ]
 related:
   - /posts/2023/august/testing-mysql-apps-node/

@@ -1,7 +1,7 @@
 ---
 title: MySQL Shell CLI Integration
 date: 2024-07-09T06:00:00
-image: /assets/images/2024/mysql-shell-cli-integration/header.jpg
+image: 2024/mysql-shell-cli-integration/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
 series: mysql-shell-gems
 description: Integrating MySQl Shell commands into a scripted process.

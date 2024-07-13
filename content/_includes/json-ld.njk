@@ -3,7 +3,7 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "{{ title }}",
-        "image": ["{% if image %}{{ image | absoluteUrl }}{% else %}{{ siteconfig.openGraphDefaultImage | absoluteUrl }}{% endif %}"],
+        "image": ["{% if image %}{{ image | absoluteUrl }}{% else %}{{ siteconfig.openGraphDefaultImage | imgurl }}{% endif %}"],
         "author": {
             "@type": "Person",
             "name": "{{ siteconfig.author }}"

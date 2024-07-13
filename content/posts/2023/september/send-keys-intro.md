@@ -1,7 +1,7 @@
 ---
 title: A Tool For Poor Typists - SendKeys
 date: 2023-09-04T06:00:00
-image: /assets/images/2023/send-keys-intro/header.jpg
+image: 2023/send-keys-intro/header.jpg
 tags: [ "Tools", "Node.js", "SendKeys" ]
 ---
 

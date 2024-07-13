@@ -1,7 +1,7 @@
 ---
 title: MySQL Shell Alias For PowerShell
 date: 2022-09-09T06:00:00
-image: /assets/images/2022/mysql-alias.jpg
+image: 2022/mysql-alias.jpg
 tags: ["MySQL", "MySQL-Shell", "PowerShell"]
 ---
 

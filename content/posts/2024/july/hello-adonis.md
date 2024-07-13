@@ -1,7 +1,7 @@
 ---
 title: Hello, Adonis!
 date: 2024-07-10T06:00:00
-image: /assets/images/2024/hello-adonis/header.jpg
+image: 2024/hello-adonis/header.jpg
 tags: [ "AdonisJs", "Vue", "Lucid", "Inertia", "EdgeJS" ]
 series: golf-league-rewrite
 description: Getting started with AdonisJS

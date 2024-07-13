@@ -1,7 +1,7 @@
 ---
 title: Better Tests Part 1 - Static Data
 date: 2022-04-05T06:00:00
-image: /assets/images/2022/zach-vessels-ZNTPlG050tk-unsplash.jpg
+image: 2022/zach-vessels-ZNTPlG050tk-unsplash.jpg
 tags: [ "TDD", "Better-Tests" ]
 related:
     - /posts/2022/april/better-tests-02/

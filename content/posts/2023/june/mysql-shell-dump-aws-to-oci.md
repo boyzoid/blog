@@ -1,7 +1,7 @@
 ---
 title: Moving MySQL Databases from AWS to OCI Using MySQL Shell
 date: 2023-06-21T06:00:00
-image: /assets/images/2023/mysql-shell-dump-aws-to-oci/header.jpg
+image: 2023/mysql-shell-dump-aws-to-oci/header.jpg
 tags: [ "MySQL", "MySQL-Shell", "Oracle-Cloud-Infrastructure" ]
 
 ---

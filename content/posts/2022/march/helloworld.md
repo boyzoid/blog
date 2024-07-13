@@ -1,7 +1,7 @@
 ---
 title: Hello, World (again)
 date: 2022-03-16T06:00:00
-image: /assets/images/2022/welcome.jpg
+image: 2022/welcome.jpg
 ---
 
 I would like to welcome you to my little slice of the Interwebs.

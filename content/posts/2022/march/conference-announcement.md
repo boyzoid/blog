@@ -1,7 +1,7 @@
 ---
 title: Conference Announcement
 date: 2022-03-17T06:00:00
-image: /assets/images/2022/js-friends.jpg
+image: 2022/js-friends.jpg
 tags: ["JavaScript", "TDD", "Conferences"]
 ---
 

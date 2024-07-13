@@ -1,7 +1,7 @@
 ---
 title: Filtering JSON Arrays with JavaScript in MySQL
 date: 2024-05-02T06:00:00
-image: /assets/images/2024/filtering-arrays-javascript-mysql/header.jpg
+image: 2024/filtering-arrays-javascript-mysql/header.jpg
 tags: [ "MySQL", "JSON", "JavaScript" ]
 related:
   - /posts/2024/may/searching-arrays-in-mysql-with-javascript/

@@ -1,7 +1,7 @@
 ---
 title: Getting Help in MySQL Shell
 date: 2024-05-30T06:00:00
-image: /assets/images/2024/getting-help-mysql-shell/header.jpg
+image: 2024/getting-help-mysql-shell/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
 series: mysql-shell-gems
 ---

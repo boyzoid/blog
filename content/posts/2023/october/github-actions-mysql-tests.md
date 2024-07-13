@@ -1,7 +1,7 @@
 ---
 title: Running MySQL Tests With GitHub Actions
 date: 2023-10-04T06:00:00
-image: /assets/images/2023/github-actions-mysql-tests/header.jpg
+image: 2023/github-actions-mysql-tests/header.jpg
 tags: [ "MySQL", "Node.js", "TDD", "Better-Tests", "Testcontainers", "Knex", "GitHub-Actions" ]
 related:
 - /posts/2023/august/testing-mysql-apps-node/

@@ -33,8 +33,8 @@
 <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ siteconfig.title }}"></meta>
 <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ siteconfig.descriptionNoTags }}{% endif %}"></meta>
 {% if image %}
-<meta name="og:image" content="{{ siteconfig.url }}{{ image | addHash }}" /></meta>
-<meta name="twitter:image" content="{{ siteconfig.url }}{{ image | addHash }}" /></meta>
+<meta name="og:image" content="{{ image | imgurl }}" /></meta>
+<meta name="twitter:image" content="{{ image | imgurl }}" /></meta>
 {% endif %}
 
 <meta property="twitter:card" content="summary"></meta>

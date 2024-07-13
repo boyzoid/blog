@@ -1,7 +1,7 @@
 ---
 title: Functional Indexes in MySQL
 date: 2023-01-12T06:00:00
-image: /assets/images/2023/functional-indexes/header.jpg
+image: 2023/functional-indexes/header.jpg
 tags: [ "MySQL", "Indexes" ]
 related:
     - /posts/2023/january/indexing-json-mysql.md/

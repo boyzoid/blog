@@ -1,7 +1,7 @@
 ---
 title: MySQL Window Functions Part 2
 date: 2022-09-08T06:00:00
-image: /assets/images/2022/window-function-2.jpg
+image: 2022/window-function-2.jpg
 tags: ["MySQL", "Window-Functions"]
 related:
     - /posts/2022/september/mysql-window-functions-1/

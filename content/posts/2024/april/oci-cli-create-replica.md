@@ -1,7 +1,7 @@
 ---
 title: Creating a MySQL HeatWave Read Replica with the OCI CLI
 date: 2024-04-16T06:00:00
-image: /assets/images/2024/oci-cli-create-replica/header.jpg
+image: 2024/oci-cli-create-replica/header.jpg
 tags: [ "MySQL", "MySQL-HeatWave", "OCI", "CLI" ]
 related:
   - /posts/2024/april/oci-cli-create-heatwave-instance/

@@ -1,7 +1,7 @@
 ---
 title: Using OCI Alarms to Detect When a MySQL Instance Is Unavailable
 date: 2023-03-15T06:00:00
-image: /assets/images/2023/oci-alarms-mds/header.jpg
+image: 2023/oci-alarms-mds/header.jpg
 tags: [ "MySQL", "Oracle-Cloud" ]
 
 ---

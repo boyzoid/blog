@@ -1,7 +1,7 @@
 ---
 title: Sandboxes in MySQL Shell
 date: 2024-06-04T06:00:00
-image: /assets/images/2024/mysql-shell-sandboxes/header.jpg
+image: 2024/mysql-shell-sandboxes/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
 series: mysql-shell-gems
 ---

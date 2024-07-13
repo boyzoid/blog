@@ -1,7 +1,7 @@
 ---
 title: Listing and Updating MySQL HeatWave Instances with the OCI CLI
 date: 2024-04-10T06:00:00
-image: /assets/images/2024/oci-cli-heatwave-list-update/header.jpg
+image: 2024/oci-cli-heatwave-list-update/header.jpg
 tags: [ "MySQL", "MySQL-HeatWave", "OCI", "CLI" ]
 related:
   - /posts/2024/april/oci-cli-create-heatwave-instance/

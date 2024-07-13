@@ -1,7 +1,7 @@
 ---
 title: Using the Global `Intl` JavaScript Object in MySQL
 date: 2024-05-09T06:00:00
-image: /assets/images/2024/using-intl-in-mysql/header.jpg
+image: 2024/using-intl-in-mysql/header.jpg
 tags: [ "MySQL", "JSON", "JavaScript" ]
 related:
   - /posts/2024/may/searching-arrays-im-mysql-with-javascript/

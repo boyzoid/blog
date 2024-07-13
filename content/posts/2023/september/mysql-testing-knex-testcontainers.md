@@ -1,7 +1,7 @@
 ---
 title: Integrating DB Migrations Into Your MySQL Tests
 date: 2023-09-21T06:00:00
-image: /assets/images/2023/mysql-testing-knex-testcontainers/header.jpg
+image: 2023/mysql-testing-knex-testcontainers/header.jpg
 tags: [ "MySQL", "Node.js", "TDD", "Better-Tests", "Testcontainers", "Knex" ]
 related:
 - /posts/2023/august/testing-mysql-apps-node/

@@ -1,7 +1,7 @@
 ---
 title: Connecting to a MySQL HeatWave Database Instance Using an OCI Network Load Balancer
 date: 2023-02-06T06:00:00
-image: /assets/images/2023/mds-balancer/header.jpg
+image: 2023/mds-balancer/header.jpg
 tags: [ "MySQL", "MySQL-Database-Service", "Oracle-Cloud-Infrastructure" ]
 ---
 [MySQL HeatWave Database](https://docs.oracle.com/en-us/iaas/mysql-database/doc/overview-mysql-database-service.html) is a fully managed service on [Oracle Cloud Infrastructure (OCI)](https://www.oracle.com/cloud/) that is developed, managed, and supported by the MySQL team at Oracle. When you provision a new MySQL instance under OCI, you can only connect to the database from inside the OCI network. While this is a great security feature for production services hosted in OCI, it is more challenging to share a development database among different developers. In this post, we will show how you can create a Network Load Balancer to allow access to a MySQL HeatWave Database instance over the internet.

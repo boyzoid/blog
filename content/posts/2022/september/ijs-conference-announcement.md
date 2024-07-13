@@ -1,7 +1,7 @@
 ---
 title: Speaking in NYC This Month
 date: 2022-09-02T06:00:00
-image: /assets/images/2022/brooklyn.jpg
+image: 2022/brooklyn.jpg
 tags: ["MySQL", "Node.js", "NoSQL", "Document Store", "Conferences"]
 ---
 

@@ -58,7 +58,7 @@ layout: base.njk
 		</p>
 	{% endif %}
 	{% if image %}
-	<img src="{{ image }}" alt="{{ imageAlt }}" />
+	<img src="{{ image | imgurl('header') }}" alt="{{ imageAlt }}" />
 	{% endif %}
 	<div class="line-numbers">
   	{{ content | safe }}

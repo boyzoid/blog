@@ -1,7 +1,7 @@
 ---
 title: Server Upgrade Checks with MySQL Shell
 date: 2024-06-06T06:00:00
-image: /assets/images/2024/server-upgrade-check-mysql-shell/header.jpg
+image: 2024/server-upgrade-check-mysql-shell/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
 related:
 series: mysql-shell-gems

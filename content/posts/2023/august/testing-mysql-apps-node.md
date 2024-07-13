@@ -1,7 +1,7 @@
 ---
 title: Testing MySQL Applications With Node.js and Testcontainers
 date: 2023-08-11T06:00:00
-image: /assets/images/2023/testing-mysql-apps-node/header.jpg
+image: 2023/testing-mysql-apps-node/header.jpg
 tags: [ "MySQL", "Node.js", "TDD", "Better-Tests", "Testcontainers" ]
 related:
   - /posts/2023/august/testing-mysql-doc-store-apps-node/

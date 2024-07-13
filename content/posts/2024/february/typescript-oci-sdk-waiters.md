@@ -1,7 +1,7 @@
 ---
 title: Waiters - Using the Oracle Cloud TypeScript SDK Part 3
 date: 2024-02-19T06:00:00
-image: /assets/images/2024/typescript-oci-sdk-waiters/header.jpg
+image: 2024/typescript-oci-sdk-waiters/header.jpg
 tags: [ "MySQL", "MySQL-HeatWave", "OCI", "SDK" ]
 related:
   - /posts/2024/february/typescript-oci-sdk-list/

@@ -1,7 +1,7 @@
 ---
 title: Better Tests Part 2 - Test Every Condition
 date: 2022-04-29T06:00:00
-image: /assets/images/2022/fahrul-razi-BR6lrzCPYPk-unsplash.jpg
+image: 2022/fahrul-razi-BR6lrzCPYPk-unsplash.jpg
 tags: [ "TDD", "Better-Tests" ]
 related:
     - /posts/2022/april/better-tests-01/

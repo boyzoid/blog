@@ -1,12 +1,16 @@
 require("dotenv").config();
 
 module.exports = {
+  //Cloud Storage URl
+  cloudUrl: 'https://objectstorage.us-ashburn-1.oraclecloud.com/n/idmqjyw9i2ib/b/blog/o/',
+  cloudinaryHeaderUrl: 'https://res.cloudinary.com/strozstuff/image/fetch/c_fit,w_650/',
+  cloudinaryUrl: 'https://res.cloudinary.com/strozstuff/image/fetch/',
   // Website title, shown in left sidebar and in page title
   title: "The Stroz",
   // Site URL to generate absolute URLs. Used across the board.
   url: "https://stroz.dev",
   // Profile image for left sidebar
-  image: "/assets/images/sidebar_profile.jpg",
+  image: "opengraph.jpg",
   // Image alt text for left sidebar
   imageAlt: "Scott Stroz",
   // Author name, shown in left sidebar, and used in JSON-LD
@@ -18,7 +22,7 @@ module.exports = {
   // OpenGraph default image, in case you don't have an `image`
   // set in your Markdown frontmatter; relevant for social
   // sharing.
-  openGraphDefaultImage: "/assets/images/sidebar_profile.jpg",
+  openGraphDefaultImage: "opengraph.jpg",
   // GitHub ID (optional, remove it not needed), used for link in the left sidebar
   socialGitHub: "boyzoid",
   // LinkedIn ID  (optional, remove it not needed), used for link in the left sidebar

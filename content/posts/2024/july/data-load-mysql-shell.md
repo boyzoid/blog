@@ -1,7 +1,7 @@
 ---
 title: Advanced Data Load with MySQL Shell
 date: 2024-07-04T06:00:00
-image: /assets/images/2024/data-load-mysql-shell/header.jpg
+image: 2024/data-load-mysql-shell/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
 series: mysql-shell-gems
 description: using advanced options to load data with MySQL Shell

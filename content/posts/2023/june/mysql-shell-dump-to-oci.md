@@ -1,7 +1,7 @@
 ---
 title: Using MySQL Shell to Dump Data To And Read Data From OCI Storage Buckets
 date: 2023-06-08T06:00:00
-image: /assets/images/2023/mysql-shell-dump-to-oci/header.jpeg
+image: 2023/mysql-shell-dump-to-oci/header.jpeg
 tags: [ "MySQL", "MySQL-Shell", "Oracle-Cloud-Infrastructure" ]
 
 ---

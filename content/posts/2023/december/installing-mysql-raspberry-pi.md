@@ -1,7 +1,7 @@
 ---
 title: Installing MySQL Innovation Release on a Raspberry Pi
 date: 2023-12-07T06:00:00
-image: /assets/images/2023/installing-mysql-raspberry-pi/header.jpg
+image: 2023/installing-mysql-raspberry-pi/header.jpg
 tags: [ "MySQL", "Oracle-Linux", "Raspberry-Pi" ]
 ---
 

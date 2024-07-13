@@ -1,7 +1,7 @@
 ---
 title: Retrieving Reference Lists - Using the Oracle Cloud TypeScript SDK Part 7
 date: 2024-04-04T06:00:00
-image: /assets/images/2024/typescript-oci-sdk-ref-lists/header.jpg
+image: 2024/typescript-oci-sdk-ref-lists/header.jpg
 tags: [ "MySQL", "MySQL-HeatWave", "OCI", "SDK" ]
 related:
   - /posts/2024/february/typescript-oci-sdk-list/

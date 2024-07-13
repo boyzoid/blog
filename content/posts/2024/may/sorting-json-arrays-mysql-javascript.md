@@ -1,7 +1,7 @@
 ---
 title: Sorting JSON Arrays in MySQL with JavaScript
 date: 2024-05-16T06:00:00
-image: /assets/images/2024/sorting-json-arrays-mysql-javascript/header.jpg
+image: 2024/sorting-json-arrays-mysql-javascript/header.jpg
 tags: ["MySQL", "JavaScript", "JSON"]
 related:
   - /posts/2024/may/searching-arrays-in-mysql-with-javascript/

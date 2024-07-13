@@ -1,7 +1,7 @@
 ---
 title: Multithreaded Data Dumps With MySQL Shell
 date: 2023-05-22T06:00:00
-image: /assets/images/2023/mysql-shell-threaded-dump/header.jpeg
+image: 2023/mysql-shell-threaded-dump/header.jpeg
 tags: [ "MySQL", "MySQL-Shell" ]
 
 ---

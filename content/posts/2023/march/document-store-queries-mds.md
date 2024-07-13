@@ -1,7 +1,7 @@
 ---
 title: Viewing MySQL Document Store Queries in MySQL Database Services
 date: 2023-03-30T06:00:00
-image: /assets/images/2023/doc-store-under-covers-mds/header.jpeg
+image: 2023/doc-store-under-covers-mds/header.jpeg
 tags: [ "MySQL", "MySQL-Document-Store", "Oracle-Cloud" ]
 
 ---

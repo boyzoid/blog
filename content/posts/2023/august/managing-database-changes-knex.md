@@ -1,7 +1,7 @@
 ---
 title: Managing MySQL Database Changes with Knex
 date: 2023-08-31T06:00:00
-image: /assets/images/2023/managing-database-changes-knex/header.jpeg
+image: 2023/managing-database-changes-knex/header.jpeg
 tags: [ "MySQL", "Node.js", "Migrations" ]
 related:
   - /posts/2023/september/mysql-testing-knex-testcontainers/

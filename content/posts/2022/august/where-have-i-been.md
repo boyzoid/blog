@@ -1,7 +1,7 @@
 ---
 title: Where Have I Been?
 date: 2022-08-29T06:00:00
-image: /assets/images/2022/been.jpg
+image: 2022/been.jpg
 tags: ["MySQL", "About-Me"]
 ---
 

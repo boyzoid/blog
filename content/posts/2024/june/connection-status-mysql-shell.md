@@ -1,7 +1,7 @@
 ---
 title: MySQL Connection Status with MySQL Shell
 date: 2024-06-11T06:00:00
-image: /assets/images/2024/connection-status-mysql-shell/header.jpg
+image: 2024/connection-status-mysql-shell/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
 series: mysql-shell-gems
 

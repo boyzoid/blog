@@ -1,7 +1,7 @@
 ---
 title: Using Aggregate Functions With MySQL Document Store
 date: 2023-04-12T06:00:00
-image: /assets/images/2023/doc-store-aggregate/header.jpg
+image: 2023/doc-store-aggregate/header.jpg
 tags: [ "MySQL", "MySQL-Document-Store", "Aggregate-Functions" ]
 
 ---

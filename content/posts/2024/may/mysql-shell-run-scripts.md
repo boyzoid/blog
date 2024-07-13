@@ -1,7 +1,7 @@
 ---
 title: Running External Scripts in MySQL Shell
 date: 2024-05-23T06:00:00
-image: /assets/images/2024/mysql-shell-run-scripts/header.jpg
+image: 2024/mysql-shell-run-scripts/header.jpg
 tags: [ "MySQL", "MySQL-Shell" ]
 series: mysql-shell-gems
 ---

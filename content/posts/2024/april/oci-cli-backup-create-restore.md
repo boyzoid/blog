@@ -1,7 +1,7 @@
 ---
 title: Backing up and Restoring a MySQL HeatWave Instance with the OCI CLI
 date: 2024-04-12T06:00:00
-image: /assets/images/2024/oci-cli-backup-create-restore/header.jpg
+image: 2024/oci-cli-backup-create-restore/header.jpg
 tags: [ "MySQL", "MySQL-HeatWave", "OCI", "CLI" ]
 related:
   - /posts/2024/april/oci-cli-create-heatwave-instance/

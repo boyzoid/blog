@@ -1,7 +1,7 @@
 ---
 title: Importing a MongoDB Into MySQL Document Store with MySQL Shell
 date: 2022-09-22T06:00:00
-image: /assets/images/2022/mongo-to-doc-store.jpg
+image: 2022/mongo-to-doc-store.jpg
 tags: ["MySQL", "MySQL-Shell", "MySQL-Document-Store", "MongoDB", "NoSQL"]
 ---
 

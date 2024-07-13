@@ -1,7 +1,7 @@
 ---
 title: MySQL Document Store - Peeking Under the Covers
 date: 2023-02-02T06:00:00
-image: /assets/images/2023/document-store-under-covers/header.jpg
+image: 2023/document-store-under-covers/header.jpg
 tags: [ "MySQL", "MySQL-Document-Store" ]
 
 ---

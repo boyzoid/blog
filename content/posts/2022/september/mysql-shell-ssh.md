@@ -1,7 +1,7 @@
 ---
 title: Connecting MySQL Shell Over SSH
 date: 2022-09-12T06:00:00
-image: /assets/images/2022/ssh.jpg
+image: 2022/ssh.jpg
 tags: ["MySQL", "MySQL-Shell", "SSH"]
 ---
 As I mentioned in my [last post](/posts/2022/september/mysql-shell-alias/), I am a big fan of [MySQL Shell](https://dev.mysql.com/doc/mysql-shell/8.0/en/). Until recently, I have only used MySQL Shell to connect to a local instance of MySQL running on my development machine.
