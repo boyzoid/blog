@@ -51,7 +51,7 @@ npm install
 
 The directory structure should resemble the image below when done with these steps.
 
-![Directory Structure](/assets/images/2023/github-actions-mysql-tests/img_01.png)
+![Directory Structure]({{ "2023/github-actions-mysql-tests/img_01.png" | imgurl }})
 
 ## Code Overview
 
@@ -126,19 +126,19 @@ The way we enable each workflow we define is pretty simple. We commit the YAML f
 
 Our workflow will be run anytime code is checked into the `main` branch in our repository. You can view the progress of a running workflow or the history of workflows on the 'Actions' tab in GitHub.
 
-![GitHub Actions Menu Link](/assets/images/2023/github-actions-mysql-tests/img_02.png)
+![GitHub Actions Menu Link]({{ "2023/github-actions-mysql-tests/img_02.png" | imgurl }})
 
 On the `Actions` page, we will see a list of all the workflows that have been run. We will see the commit message used when the code was pushed (1), the workflow name (2), the commit ID (3), and the person who committed the code (4).
 
-![GitHub Actions List](/assets/images/2023/github-actions-mysql-tests/img_03.png)
+![GitHub Actions List]({{ "2023/github-actions-mysql-tests/img_03.png" | imgurl }})
 
 We can see details about the run if we click the commit message. We can see the status (1), how long the run took (2), and details about the workflow itself (3).
 
-![GitHub Actions Workflow Information](/assets/images/2023/github-actions-mysql-tests/img_04.png)
+![GitHub Actions Workflow Information]({{ "2023/github-actions-mysql-tests/img_04.png" | imgurl }})
 
 If we click the `1 Job completed` link, we will see a list of jobs that were completed. In our case, we will see one named 'build 20.x'. When we click the `build 20.x` link, we can see fine details about the workflow.
 
-![GitHub Actions Workflow Run Details](/assets/images/2023/github-actions-mysql-tests/img_05.png)
+![GitHub Actions Workflow Run Details]({{ "2023/github-actions-mysql-tests/img_05.png" | imgurl }})
 
 This view lists everything done when running the workflow, including setting up and breaking down the runner. Since we are concerned about the tests running successfully, we should focus on the details under `Run npm test`.
 
@@ -216,7 +216,7 @@ The information above shows the individual output from running each of our tests
 
 Here is what the details look like in the GitHub web interface.
 
-![GitHub Actions Workflow Failure](/assets/images/2023/github-actions-mysql-tests/img_06.png)
+![GitHub Actions Workflow Failure]({{ "2023/github-actions-mysql-tests/img_06.png" | imgurl }})
 
 When we click through and look at the details of the job, we will see the following:
 

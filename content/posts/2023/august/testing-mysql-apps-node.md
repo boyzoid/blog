@@ -69,7 +69,7 @@ npm install
 
 We should now have a directory structure that looks like the following:
 
-![Project Directory Structure](/assets/images/2023/testing-mysql-apps-node/image_01.png)
+![Project Directory Structure]({{ "2023/testing-mysql-apps-node/image_01.png" | imgurl }})
 
 Let's talk about some of these files/directories.
 
@@ -373,7 +373,7 @@ node --test
 
 It may take a while to complete the first time you run these tests. That is because the Docker images need to be fetched. When the tests are completed, you should see an output that resembles the image below.
 
-![Test result output](/assets/images/2023/testing-mysql-apps-node/image_02.png)
+![Test result output]({{ "2023/testing-mysql-apps-node/image_02.png" | imgurl }})
 
 We can tell the Node test Runner to watch a directory for changes and run the tests when a file is saved by using the command:
 
@@ -389,7 +389,7 @@ npm run test
 
 The result for each of these will look similar to this screenshot:
 
-![Test result with --watch](/assets/images/2023/testing-mysql-apps-node/image_03.png)
+![Test result with --watch]({{ "2023/testing-mysql-apps-node/image_03.png" | imgurl }})
 
 Now, if a change is made to any of the files used in the tests, the test suite(s) will be re-run.
 

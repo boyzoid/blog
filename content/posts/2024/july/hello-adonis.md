@@ -68,13 +68,13 @@ npm run dev
 ```
 And...I got an error about missing environment variables for the database.
 
-![AdonisJS database error](/assets/images/2024/hello-adonis/img_02.png)
+![AdonisJS database error]({{ "2024/hello-adonis/img_02.png" | imgurl }})
 
 I realized I had not updated the `.env` file to include connection information to my local instance of MySQL. I opened the file, made the necessary changes, and tried starting the app again.
 
 This time, I saw a message in the console that the server started, and I could access the site at `http://localhost:3333`. Here is what I saw when I visited that URL.
 
-![AdonisJS Welcome screen](/assets/images/2024/hello-adonis/img_01.png)
+![AdonisJS Welcome screen]({{ "2024/hello-adonis/img_01.png" | imgurl }})
 
 This feels like a good place to stop. I loved how easy it was to install AdonisJS and that it handled configuring all the related libraries. Let's hope my happiness continues!
 

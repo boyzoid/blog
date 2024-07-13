@@ -1,6 +1,6 @@
 ---
 title: Database Seeders Using Lucid ORM
-date: 2024-07-12T06:00:00
+date: 2024-07-15T06:00:00
 image: 2024/database-seeders-with-lucid/header.jpg
 tags: ["AdonisJs", "Lucid"]
 series: golf-league-rewrite
@@ -199,7 +199,7 @@ node ace db:seed -i
 
 When we run this command, we will see a list of available seeders, and we can specify which one to run.
 
-![Choosing a seeder in interactive mode](/assets/images/2024/database-seeders-with-lucid/img_01.png)
+![Choosing a seeder in interactive mode]({{ "2024/database-seeders-with-lucid/img_01.png" | imgurl }})
 
 To specify a custom order for the seeders to be run, check out the [documentation](https://lucid.adonisjs.com/docs/seeders#customizing-seeders-order) from Lucid ORM.
 

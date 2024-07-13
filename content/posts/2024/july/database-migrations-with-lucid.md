@@ -40,7 +40,7 @@ node ace make:migration league
 
 This command will create a file in the `database/migrations` folder at the root of the project. The file name will include a timestamp with the table's name. Here is the file that was created for my `league` table.
 
-![File structure of a database migration](/assets/images/2024/database-migrations-with-lucid/img_01.png)
+![File structure of a database migration]({{ "2024/database-migrations-with-lucid/img_01.png" | imgurl }})
 
 ### Knicker Twisting Time
 
@@ -48,7 +48,7 @@ In my [first post](/posts/2024/july/hello-adonis/#hello%2C-adonisjs!), I pointed
 
 Can you see what caused me such angst? Look again...
 
-![File structure of a database migration](/assets/images/2024/database-migrations-with-lucid/img_01.png)
+![File structure of a database migration]({{ "2024/database-migrations-with-lucid/img_01.png" | imgurl }})
 
 I used `league` in the command, but the file name includes `leagues`.
 
@@ -150,7 +150,7 @@ Migrated in 123 ms
 
 If we look at our database structure, we will see that there are now three tables:
 
-![Database structure](/assets/images/2024/database-migrations-with-lucid/img_02.png)
+![Database structure]({{ "2024/database-migrations-with-lucid/img_02.png" | imgurl }})
 
 Lucid uses two of the created tables to track what migrations have been run and what version the schema is at.
 

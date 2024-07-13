@@ -158,7 +158,7 @@ console.log(result)
 ### Before
 Before we run the code, let's look at the backup details page in OCI for the backup we want to update. We can see that the backup name is 'TEST API Backup' (1), and the 'Retention Days' value is set to 42 (2).
 
-![Backup Details Page](/assets/images/2024/typescript-oci-sdk-backup-update/img_1.png)
+![Backup Details Page]({{ "2024/typescript-oci-sdk-backup-update/img_1.png" | imgurl }})
 
 To run the code, open a terminal/command window in the project folder and run the command:
 
@@ -232,7 +232,7 @@ In the console, you will almost immediately see the output of our call to `creea
 
 If we go back and look at the backup Details page in OCI, we will see that the backup name (1) and retention days (2) have been updated.
 
-![Backup Details Page 2](/assets/images/2024/typescript-oci-sdk-backup-update/img_2.png)
+![Backup Details Page 2]({{ "2024/typescript-oci-sdk-backup-update/img_2.png" | imgurl }})
 
 ## The Wrap-Up
 

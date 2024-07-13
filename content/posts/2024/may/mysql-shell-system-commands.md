@@ -27,7 +27,7 @@ Here is an example. In a [previous post](/posts/2024/may/mysql-shell-run-scripts
 
 The result of this command would look like:
 
-![Result of listing files in a directory](/assets/images/2024/mysql-shell-system-commands/img_01.png)
+![Result of listing files in a directory]({{ "2024/mysql-shell-system-commands/img_01.png" | imgurl }})
 
 Something to note is that MySQL Shell's "current directory" is the directory we were in when we started MySQL Shell. For example, I could run the following command to get the same result if I was already in the `~/projects/shell_scripts` directory and ran the `mysqlsh` command.
 
@@ -45,7 +45,7 @@ Let's assume we are connected to a remote server and must edit one of the files 
 
 This command opens the file `demo2.js` in Nano.
 
-![JavaScript code displayed in Nano](/assets/images/2024/mysql-shell-system-commands/img_03.png)
+![JavaScript code displayed in Nano]({{ "2024/mysql-shell-system-commands/img_03.png" | imgurl }})
 
 After editing the file and closing Nano, we are brought back to the MySQL Shell interface.
 

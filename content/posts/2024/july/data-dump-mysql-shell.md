@@ -236,7 +236,7 @@ Average compressed throughput: 1.42 MB/s
 
 This image shows the files we created in the `database_dumps` bucket in my OCI account.
 
-![Oracle Cloud Storgae Bucket File List](/assets/images/2024/data-dump-mysql-shell/img_01.png)
+![Oracle Cloud Storgae Bucket File List]({{ "2024/data-dump-mysql-shell/img_01.png" | imgurl }})
 
 ### Ensuring HeatWave Compatability
 

@@ -21,7 +21,7 @@ I asked my son to help me solder the pins to the GPS module and connected the se
 * Green wire to Rx (receive)
 * White wire to Tx (transmit)
 
-![GPS Wiring](/assets/images/2023/capturing-storing-gps/img_04.png)
+![GPS Wiring]({{ "2023/capturing-storing-gps/img_04.png" | imgurl }})
 
 For more information on how to attach the GPS module using the USB adapter and verify the module is working as expected, check out this [link](https://learn.adafruit.com/adafruit-ultimate-gps-on-the-raspberry-pi/setting-everything-up) on the Adafruit website. However, anything after the "Setting up the USB Adapter" is irrelevant for this post.
 
@@ -92,7 +92,7 @@ ip addr
 
 This command will give you output that looks similar to the image below. We want to note the local IPV4 address for the `eth0` connection. In my case, it is `192.168.86.49`.
 
-![Pi IP address info](/assets/images/2023/capturing-storing-gps/img_01.png)
+![Pi IP address info]({{ "2023/capturing-storing-gps/img_01.png" | imgurl }})
 
 ### Connect From a Remote Computer
 
@@ -119,7 +119,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 
 Type `yes`, then press `enter`. You will be prompted for the password for your user. When you enter the password, you should be connected to the Pi.
 
-![Pi Login Success](/assets/images/2023/capturing-storing-gps/img_02.png)
+![Pi Login Success]({{ "2023/capturing-storing-gps/img_02.png" | imgurl }})
 
 ## Install MySQL Shell
 
@@ -139,7 +139,7 @@ In this case, `{username}` is the name of the MySQL user created in the previous
 
 Once you are connected to MySQL Shell, the prompt will look similar to the picture below.
 
-![MySQL Shell Login Success](/assets/images/2023/capturing-storing-gps/img_03.png)
+![MySQL Shell Login Success]({{ "2023/capturing-storing-gps/img_03.png" | imgurl }})
 
 By default, MySQL Shell starts in JavaScript mode which is ideal because that is the mode we need.
 

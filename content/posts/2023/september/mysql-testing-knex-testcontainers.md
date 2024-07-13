@@ -56,7 +56,7 @@ npm install
 
 We should see a directory structure that looks like the image below.
 
-![File Structure](/assets/images/2023/mysql-testing-knex-testcontainers/image_01.png)
+![File Structure]({{ "2023/mysql-testing-knex-testcontainers/image_01.png" | imgurl }})
 
 Let's talk about some of these files and directories.
 
@@ -513,7 +513,7 @@ node --test
 
 It may take a while to complete the first time you run these tests. That is because the Docker images need to be fetched. You should see an output that resembles the image below when the tests are conducted.
 
-![Test result output](/assets/images/2023/mysql-testing-knex-testcontainers/image_02.png)
+![Test result output]({{ "2023/mysql-testing-knex-testcontainers/image_02.png" | imgurl }})
 
 We can tell the Node test Runner to watch a directory for changes and run the tests when a file is saved by using the command:
 
@@ -529,7 +529,7 @@ npm run test
 
 The result for each of these will look similar to this screenshot:
 
-![Test result with --watch](/assets/images/2023/mysql-testing-knex-testcontainers/image_03.png)
+![Test result with --watch]({{ "2023/mysql-testing-knex-testcontainers/image_03.png" | imgurl }})
 
 If a change is made to any of the files used in the tests, the test suite(s) will be re-run.
 

@@ -53,7 +53,7 @@ npm install
 
 The directory structure should resemble the image below when done with these steps.
 
-![Directory Structure](/assets/images/2023/github-actions-mysql-migrations/img_01.png)
+![Directory Structure]({{ "2023/github-actions-mysql-migrations/img_01.png" | imgurl }})
 
 ## Code Overview
 
@@ -172,27 +172,27 @@ The way we enable each workflow we define is pretty simple. We commit the YAML f
 
 Our workflow will be run anytime code is checked into the `main` branch in our repository. You can view the progress of a running workflow or the history of workflows on the 'Actions' tab in GitHub.
 
-![GitHub Actions Menu Link](/assets/images/2023/github-actions-mysql-migrations/img_02.png)
+![GitHub Actions Menu Link]({{ "2023/github-actions-mysql-migrations/img_02.png" | imgurl }})
 
 Here is the table structure for the `migration_demo` schema before we made any commits to the repo.
 
-![Table Structure for migration_demo](/assets/images/2023/github-actions-mysql-migrations/img_03.png)
+![Table Structure for migration_demo]({{ "2023/github-actions-mysql-migrations/img_03.png" | imgurl }})
 
 On the `Actions` page, we will see a list of all the workflows that have been run. We will see the commit message used when the code was pushed (1), the workflow name (2), the commit ID (3), and the person who committed the code (4).
 
-![GitHub Actions List](/assets/images/2023/github-actions-mysql-migrations/img_04.png)
+![GitHub Actions List]({{ "2023/github-actions-mysql-migrations/img_04.png" | imgurl }})
 
 We can see details about the run if we click the commit message. We can see the status (1), how long the run took (2), and details about the workflow itself (3).
 
-![GitHub Actions Workflow Information](/assets/images/2023/github-actions-mysql-migrations/img_05.png)
+![GitHub Actions Workflow Information]({{ "2023/github-actions-mysql-migrations/img_05.png" | imgurl }})
 
 If we click on the `migration` job, we can see details about the steps in the job. This view is where you can find information about failures if any step fails.
 
-![GitHub Actions Step Information](/assets/images/2023/github-actions-mysql-migrations/img_06.png)
+![GitHub Actions Step Information]({{ "2023/github-actions-mysql-migrations/img_06.png" | imgurl }})
 
 Now that our jobs have been completed successfully, let's look at the table structure again.
 
-![Table Structure for post-migration](/assets/images/2023/github-actions-mysql-migrations/img_07.png)
+![Table Structure for post-migration]({{ "2023/github-actions-mysql-migrations/img_07.png" | imgurl }})
 
 We see that there are now four tables. The two tables we defined in our migration script and two others that Knex uses to track which migrations have been processed.
 

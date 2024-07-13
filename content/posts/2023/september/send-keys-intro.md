@@ -121,7 +121,7 @@ With the app started, navigate to `https://localhost:3000` to see the user inter
 
 Here is the UI for the command set from my last video.
 
-![SendKeys via Node User Interface](/assets/images/2023/send-keys-intro/image_01.png)
+![SendKeys via Node User Interface]({{ "2023/send-keys-intro/image_01.png" | imgurl }})
 
 The drop-down at the top will contain references to each command set you have defined in the `command-sets` directory.
 

@@ -20,7 +20,7 @@ db.scores.find("year(date) = 2023").fields(['lastName', 'firstName', 'round(avg(
 
 When I run this command in MYSQl Shell, it looks like this:
 
-![MySQl Document Store Command](/assets/images/2024/mysql-shell-run-scripts/img_01.png)
+![MySQl Document Store Command]({{ "2024/mysql-shell-run-scripts/img_01.png" | imgurl }})
 
 It is difficult for me to find a typo in non-formatted text with random line breaks. The first hidden gem we will discuss is MySQL Shell's ability to execute commands from external files. This allows us to edit the files in an IDE or other editor and run the commands in MySQL Shell.
 
@@ -63,11 +63,11 @@ find("year(date) = 2023")
 
 This format is much easier to read. I can have my calls to other methods and elements within the arrays all on separate lines. As the image below shows, I also get the added benefit of syntax highlighting from my IDE.
 
-![Formatted Document Store Code](/assets/images/2024/mysql-shell-run-scripts/img_02.png)
+![Formatted Document Store Code]({{ "2024/mysql-shell-run-scripts/img_02.png" | imgurl }})
 
 Take note of the first two lines. Specifically, notice that the `.` before the `find()` method is on the line above. If we move that down to the same line as `find()`, MySQl Shell will throw an error. For me, this is not ideal, but it is much nicer than:
 
-![MySQl Document Store Command](/assets/images/2024/mysql-shell-run-scripts/img_01.png)
+![MySQl Document Store Command]({{ "2024/mysql-shell-run-scripts/img_01.png" | imgurl }})
 
 To run this external script, we use the command:
 

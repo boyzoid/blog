@@ -34,7 +34,7 @@ dba.deploySandboxInstance(3336)
 
 When we run this command, we will be asked to provide a password for the `root` user. Once the instance is up and running, we will see a message that it has been successfully deployed and started.
 
-![Messages from creating a sandbox instance](/assets/images/2024/mysql-shell-sandboxes/img_01.png)
+![Messages from creating a sandbox instance]({{ "2024/mysql-shell-sandboxes/img_01.png" | imgurl }})
 
 By default, any sandbox instances will be created in a directory named `mysql-sandboxes` in the home directory of the user who ran the command.
 
@@ -48,7 +48,7 @@ We can use the following command to connect to our new instance.
 
 When we execute this command, we will be prompted to provide the password for the `root` user. Once we provide the password, we will be connected to the new instance.
 
-![Connecting to the new sandbox instance](/assets/images/2024/mysql-shell-sandboxes/img_02.png)
+![Connecting to the new sandbox instance]({{ "2024/mysql-shell-sandboxes/img_02.png" | imgurl }})
 
 ### Configuration Options
 

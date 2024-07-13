@@ -54,7 +54,7 @@ Once you have cloned the repo, open the project in your IDE.
 
 We should now have a directory structure that looks like the following:
 
-![Project Directory Structure](/assets/images/2023/testing-mysql-apps-java/img_01.png)
+![Project Directory Structure]({{ "2023/testing-mysql-apps-java/img_01.png" | imgurl }})
 
 Let's talk about the files/directories used in this demo.
 
@@ -381,11 +381,11 @@ public String getRandomString(int length){
 
 Most IDEs will have a way to run your tests easily. IntelliJ IDEA usually has a green 'play button' in the left gutter (for some reason, I could not figure out, these were missing when I was grabbing the screenshots). In IDEA, you can also right-click the `class` and select `Run 'UserServiceTest'` to run all the tests.
 
-![Run all tests](/assets/images/2023/testing-mysql-apps-java/img_02.png)
+![Run all tests]({{ "2023/testing-mysql-apps-java/img_02.png" | imgurl }})
 
 You can right-click a test method to run a single test and choose `Run 'UserServiceTest.{method name}'`.
 
-![Run single test](/assets/images/2023/testing-mysql-apps-java/img_03.png)
+![Run single test]({{ "2023/testing-mysql-apps-java/img_03.png" | imgurl }})
 
 When I run the entire class of tests, I will see some logging in the console followed by:
 
@@ -399,11 +399,11 @@ If the test fail, you will see messages here that give more details.
 
 By default, JUnit 5 creates an HTML report of the last test run in `/build/reports/tests/test/index.html`.
 
-![Report location](/assets/images/2023/testing-mysql-apps-java/img_04.png)
+![Report location]({{ "2023/testing-mysql-apps-java/img_04.png" | imgurl }})
 
 If you open this file in a browser, the output is similar to the image below.
 
-![Report output](/assets/images/2023/testing-mysql-apps-java/img_05.png)
+![Report output]({{ "2023/testing-mysql-apps-java/img_05.png" | imgurl }})
 
 ## The Wrap-up
 

@@ -15,31 +15,31 @@ Let's talk about how you can view queries that were run against a MySQL HeatWave
 
 Log in to Oracle Cloud and click the hamburger menu.
 
-![Oracle CLoud Hamburger Menu](/assets/images/2024/database-management-doc-store-queries/img_01.png)
+![Oracle CLoud Hamburger Menu]({{ "2024/database-management-doc-store-queries/img_01.png" | imgurl }})
 
 In the search box that pops up, enter `database management` (1) and click the "MySQL HeatWave Database Management" link (2).
 
-![Oracle CLoud Search Bar](/assets/images/2024/database-management-doc-store-queries/img_02.png)
+![Oracle CLoud Search Bar]({{ "2024/database-management-doc-store-queries/img_02.png" | imgurl }})
 
 This link will cover the "MySQL HeatWave fleet summary" page for the chosen compartment. On this page, you can view information about all the MySQL HeatWave instances in the compartment. You can also view a list of instances. In this case, we have a single instance used for [MySQL Shorts](https://www.youtube.com/playlist?list=PLWx5a9Tn2EvG4C90YFJ9eU61IpALeE0SN) demos. From this list, click the instance against which you will run Document Store commands. For this post, we will use the "MySQL Shorts" instance.
 
-![Database Management MySQL HeatWave Fleet Summary](/assets/images/2024/database-management-doc-store-queries/img_03.png)
+![Database Management MySQL HeatWave Fleet Summary]({{ "2024/database-management-doc-store-queries/img_03.png" | imgurl }})
 
 On the "MySQL Database Details" page, click the "Performance Hub" button.
 
-![MySQL Database details page](/assets/images/2024/database-management-doc-store-queries/img_04.png)
+![MySQL Database details page]({{ "2024/database-management-doc-store-queries/img_04.png" | imgurl }})
 
 On the "Performance Hub" page, you can see information about the chosen MySQL HeatWave instance. At the bottom of the page, you can see a list of queries executed against the instance. By default, the queries are sorted by 'Average statement latency'.
 
-![Default sort order for performance hub](/assets/images/2024/database-management-doc-store-queries/img_05.png)
+![Default sort order for performance hub]({{ "2024/database-management-doc-store-queries/img_05.png" | imgurl }})
 
 To see the most recent queries more easily, click the dropdown box (1) and select "Last seen" (2).
 
-![Changing query sort order](/assets/images/2024/database-management-doc-store-queries/img_06.png)
+![Changing query sort order]({{ "2024/database-management-doc-store-queries/img_06.png" | imgurl }})
 
 We will now see the list of queries sorted by when they were executed in descending order (with the most recent queries on top).
 
-![Sort order updated](/assets/images/2024/database-management-doc-store-queries/img_07.png)
+![Sort order updated]({{ "2024/database-management-doc-store-queries/img_07.png" | imgurl }})
 
 ## Running a Basic `find()` Command
 
@@ -51,15 +51,15 @@ db.restaurant.find()
 
 After running this command, the results will be in the console. When the command has been completed, head back to the Performance Hub for the instance we are using and click the "Refresh" button in the upper right corner.
 
-![performacne Hub refresh button](/assets/images/2024/database-management-doc-store-queries/img_08.png)
+![performacne Hub refresh button]({{ "2024/database-management-doc-store-queries/img_08.png" | imgurl }})
 
 When the data refreshes, we will see an item in the list that looks like the following.
 
-![Sorted query list](/assets/images/2024/database-management-doc-store-queries/img_09.png)
+![Sorted query list]({{ "2024/database-management-doc-store-queries/img_09.png" | imgurl }})
 
 If we click on the link for the query, a modal window will open up and show details about the query.
 
-![Query Details](/assets/images/2024/database-management-doc-store-queries/img_10.png)
+![Query Details]({{ "2024/database-management-doc-store-queries/img_10.png" | imgurl }})
 
 ## More Complex Example
 
@@ -73,11 +73,11 @@ This command will fetch documents where the `cuisine` property is "pizza", but i
 
 After running this command, jump back to the "Performance Hub" and click "Refresh". We should see a query that resembles the following:
 
-![Sorted Query list - new](/assets/images/2024/database-management-doc-store-queries/img_11.png)
+![Sorted Query list - new]({{ "2024/database-management-doc-store-queries/img_11.png" | imgurl }})
 
 When we click the link and look at the details, we will see something that resembles the following:
 
-![Complex Query Details](/assets/images/2024/database-management-doc-store-queries/img_12.png)
+![Complex Query Details]({{ "2024/database-management-doc-store-queries/img_12.png" | imgurl }})
 
 Note that we do not see the full query. Rather, some of the values are parameterized (`?`). It would be nice if we could see what the parameter values were, but we can easily plug them in from our command if we want to execute the query manually. This method is a little better than the previous method I discussed because you can compare multiple queries more easily.
 

@@ -379,7 +379,7 @@ Total duration: 33 sec
 
 This image shows the progress file created when we loaded the dump. It was added to our OCI bucket in a folder named 'example5'.
 
-![Oracle Cloud Storage Bucket File List](/assets/images/2024/data-load-mysql-shell/img_01.png)
+![Oracle Cloud Storage Bucket File List]({{ "2024/data-load-mysql-shell/img_01.png" | imgurl }})
 
 ### Creating Invisible Primary Keys
 

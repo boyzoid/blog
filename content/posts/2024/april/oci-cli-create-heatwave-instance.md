@@ -492,7 +492,7 @@ Action completed. Waiting until the work request has entered state: ('SUCCEEDED'
 
 While waiting for the instance to be created, we can log in to Oracle Cloud and check the progress. You can see our new instance is being created.
 
-![Oracle Cloud MySQl Database System Progress](/assets/images/2024/oci-cli-create-heatwave-instance/img_01.png)
+![Oracle Cloud MySQl Database System Progress]({{ "2024/oci-cli-create-heatwave-instance/img_01.png" | imgurl }})
 
 The command may return as `SUCCEEDED` before the instance is available. When the command is successful, we will see the output in the terminal similar to the text below:
 
@@ -521,7 +521,7 @@ The command may return as `SUCCEEDED` before the instance is available. When the
 
 You will see the following when the instance is fully available in Oracle Cloud.
 
-![Oracle Cloud MySQl Database System Active](/assets/images/2024/oci-cli-create-heatwave-instance/img_02.png)
+![Oracle Cloud MySQl Database System Active]({{ "2024/oci-cli-create-heatwave-instance/img_02.png" | imgurl }})
 
 ## Wrap-up
 

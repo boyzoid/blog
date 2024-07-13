@@ -18,7 +18,7 @@ As I mentioned in some [previous]( /posts/2024/may/searching-arrays-im-mysql-wit
 
 If you have never used the `Intl` object in JavaScript, check out the [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) on [MDN](https://developer.mozilla.org/). This object can be used to handle a variety of internationalization. I will use the `NumberFormat()` method for this demo to return a "compact" formatted number. I mean that instead of returning a value of `4999`, it will return `5k`. This formatting can be useful when you don't need the exact number. Take a look at the image below that is taken from the [MySQL Shorts](https://www.youtube.com/playlist?list=PLWx5a9Tn2EvG4C90YFJ9eU61IpALeE0SN) playlist page. It shows the rounded number of views in a compact format.
 
-![MySQL Shorts Playlist View Count](/assets/images/2024/using-intl-in-mysql/img_01.png)
+![MySQL Shorts Playlist View Count]({{ "2024/using-intl-in-mysql/img_01.png" | imgurl }})
 
 ## The Data
 

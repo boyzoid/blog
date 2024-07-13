@@ -49,15 +49,15 @@ Now that we have Oracle Linux running on the Pi and a way to execute commands, t
 
 First, head to the [MySQl Community Downloads page](https://dev.mysql.com/downloads/) and click the 'MySQL Yum Repository Link'.
 
-![MySQL Yum Repository Link](/assets/images/2023/installing-mysql-raspberry-pi/img_01.png)
+![MySQL Yum Repository Link]({{ "2023/installing-mysql-raspberry-pi/img_01.png" | imgurl }})
 
 On the next page, click the "Download" button for the version of Oracle Linux you installed earlier. In my case, I installed Oracle Linux 9, so I clicked the first "Download" button.
 
-![Repo downlaod link](/assets/images/2023/installing-mysql-raspberry-pi/img_02.png)
+![Repo downlaod link]({{ "2023/installing-mysql-raspberry-pi/img_02.png" | imgurl }})
 
 After you click the "download" button, you are brought to the downlaod page. On this page, right-click the "No thanks, just start my download link" (1) and then click "Copy Link" (2).
 
-![Copy link](/assets/images/2023/installing-mysql-raspberry-pi/img_03.png)
+![Copy link]({{ "2023/installing-mysql-raspberry-pi/img_03.png" | imgurl }})
 
 To install this repo, we need to run the command:
 
@@ -75,7 +75,7 @@ If you used a different version of Oracle Linux or there is a newer version of t
 
 When the repo is installed successfully, the output should look similar to the image below.
 
-![Repo Install Success](/assets/images/2023/installing-mysql-raspberry-pi/img_04.png)
+![Repo Install Success]({{ "2023/installing-mysql-raspberry-pi/img_04.png" | imgurl }})
 
 ## Install MySQL Innovation Release
 
@@ -89,7 +89,7 @@ In this command, we tell the repo to install the Innovation Release using `--ena
 
 Because this is a scaled down version of Linux, there will likely be a few dependencies that need to be installed. However, you should look for the MySQl package to ensure the Innovation Release is being installed. In my case, I am installing version 8.2.0-1 of `mysql-community-server`.
 
-![Repo Install List](/assets/images/2023/installing-mysql-raspberry-pi/img_05.png)
+![Repo Install List]({{ "2023/installing-mysql-raspberry-pi/img_05.png" | imgurl }})
 
 During the installation process, you may be asked to install several GPG keys. Allow each of these by entering `y` and pressing `enter`.
 
@@ -103,7 +103,7 @@ mysql --version
 
 The version number we see should align with the package we installed in the previous step.
 
-![Verifying the MySQL Version](/assets/images/2023/installing-mysql-raspberry-pi/img_06.png)
+![Verifying the MySQL Version]({{ "2023/installing-mysql-raspberry-pi/img_06.png" | imgurl }})
 
 ## Creating a MySQL User
 
