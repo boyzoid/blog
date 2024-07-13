@@ -128,7 +128,7 @@ The drop-down at the top will contain references to each command set you have de
 Each command is listed with the `title`, `target`, `initialDelay`, and `delay`. Lastly, each command has a button to run that command. Take a look below to see what the output looks like in Tabby. The delay before the query results are shown is a result of adding a 2-second pause before 'pressing' return. This syntax is `<p:2><c:return>`.
 
 <video width="694" height="284" controls autoplay loop style="margin: 0 auto">
-<source src="/assets/images/2023/send-keys-intro/image_02.mp4" type="video/mp4">
+<source src=" {{ '2023/send-keys-intro/image_02.mp4' | videourl }}" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
