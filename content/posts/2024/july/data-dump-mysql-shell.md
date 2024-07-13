@@ -195,7 +195,7 @@ One of my favorite features of MySQL Shell is the ability to dump to an Oracle C
 This example assumes you have installed the [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm).
 
 ```shell
-util.dumpInstance("example5", {osBucketName:"database_dumps"})
+util.dumpInstance("example5", {osBucketName:"database_dumps")
 ```
 
 Depending on how the OCI CLI is configured on your system, you may also need to include your bucket's `namespace`.

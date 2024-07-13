@@ -56,7 +56,7 @@ print('\nMySQL Shell Start-up command\n\n')
 Save the file and start MySQL Shell (or restart it if you have it running).
 Once MySQL Shell loads, we should see something like this:
 
-![MySQL Shell start up command](/assets/images/2022/customize-mysql-shell/img1.png "MySQL Shell start up command")
+![MySQL Shell start up command]({{ "2022/customize-mysql-shell/img1.png" | imgurl }}  "MySQL Shell start up command")
 
 As you can see, the text we passed to `print()` was output to the screen.
 
@@ -101,7 +101,7 @@ c.prod()
 ```
 
 If the command runs successfully, you should see output similar to the one below:
-![MySQL Shell connect to production](/assets/images/2022/customize-mysql-shell/img2.png "MySQL Shell connect to production")
+![MySQL Shell connect to production]({{ "2022/customize-mysql-shell/img2.png" | imgurl }}  "MySQL Shell connect to production")
 
 In the image above, item 1 is the message we pass to `print()`.
 Item 2 indicates we are making a connection using the X-Protocol to `{MySQL Server Address}`.
@@ -169,7 +169,7 @@ The arguments we pass to `registerGlobal()` are:
 When we register this global object, we will have an object named `c` available to us from within the MySQL Shell.
 While we wrote this start-up script in JavaScript, because we added the extension as a global object, we can call `c.prod()` while in Python mode.
 
-![MySQL Shell connect to production in Python mode](/assets/images/2022/customize-mysql-shell/img3.png "MySQL Shell connect to production in Python mode")
+![MySQL Shell connect to production in Python mode]({{ "2022/customize-mysql-shell/img3.png" | imgurl }}  "MySQL Shell connect to production in Python mode")
 
 ### Adding More Members
 

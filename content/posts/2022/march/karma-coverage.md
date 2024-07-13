@@ -82,7 +82,7 @@ karma start my.conf.js
 
 Karma will start up and run the tests we have set up in the `/tests` directory. When the tests are done, you should see something that looks like the following image.
 
-![Coverage results 1](/assets/images/2022/karma-coverage/coverage-1.png "Coverage Results 1")
+![Coverage results 1]({{ "2022/karma-coverage/coverage-1.png" | imgurl }}  "Coverage Results 1")
 
 That shows a lot of red, but this was by design. Let's break down what we are looking at.
 
@@ -133,7 +133,7 @@ it("testing doubleNumber()", function () {
 
 Karma should re-run the tests automatically, and you should see something similar to the image below.
 
-![Coverage results 2](/assets/images/2022/karma-coverage/coverage-2.png "Coverage Results 2")
+![Coverage results 2]({{ "2022/karma-coverage/coverage-2.png" | imgurl }}  "Coverage Results 2")
 
 w00t!! We now have some better coverage on our tests as 50% of our statements, functions, and lines are covered by our tests. If you uncomment other lines of code that call methods on the `demo` object, you will see the results of the coverage report change.
 
@@ -177,7 +177,7 @@ describe("My Code tests", function () {
 
 When the test are run again, we should see this result.
 
-![Coverage results 3](/assets/images/2022/karma-coverage/coverage-3.png "Coverage Results 3")
+![Coverage results 3]({{ "2022/karma-coverage/coverage-3.png" | imgurl }}  "Coverage Results 3")
 
 You may be asking, how can we have 100% coverage of function, but not lines or statements? The answer is because in one of our methods, `divideNumbers()`, we have an `if()` statement and none of our tests trigger the `else` portion of that statement.
 
@@ -195,7 +195,7 @@ This feature of coverage is extremely helpful when you have complex nested logic
 
 Uncomment out those last 2 lines of code, and you should see the following indicating we have full test coverage.
 
-![Coverage results 4](/assets/images/2022/karma-coverage/coverage-4.png "Coverage Results 4")
+![Coverage results 4]({{ "2022/karma-coverage/coverage-4.png" | imgurl }}  "Coverage Results 4")
 
 ## Wrapping Up
 

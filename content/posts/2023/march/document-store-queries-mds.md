@@ -40,7 +40,7 @@ By default, MDS instances have the `performance_schema` enabled. Let's run the f
 
 The results should resemble the following:
 
-![Query Results](/assets/images/2023/doc-store-under-covers-mds/img01.png "Query Results")
+![Query Results]({{ "2023/doc-store-under-covers-mds/img01.png" | imgurl }}  "Query Results")
 
 ### Checking Instruments
 
@@ -75,7 +75,7 @@ db.restaurant.find("cuisine = 'Bakery'").fields(['name', 'borough']).sort('name'
 
 The results look like this:
 
-![API Call Results](/assets/images/2023/doc-store-under-covers-mds/img02.png "API Call Results")
+![API Call Results]({{ "2023/doc-store-under-covers-mds/img02.png" | imgurl }}  "API Call Results")
 
 ### Get the Raw SQL
 
@@ -89,7 +89,7 @@ Now that we have made a call to the Document Store API, we can run this command 
 
 This statement will return the result of the last query that was executed. In our case, that result will look like the following:
 
-![Raw SQL Check Results](/assets/images/2023/doc-store-under-covers-mds/img03.png "Raw SQL Check Results")
+![Raw SQL Check Results]({{ "2023/doc-store-under-covers-mds/img03.png" | imgurl }}  "Raw SQL Check Results")
 
 Keep in mind that I formatted the results a bit to make them easier to read.
 The yellow highlighted portion is the actual query that was executed.
@@ -105,7 +105,7 @@ Run the command:
 ```
 And we will see the following results.
 
-![Raw SQL Results](/assets/images/2023/doc-store-under-covers-mds/img04.png "Raw SQL Results")
+![Raw SQL Results]({{ "2023/doc-store-under-covers-mds/img04.png" | imgurl }}  "Raw SQL Results")
 
 The X-plugin would take these results and send them back as raw JSON.
 

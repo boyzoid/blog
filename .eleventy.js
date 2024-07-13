@@ -190,19 +190,12 @@ module.exports = function (eleventyConfig) {
     return related;
   });
 
-  eleventyConfig.addFilter("imgurl", function (text, type) {
-    let url = ''
-    switch(type){
-      case 'header':
-        url =  siteconfig.cloudinaryHeaderUrl + siteconfig.cloudUrl + text
-        break
-      default:
-        url = siteconfig.cloudinaryUrl + siteconfig.cloudUrl + text
-        break
-    }
+  eleventyConfig.addFilter("imgurl", function (text) {
+    return siteconfig.cloudinaryUrl + siteconfig.cloudUrl + text
+  });
 
-    return url
-
+  eleventyConfig.addFilter("imgurlheader", function (text) {
+    return siteconfig.cloudinaryHeaderUrl + siteconfig.cloudUrl + text
   });
   // Add 3rd party plugins
   eleventyConfig.addPlugin(pluginRss);

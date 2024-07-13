@@ -49,7 +49,11 @@ This command opens the file `demo2.js` in Nano.
 
 After editing the file and closing Nano, we are brought back to the MySQL Shell interface.
 
-<div><img src="/assets/images/2024/mysql-shell-system-commands/img_02.gif" alt="Animated image of opening a file in nano"></div>
+<div>
+
+![Animated image of opening a file in nano]({{ "2024/mysql-shell-system-commands/img_02.gif" | imgurl }})
+
+</div>
 
 ### Using `sudo`
 
@@ -64,4 +68,4 @@ If there is a command that you would typically use `sudo` to run, no worries. Yo
 MySQL Shell has many features that help make our lives easier. Running system commands, even those needing `sudo`, without having to leave MySQL Shell can save a lot of time. This behavior is one of those features you appreciate the more you use it.
 
 
-Photo by [Sora Shimazaki](https://www.pexels.com/photo/crop-cyber-spy-hacking-system-while-typing-on-laptop-5935794/).
+Photo by [Sora Shimazaki](https://www.pexels.com/photo/crop-cyber-spy-hacking-system-while-typing-on-laptop-5935794/}).

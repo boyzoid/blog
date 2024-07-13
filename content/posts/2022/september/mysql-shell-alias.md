@@ -52,11 +52,11 @@ This will reload our profile and pull in our new aliases.
 
 Now, when we run the `mysql` command in PowerShell, we will see the following results:
 
-![MySQL Shell SQL mode example](/assets/images/2022/mysql-shell-alias/mysql.png "MySQL Shell SQL Mode Example")
+![MySQL Shell SQL mode example]({{ "2022/mysql-shell-alias/mysql.png" | imgurl }}  "MySQL Shell SQL Mode Example")
 
 If we want to start MySQL Shell in JS mode, we use the `mysqlx` command.
 
-![MySQL Shell JS mode example](/assets/images/2022/mysql-shell-alias/mysqlx.png "MySQL Shell JS Mode Example")
+![MySQL Shell JS mode example]({{ "2022/mysql-shell-alias/mysqlx.png" | imgurl }}  "MySQL Shell JS Mode Example")
 
 I am a big fan of MySQL Shell, and these aliases allow me to open MySQL Shell in the mode I want much quicker.
 

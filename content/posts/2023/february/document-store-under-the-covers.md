@@ -19,7 +19,7 @@ To do this, we start up MySQL Shell using the following command.
 mysqlsh
 ```
 After we start MySQL Shell, we should see something like this:
-![MySQL Shell Startup](/assets/images/2023/document-store-under-covers/img1.png "MySQL Shell Start Up")
+![MySQL Shell Startup]({{ "2023/document-store-under-covers/img1.png" | imgurl }}  "MySQL Shell Start Up")
 
 Next, we need to connect to an instance of MySQL using a command similar to:
 ```shell
@@ -30,7 +30,7 @@ If you connect to a remote server, you may need to open port 33060 on your firew
 Port 33060 is the port for the [X Protocol](https://dev.mysql.com/doc/dev/mysql-server/latest/page_mysqlx_protocol.html) that we use to talk to MySQL when using MySQL Document Store.
 
 Once we are connected to MySQL, you should see something that looks like the image below:
-![MySQL Shell Connected](/assets/images/2023/document-store-under-covers/img2.png "MySQL Shell Start Connected")
+![MySQL Shell Connected]({{ "2023/document-store-under-covers/img2.png" | imgurl }}  "MySQL Shell Start Connected")
 
 In this case, I am connecting to an instance of MySQL that is running on my local machine, and I am using a user named `scott` that can connect without a password.
 
@@ -39,7 +39,7 @@ Next, we need to make sure we have logging turned on. Run the following command 
 session.runSql("show variables like '%general_log%'")
 ```
 We should see something that looks like this image:
-![General Log Query](/assets/images/2023/document-store-under-covers/img3.png "General Log Query")
+![General Log Query]({{ "2023/document-store-under-covers/img3.png" | imgurl }}  "General Log Query")
 
 The method `session.runSql()` allows us to run SQL commands against the database.
 If you see that the value for `general_log` is set to `OFF`, we need to turn it on using this command:
@@ -51,7 +51,7 @@ Once we have run this command, we check to make sure the general log was turned 
 session.runSql("show variables like '%general_log%'")
 ```
 And now, the results should look like the following:
-![General Log Query](/assets/images/2023/document-store-under-covers/img4.png "General Log Query")
+![General Log Query]({{ "2023/document-store-under-covers/img4.png" | imgurl }}  "General Log Query")
 
 With logging turned on, open up, or 'tail', the log file is denoted by the value of the `general_log_file` variable.
 
@@ -74,7 +74,7 @@ With the new schema created, we need to tell MySQL Shell to use this schema. Thi
 \u log_test
 ```
 We should see the following output in the console:
-![MySQL Shell use result](/assets/images/2023/document-store-under-covers/img5.png "MySQL Shell Use Result")
+![MySQL Shell use result]({{ "2023/document-store-under-covers/img5.png" | imgurl }}  "MySQL Shell Use Result")
 Note the message that the schema named `log_test` is available in a variable named `db`.
 
 We will also see the following entries in our log file.
@@ -104,7 +104,7 @@ The interesting part here is the `CREATE TABLE` command.
 ### Adding Documents
 With our collection created, let's add a simple document.
 ```shell
-db.my_data.add({"firstName": "Scott", "lastName": "Stroz"})
+db.my_data.add({"firstName": "Scott", "lastName": "Stroz")
 ```
 We will see the following added to our log file:
 ```sql
@@ -134,7 +134,7 @@ If we want to return all the documents, we will use this command:
 db.my_data.find()
 ```
 Our results will look something like this:
-![Results of find](/assets/images/2023/document-store-under-covers/img6.png "Results of find")
+![Results of find]({{ "2023/document-store-under-covers/img6.png" | imgurl }}  "Results of find")
 
 And our log file will have this new entry:
 ```sql
@@ -145,7 +145,7 @@ When we add a condition to the `find()` method, we can filter our results.
 db.my_data.find("lastName = 'Stroz'")
 ```
 Our results will resemble this image:
-![Results of find with condition](/assets/images/2023/document-store-under-covers/img7.png "Results of find with condition")
+![Results of find with condition]({{ "2023/document-store-under-covers/img7.png" | imgurl }}  "Results of find with condition")
 And our log file will have this new entry:
 ```sql
 SELECT doc FROM `log_test`.`my_data` WHERE (JSON_EXTRACT(doc,'$.lastName') = 'Stroz')
@@ -158,7 +158,7 @@ db.my_data.find("firstName in ('Lenka', 'Scott')").fields("lastName").sort("last
 ```
 With this command, we are telling MySQL that we want to return just the `lastName` property (instead of the complete document) for all documents where the `firstName` property equals 'Lenka' or 'Scott' and that we should sort the results by the `lastName` property.
 Here is what the result will look like:
-![Results of find with other conditions](/assets/images/2023/document-store-under-covers/img8.png "Results of find with other conditions")
+![Results of find with other conditions]({{ "2023/document-store-under-covers/img8.png" | imgurl }}  "Results of find with other conditions")
 This is what the new entry in the log file looks like:
 ```text
 SELECT JSON_OBJECT('lastName', JSON_EXTRACT(doc,'$.lastName')) AS doc FROM `log_test`.`my_data` WHERE (JSON_UNQUOTE(JSON_EXTRACT(doc,'$.firstName')) IN ('Lenka','Scott')) ORDER BY JSON_EXTRACT(doc,'$.lastName')
@@ -176,7 +176,7 @@ The following is the query that MySQL executed against our database with this co
 UPDATE `log_test`.`my_data` SET doc=JSON_SET(JSON_SET(doc,'$.isHuman',TRUE),'$._id',JSON_EXTRACT(`doc`,'$._id')) WHERE (NOT (JSON_EXTRACT(doc,'$.firstName') IS NULL))
 ```
 If we run `db.my_data.find()` we will see the these results:
-![Results of find with new property](/assets/images/2023/document-store-under-covers/img9.png "Results of find with new property")
+![Results of find with new property]({{ "2023/document-store-under-covers/img9.png" | imgurl }}  "Results of find with new property")
 
 If we want to update a property for just one document, we can use the value of the `_id` property.
 ```shell
@@ -187,7 +187,7 @@ The raw query MySQL uses to make this update will look like the following:
 UPDATE `log_test`.`my_data` SET doc=JSON_SET(JSON_SET(doc,'$.playsGolf',TRUE),'$._id',JSON_EXTRACT(`doc`,'$._id')) WHERE (JSON_UNQUOTE(JSON_EXTRACT(doc,'$._id')) = '000063d936710000000000000002')
 ```
 And we can see this update by once again running `db.my_data.find()` and seeing results similar to those below:
-![Results of find with another new property](/assets/images/2023/document-store-under-covers/img10.png "Results of find with another new property")
+![Results of find with another new property]({{ "2023/document-store-under-covers/img10.png" | imgurl }}  "Results of find with another new property")
 
 ### Deleting Documents
 The last example is what MySQL uses under the hood to delete documents in a Document Store.

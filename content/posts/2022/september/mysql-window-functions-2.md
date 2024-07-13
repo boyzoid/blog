@@ -48,7 +48,7 @@ In each row of the result set, we add the value returned from `LAG()` and `LEAD(
 
 This image shows the results of the above query.
 
-![LAG_LEAD](/assets/images/2022/window-functions/img5.png "LAG() and LEAD() example")
+![LAG_LEAD]({{ "2022/window-functions/img5.png" | imgurl }}  "LAG(}) and LEAD() example")
 
 The results of our calls to `LAG()` and `LEAD()` indicated by the red and yellow arrows may be interesting. If we omitted the third argument (the default value is the result is `NULL`), each result would be `NULL`. Since we are returning the value of points in the current row if the result was `NULL`, each of these is the value of points doubled.
 
@@ -76,7 +76,7 @@ We pass in a single argument to `NTILE()`, the number of groups into which we wo
 
 When we run this query, we see results that look like this:
 
-![NTILE](/assets/images/2022/window-functions/img6.png "NTILE() example")
+![NTILE]({{ "2022/window-functions/img6.png" | imgurl }}  "NTILE(}) example")
 
 ## `PERCENT_RANK()` Example
 
@@ -103,7 +103,7 @@ ORDER BY group_name, player_group_rank, full_name;
 
 The results of this query can be seen in the image below.
 
-![PCT_RANK](/assets/images/2022/window-functions/img7.png "PERCENT_RANK() example")
+![PCT_RANK]({{ "2022/window-functions/img7.png" | imgurl }}  "PERCENT_RANK(}) example")
 
 The interesting thing to note in the result set is that there is no score where 100% of the other scores are higher in Group A. This happens because Jimmie Neighbors and Kevin Hardy are tied for last place in the group.
 
@@ -131,7 +131,7 @@ Notice how we add an `OVER()` clause to `SUM()`, partitioning the data by the gr
 
 The results of this query would look similar to the picture below.
 
-![AGGREGATE_WINDOW_FUNCTION](/assets/images/2022/window-functions/img8.png "Using SUM() as window function example")
+![AGGREGATE_WINDOW_FUNCTION]({{ "2022/window-functions/img8.png" | imgurl }}  "Using SUM(}) as window function example")
 
 The results show that of the 15 players in Group A, Todd Sharp contributed 9.2368% of the points. In case you are wondering,  I purposely rounded these values to four decimal places so we could see the difference between the top two player percentages in Group A.
 
@@ -178,7 +178,7 @@ Note that we are only using the starting point for the window frame. In this cas
 
 The results for this query would resemble the image below.
 
-![WINDOW_FRAME_ROWS](/assets/images/2022/window-functions/img9.png "Window frame ROWS example")
+![WINDOW_FRAME_ROWS]({{ "2022/window-functions/img9.png" | imgurl }}  "Window frame ROWS example")
 
 The image above shows that the running total restarts when a new group starts. So if we wanted to do a running total for all players, we would remove the partition in our call to `SUM()`.
 
@@ -207,7 +207,7 @@ We use `COUNT()` as a window function in this example. If you look at the window
 
 The results of this query will look like the following:
 
-![WINDOW_FRAME_RANGE](/assets/images/2022/window-functions/img10.png "Window frame RANGE example")
+![WINDOW_FRAME_RANGE]({{ "2022/window-functions/img10.png" | imgurl }}  "Window frame RANGE example")
 
 An interesting bit is that Ardella shows one player is within ten points, but the player below her in the standings is more than ten points behind. This is because Ardella and Precious Cummings are tied, so the points for Precious are used in this calculation.
 

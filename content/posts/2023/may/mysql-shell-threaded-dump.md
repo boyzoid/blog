@@ -69,7 +69,7 @@ Average compressed throughput: 1.91 KB/s
 ```
 If we look in the directory we specified, we will see files that look like the following image:
 
-![Table Dump FIles](/assets/images/2023/mysql-shell-threaded-dump/img_01.png "Table dump files")
+![Table Dump FIles]({{ "2023/mysql-shell-threaded-dump/img_01.png" | imgurl }}  "Table dump files")
 
 Whenever we dump data, by default, MySQL Shell will use four threads to perform the action.
 If we want to use 8 threads, we will use the following call:

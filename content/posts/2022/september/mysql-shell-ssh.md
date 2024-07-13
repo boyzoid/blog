@@ -18,7 +18,7 @@ mysqlsh
 
 This will start MySQL Shell in JS mode. You should see something similar to the image below.
 
-![MySQL Shell JS Mode](/assets/images/2022/mysql-shell-ssh/img1.png "MySQL Shell JS Mode")
+![MySQL Shell JS Mode]({{ "2022/mysql-shell-ssh/img1.png" | imgurl }}  "MySQL Shell JS Mode")
 
 Now that we are in Js mode of MySQL Shell, we use the `shell.connect()` command to connect to a MySQL server tunneled through an SSH connection.
 
@@ -42,7 +42,7 @@ C:/Users/Dan/.ssh/my-ssh-key
 
 Once we run the `shell.connect()`, you will see a message that we are connected.
 
-![MySQL Shell SSH Connected](/assets/images/2022/mysql-shell-ssh/img2.png "MySQL Shell SSH Connected")
+![MySQL Shell SSH Connected]({{ "2022/mysql-shell-ssh/img2.png" | imgurl }}  "MySQL Shell SSH Connected")
 
 You can see that we are using a `Classic Session`.
 This is because we specified port 3306 in our connection string.
@@ -58,7 +58,7 @@ To switch to SQL mode, enter the following command:
 
 We will then see this prompt:
 
-![MySQL SheSQL Mode](/assets/images/2022/mysql-shell-ssh/img3.png "MySQL ShellSQL Mode")
+![MySQL SheSQL Mode]({{ "2022/mysql-shell-ssh/img3.png" | imgurl }}  "MySQL ShellSQL Mode")
 
 Now that we are in SQL mode, we can run SQL commands against the remote database.
 
@@ -70,7 +70,7 @@ Once we are done with our session, we can disconnect from MySQL Shell and close 
 
 We can now see that our connection is closed.
 
-![MySQL Shell Connection Closed](/assets/images/2022/mysql-shell-ssh/img4.png "MySQL Shell Connection Closed")
+![MySQL Shell Connection Closed]({{ "2022/mysql-shell-ssh/img4.png" | imgurl }}  "MySQL Shell Connection Closed")
 
 As you can see, it is not that difficult to use MySQL Shell over a secured connection using SSH.
 

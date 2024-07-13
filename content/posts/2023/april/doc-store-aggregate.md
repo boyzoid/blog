@@ -15,7 +15,7 @@ When we talk about 'simple' property values, we mean properties that contain sim
 In other words, these properties do not have values that are arrays or objects.
 Let's take a look at an example.
 
-![Simple vs Complex Values](/assets/images/2023/doc-store-aggregate/img-01.png "Simple vs Complex Values")
+![Simple vs Complex Values]({{ "2023/doc-store-aggregate/img-01.png" | imgurl }}  "Simple vs Complex Values")
 
 The properties `firstName`, `lastName`, `date`, and `score` are simple values because they only contain strings or numbers.
 The property `course` has a complex value because its value is an object.
@@ -34,7 +34,7 @@ In this example, we are returning just the `firstName` and `lastName` properties
 Also, the call to `groupBy()` shows we want to group our results by the `lastName` and `firstName` properties.
 When we run this command, we will see the following results.
 
-![Basic Grouping with Fields](/assets/images/2023/doc-store-aggregate/img-02.png "Basic Grouping with Fields")
+![Basic Grouping with Fields]({{ "2023/doc-store-aggregate/img-02.png" | imgurl }}  "Basic Grouping with Fields")
 
 ### Using `avg()`
 
@@ -47,7 +47,7 @@ db.scores.find("lastName = 'Stroz' and year(date) = 2022").fields(['firstName', 
 
 Executing this command gives us the following results:
 
-![Score Average](/assets/images/2023/doc-store-aggregate/img-03.png "Score Average")
+![Score Average]({{ "2023/doc-store-aggregate/img-03.png" | imgurl }}  "Score Average")
 
 ### Using `count()`
 
@@ -59,7 +59,7 @@ db.scores.find("lastName = 'Stroz' and year(date) = 2022").fields(['firstName', 
 
 We can see in the results that I had 20 scores for 2022.
 
-![Score Count](/assets/images/2023/doc-store-aggregate/img-04.png "Score Count")
+![Score Count]({{ "2023/doc-store-aggregate/img-04.png" | imgurl }}  "Score Count")
 
 ### Using `min()` and `max()`
 
@@ -77,7 +77,7 @@ db.scores.find("lastName = 'Stroz' and year(date)=2022").fields(['firstName', 'l
 
 When we run this command, we will see the results below.
 
-![Score Min and Max](/assets/images/2023/doc-store-aggregate/img-05.png "Score Min and Max")
+![Score Min and Max]({{ "2023/doc-store-aggregate/img-05.png" | imgurl }}  "Score Min and Max")
 
 ***Note:** You may have noticed that the properties are not returned in the same order specified in `fields()`.
 This is due to how the data is stored in the database table.*
@@ -93,7 +93,7 @@ To demonstrate how we would handle this, we need to use a different set of data.
 Instead of each document containing the name and score information, we will use documents where the scores are stored in an array for each person.
 Take a look at the sample schema below.
 
-![New Schema](/assets/images/2023/doc-store-aggregate/img-06.png "New Schema")
+![New Schema]({{ "2023/doc-store-aggregate/img-06.png" | imgurl }}  "New Schema")
 
 In this new schema, we see that each document contains properties with simple values for `firstName` and `lastName` and a property named `scores` that contains an array of objects.
 Each object has two properties with simple values, `score` and `date`.
@@ -165,7 +165,7 @@ The call to `find()` shows we want documents where the `lastName` property is eq
 In the call to `fileds()`, we can see that we want to return the `firstName` and `lastName` properties and that we want to return the rounded result of our call to `json_array_avg()`.
 Here are the results from the command above:
 
-![User-Defined Function results](/assets/images/2023/doc-store-aggregate/img-07.png "User-Defined Function results")
+![User-Defined Function results]({{ "2023/doc-store-aggregate/img-07.png" | imgurl }}  "User-Defined Function results")
 
 Note that what we pass to `json_array_avg()`, `scores[*].score` is a JSON path. This path tells MySQL to use all the elements of the scores array but only return values for the `score` property.
 The values will be populated into a JSON array which can be used by `json_array_avg()`.

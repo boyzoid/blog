@@ -39,7 +39,7 @@ Where `{user name}` is a database user and `{database server}` is your database 
 If you have not used MySQL Shell to connect to this instance in the past (or if you did not have MySQL Shell 'remember' the password), you will be asked to provide your password.
 Once you are connected, your screen should look like the image below:
 
-![MySQL Shell Connection](/assets/images/2023/mysql-shell-dump-azure-to-oci/image01.png "MySQL Shell Connection")
+![MySQL Shell Connection]({{ "2023/mysql-shell-dump-azure-to-oci/image01.png" | imgurl }}  "MySQL Shell Connection")
 
 For the sake of simplicity, in this post, I am connecting to an Azure MySQL instance that is publicly accessible (that is why I blurred out the domain name).
 It would be best to connect to your RDS MySQL Instance however you normally would and ***exercise extreme care in having a database instance exposed to the world.***

@@ -93,7 +93,7 @@ As you can see, one part of the `OVER()` clause is an `ORDER BY` clause. So, in 
 
 The results of this query show the rank of each player would look like this:
 
-![Ranking_players](/assets/images/2022/window-functions/img1.png "Ranking All Players")
+![Ranking_players]({{ "2022/window-functions/img1.png" | imgurl }}  "Ranking All Players")
 
 Notice that the rank value is sequential until it gets to Ardella Langosh, and four repeats. This repetition is because Ardella and Precious Cummings have the same number of points, each ranking 4th overall. Also, the next player, Bernita Yundt, is ranked 6th. This action is due to the fact we used `RANK()`, where it will skip numbers if more than one value is the same as another. This logic is consistent with how leaderboards for competitions often work.
 
@@ -115,7 +115,7 @@ Notice that we added `full_name` to the `ORDER BY` in the `RANK()` window functi
 
 The results of this query would appear as:
 
-![Ranking_players_no_ties](/assets/images/2022/window-functions/img1c.png "Ranking All Players with unique rank")
+![Ranking_players_no_ties]({{ "2022/window-functions/img1c.png" | imgurl }}  "Ranking All Players with unique rank")
 
 As we can see, each player is now ranked 1-10 instead of duplicating ranks among players with the same score.
 
@@ -133,7 +133,7 @@ ORDER BY player_overall_rank;
 ```
 The image below shows the results of using `DENSE_RANK()`. Note that Bernita Yundt has a ranking of `5` rather than `6` as in the first example.
 
-![Ranking_players_dense](/assets/images/2022/window-functions/img1b.png "Ranking All Players using RANK_DENSE()")
+![Ranking_players_dense]({{ "2022/window-functions/img1b.png" | imgurl }}  "Ranking All Players using RANK_DENSE(})")
 
 
 ### Using `PARTITION BY`
@@ -160,7 +160,7 @@ Note that we added another column, player_group_rank, to the result set that use
 
 Here are the results of this query:
 
-![Ranking_players_group](/assets/images/2022/window-functions/img2.png "Ranking Players By Group")
+![Ranking_players_group]({{ "2022/window-functions/img2.png" | imgurl }}  "Ranking Players By Group")
 
 We can see now that each player is listed in their group sorted by their ranking within that group. While Todd Sharp is the 3rd ranked player overall, he is the highest-ranked player in Group A. We can also see that while Ray Camden is 9th overall, he is in a tie for 4th in Group A.
 
@@ -193,7 +193,7 @@ By passing in the argument, `points`, to `FIRST_VALUE()`, we retrieve the value 
 
 The result of this query looks like this.
 
-![Points_from_first](/assets/images/2022/window-functions/img3.png "Points From First Place")
+![Points_from_first]({{ "2022/window-functions/img3.png" | imgurl }}  "Points From First Place")
 
 When we view these rankings, it is much easier to determine how far back a player is from the player ranked 1st. It would be trivial to handle this programmatically in any programming language. Returning this data as part of the result set makes it a more straightforward process by returning this data in the result set.
 
@@ -233,7 +233,7 @@ You may be wondering why we decided to use a `CASE` statement for this value, an
 
 Here is the result of the above query:
 
-![Points_from_playoffs](/assets/images/2022/window-functions/img4.png "Points From Playoff Spot")
+![Points_from_playoffs]({{ "2022/window-functions/img4.png" | imgurl }}  "Points From Playoff Spot")
 
 It may seem strange that more than four teams are 0 points from a playoff spot for each group. For example, in Group A, we have two teams tied for 2nd place and three in a tie for 4th place. In Group B, we have two teams tied for 4th place. If we had teams tied at the end of the season, we would need to use a tiebreaker to determine who would make the playoffs. Depending on the tiebreaker rules, we could add that logic to the query to ensure the teams tied in points are displayed based on the tiebreaker information.
 

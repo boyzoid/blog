@@ -139,7 +139,7 @@ Check out the [documentation](https://dev.mysql.com/doc/mysql-shell/8.4/en/mysql
 With MySQL Shell, we can check other systems when running `util.checkForServerUpgrade()`. The syntax for connecting to another system to run the check resembles the following command:
 
 ```shell
-util.checkForServerUpgrade('user@example.com:3306', {"password":"password"})
+util.checkForServerUpgrade('user@example.com:3306', {"password":"password")
 ```
 
 ## Method Options

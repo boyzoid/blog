@@ -34,7 +34,7 @@ mongoexport --db demo --collection restaurants --out restaurants.json
 ```
 
 We should see the following result:
-![MongoDB Export Results](/assets/images/2022/mongo-import/img1.png "MongoDB Export Results")
+![MongoDB Export Results]({{ "2022/mongo-import/img1.png" | imgurl }}  "MongoDB Export Results")
 
 The file `restaurants.json` will contain all the records from the `restaurants` collection.
 Being the curious sort that I am, I looked at this file and was surprised to find that the file did NOT contain an array of JSON objects.
@@ -58,7 +58,7 @@ mysqlsh
 ```
 
 We should see something similar to this image:
-![MySQL Shell Start up](/assets/images/2022/mongo-import/img2.png "MySQL Shell Start up")
+![MySQL Shell Start up]({{ "2022/mongo-import/img2.png" | imgurl }}  "MySQL Shell Start up")
 
 Now, we need to connect to our MySQL Instance by running the following command:
 
@@ -69,7 +69,7 @@ Now, we need to connect to our MySQL Instance by running the following command:
 Where `{user}` is our MySQL username, `{password}` is the password for this user, and `{server address}` is the IP address or domain name of the server to which we are connecting.
 
 When the connection is successful, we will see the following:
-![MySQL Shell Connection](/assets/images/2022/mongo-import/img3.png "MySQL Shell Connection")
+![MySQL Shell Connection]({{ "2022/mongo-import/img3.png" | imgurl }}  "MySQL Shell Connection")
 
 **Note:** In my example, I am using a user (not `root`) that does not need a password when connecting to `localhost`.
 
@@ -80,7 +80,7 @@ Before we import our data, we must create the schema where the data will reside.
 session.createSchema('import_demo')
 ```
 When a schema is created successfully, we will see it echoed below our command, as in the picture below.
-![MySQL Shell Create Schema](/assets/images/2022/mongo-import/img4.png "MySQL Shell Create Schema")
+![MySQL Shell Create Schema]({{ "2022/mongo-import/img4.png" | imgurl }}  "MySQL Shell Create Schema")
 
 ## Importing The Data
 Now that we have our schema defined, we can import our data. MySQL Shell comes with several utilities, one of which is `importJson()`.
@@ -105,7 +105,7 @@ This data type is incompatible with MySQL Document Store as the `_id` field in M
 When we set `convertBsonOid` to true, the import will translate the value of `$oid` to `varbinary(32)`.
 
 When the import is successful, we will see output that resembles:
-![MySQL Shell Import Success](/assets/images/2022/mongo-import/img5.png "MySQL Shell Import Success")
+![MySQL Shell Import Success]({{ "2022/mongo-import/img5.png" | imgurl }}  "MySQL Shell Import Success")
 We can see that the import was successful and that we imported 2548 documents in 0.2612 seconds.
 
 ## Checking the Import
@@ -120,7 +120,7 @@ Let's start by telling MySQL Shell to use the new schema by running the followin
 ```
 
 We should see a message similar to the following:
-![MySQL Shell Use Schema](/assets/images/2022/mongo-import/img6.png "MySQL Shell Use Schema")
+![MySQL Shell Use Schema]({{ "2022/mongo-import/img6.png" | imgurl }}  "MySQL Shell Use Schema")
 
 Here, we can see that once we have specified a schema, we can refer to the schema using `db`.
 
@@ -176,14 +176,14 @@ First, we need to switch MySQL Shell over to `SQL mode` by running this command:
 \sql
 ```
 This command will switch MySQL Shell to `SQL Mode`  - where we can run SQL queries. As long as you have set the schema in `JS Mode`, it will be set in `SQL Mode`, as the image below shows.
-![MySQL Shell SQL Mode](/assets/images/2022/mongo-import/img7.png "MySQL Shell SQL Mode")
+![MySQL Shell SQL Mode]({{ "2022/mongo-import/img7.png" | imgurl }}  "MySQL Shell SQL Mode")
 
 Now that we are in SQL mode, we can run this command to see the table structure for the `restaurants` collection.
 ```sql
 describe restaurants;
 ```
 The results of this query are below:
-![MySQL Shell Restaurants Structure](/assets/images/2022/mongo-import/img8.png "MySQL Shell Restaurants Structure")
+![MySQL Shell Restaurants Structure]({{ "2022/mongo-import/img8.png" | imgurl }}  "MySQL Shell Restaurants Structure")
 
 You can see there are three columns:
 * `doc` - which is of type `json` and contains the JSON documents we imported.

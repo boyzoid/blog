@@ -23,31 +23,31 @@ Before we dump database data to OCI, we first need to create a storage bucket in
 
 To do this, log in to your OCI account and click the "hamburger" menu icon.
 
-![OCI Hamburger Menu](/assets/images/2023/mysql-shell-dump-to-oci/image01.png "OCI Hamburger Menu")
+![OCI Hamburger Menu]({{ "2023/mysql-shell-dump-to-oci/image01.png" | imgurl }}  "OCI Hamburger Menu")
 
 Enter " buckets " In the search form and then click the "Buckets" link.
 
-![OCI Buckets Link](/assets/images/2023/mysql-shell-dump-to-oci/image02.png "OCI Buckets Link")
+![OCI Buckets Link]({{ "2023/mysql-shell-dump-to-oci/image02.png" | imgurl }}  "OCI Buckets Link")
 
 Once on the main Buckets page, click the "Create Bucket" button.
 
-![Create Buckets Button](/assets/images/2023/mysql-shell-dump-to-oci/image03.png "Create Buckets Button")
+![Create Buckets Button]({{ "2023/mysql-shell-dump-to-oci/image03.png" | imgurl }}  "Create Buckets Button")
 
 In the "Create Bucket" form, enter a name for the new bucket (1).
 In this example, I used "database_dumps".
 We can accept the default values for the other fields and click the "Create" button (2).
 
-![Create Bucket Form](/assets/images/2023/mysql-shell-dump-to-oci/image04.png "Create Bucket Form")
+![Create Bucket Form]({{ "2023/mysql-shell-dump-to-oci/image04.png" | imgurl }}  "Create Bucket Form")
 
 When the new bucket is created, it will appear in the list of buckets in our compartment.
 Click the link for our new bucket to view the details.
 
-![New Bucket Link](/assets/images/2023/mysql-shell-dump-to-oci/image05.png "New Bucket Link")
+![New Bucket Link]({{ "2023/mysql-shell-dump-to-oci/image05.png" | imgurl }}  "New Bucket Link")
 
 On the details page for our new bucket, take note of the "Namespace" value.
 We will need this when we run the commands to dump and load our database data.
 
-![Bucket Details](/assets/images/2023/mysql-shell-dump-to-oci/image06.png "Bucket Details")
+![Bucket Details]({{ "2023/mysql-shell-dump-to-oci/image06.png" | imgurl }}  "Bucket Details")
 
 ## Connect to a MySQL Instance
 
@@ -136,7 +136,7 @@ Return to the OCI web interface and navigate to the bucket we created earlier.
 If we look in the "Objects" section of the Bucket Details page, we will see a folder named "airport_dump".
 If we expand this folder, we will see the files created when we performed the data dump.
 
-![Data Dump Files](/assets/images/2023/mysql-shell-dump-to-oci/image07.png "Data Dump Files")
+![Data Dump Files]({{ "2023/mysql-shell-dump-to-oci/image07.png" | imgurl }}  "Data Dump Files")
 
 ## Load the Data
 
@@ -145,7 +145,7 @@ In this example, we will load the data into the same instance but use a differen
 Here is the command to load this dump.
 
 ```shell
-util.loadDump("airport_dump", {schema: "airportdb_2", osBucketName:"database_dumps", osNamespace:"{namespace value"})
+util.loadDump("airport_dump", {schema: "airportdb_2", osBucketName:"database_dumps", osNamespace:"{namespace value")
 ```
 
 The first argument, `airport_dump`, is the folder's name that was created in our bucket.

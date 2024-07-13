@@ -12,7 +12,7 @@ You may be curious to know what you can expect to see here. I can assure you the
 
 There is also a better than fair chance you will see lots of pictures of my dog. That's him below.
 
-![My Dog](/assets/images/2022/murphy.jpg "My Dog")
+![My Dog]({{ "2022/murphy.jpg" | imgurl }}  "My Dog")
 
 I also anticipate the theme/layout/features of this site to change as I get used to using Eleventy.
 

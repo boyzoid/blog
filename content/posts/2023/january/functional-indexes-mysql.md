@@ -15,7 +15,7 @@ Download [this file](https://objectstorage.us-ashburn-1.oraclecloud.com/n/idmqjy
 
 When you are done, you should have a table named `test_data` with the following structure:
 
-![test_data table structure](/assets/images/2023/functional-indexes/img1.png "test_data Table Structure")
+![test_data table structure]({{ "2023/functional-indexes/img1.png" | imgurl }}  "test_data Table Structure")
 
 This table should also contain 2000 rows of data.
 
@@ -30,7 +30,7 @@ select count(*) from test_data where col1 + col2 = 10;
 
 And the result would look like this:
 
-![query results](/assets/images/2023/functional-indexes/img2.png "Query Results")
+![query results]({{ "2023/functional-indexes/img2.png" | imgurl }}  "Query Results")
 
 We can take a look at the explain plan for this query by executing this SQL command:
 
@@ -42,7 +42,7 @@ explain select count(*) from test_data where col1 + col2 = 10\G
 
 The result of this command will look like the following:
 
-![explain plan result](/assets/images/2023/functional-indexes/img3.png "Explain Plan Results")
+![explain plan result]({{ "2023/functional-indexes/img3.png" | imgurl }}  "Explain Plan Results")
 
 The red arrows indicate that there are no indexes that we can use in this query.
 The yellow arrow indicates that the query did a full table scan.
@@ -62,7 +62,7 @@ alter table test_data
 ```
 
 Now that we have an index that can help our query let's look at the explain plan again:
-![explain plan result 2](/assets/images/2023/functional-indexes/img4.png "Explain Plan Result - 2")
+![explain plan result 2]({{ "2023/functional-indexes/img4.png" | imgurl }}  "Explain Plan Result - 2")
 Here, the red arrows show some indexes are used, and the yellow arrow indicates only 177 rows were scanned. Even in this small data set, that is quite an improvement.
 
 ### The Rules

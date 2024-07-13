@@ -177,7 +177,7 @@ limit 15;
 In this query, we use the JSON path operator to extract the `_id` and `name` properties of our JSON document and the value in the column used for our index.
 The results will look like the following:
 
-![Demo query results](/assets/images/2022/doc-store-indexes/img3.png "Demo query results")
+![Demo query results]({{ "2022/doc-store-indexes/img3.png" | imgurl }}  "Demo query results")
 
 As you can see, when we created our index, it extracted the value of the `name` property and stored it in this new column.
 The value in this column is populated when a new document is added to our collection. This value is also updated when a document is updated.
