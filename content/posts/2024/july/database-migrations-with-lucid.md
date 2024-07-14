@@ -119,7 +119,7 @@ This function defines the table using Lucid's [schema builder API](https://lucid
 
 We added two columns, `name` and `enabled`. The `name` column will be a `varchar(50)` and not nullable. The `enabled` column will be created as a `tinyint(1)` data type and default to `true`.
 
-We also added a shortcut for specifying the `created_at` and `updated_at` columns. These two columns will be created using `table.timestamps()`. Making the first argument 'true` will use the data type `timestamp` instead of `datetime`. Using `true` for the second argument will set the default value of each of these columns to `CURRENT_TIMESTAMP`.
+We also added a shortcut for specifying the `created_at` and `updated_at` columns. These two columns will be created using `table.timestamps()`. Making the first argument `true` will use the data type `timestamp` instead of `datetime`. Using `true` for the second argument will set the default value of each of these columns to `CURRENT_TIMESTAMP`.
 
 The second function on this page is called `down()`. The generated code includes a call to drop the table. For now, we do not need to change this function.
 
