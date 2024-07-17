@@ -197,6 +197,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("imgurlheader", function (text) {
     return siteconfig.cloudinaryHeaderUrl + siteconfig.cloudUrl + text
   });
+  eleventyConfig.addFilter("imgurlpreview", function (text) {
+    return siteconfig.cloudinaryHeaderUrl + siteconfig.cloudUrl + text
+  });
 
   eleventyConfig.addFilter("videourl", function (text) {
     return siteconfig.cloudianryVideoUrl + siteconfig.cloudUrl + text

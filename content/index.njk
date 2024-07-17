@@ -17,8 +17,14 @@ meta:
     <div>
     	<div class="pb-4 pt-4">
 			<a class="text-myblue-500 dark:text-indigo-300 text-xl dark:font-light font-normal postlistheading" href="{{ post.url | url }}">{{ post.data.title }}</a>
+			<div class="pb-4 pt-3 grid grid-cols-3 gap-2">
+				<div>
+					<img class="preview" src="{{ siteconfig.cloudinaryPreviewUrl }}{{ siteconfig.cloudUrl }}{{ post.data.image }}" title="{{ post.data.title }}" alt="{{ post.data.title }}">
+				</div>
+				<div class="preview col-span-2">{% excerpt post %}</div>
+			</div>
 		</div>
-      	<div class="pb-4 text-gray-900 dark:text-gray-400">{% excerpt post %}</div>
+
       	<div class="pb-6 text-sm text-gray-500 dark:text-gray-400 border-b-1 border-gray-800 dark:border-gray-700 border-opacity-20 flex">
 			<div class="flex">
         		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.112 600.111" class="h-5 w-4 mr-2">
@@ -71,7 +77,7 @@ meta:
 	    <li class="mr-3">
 			<div class="leading-relaxed">
 				{% if not pagination.href.first %}
-				<span class="block cursor-not-allowed">&lt;&lt;</a>
+				<a class="block cursor-not-allowed">&lt;&lt;</a>
 				{% else %}
 				<a href="{{ pagination.href.first }}" class="block hover:no-underline">&lt;&lt;</a>
 				{% endif %}

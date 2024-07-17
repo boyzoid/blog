@@ -4,6 +4,7 @@ module.exports = {
   //Cloud Storage URl
   cloudUrl: 'https://objectstorage.us-ashburn-1.oraclecloud.com/n/idmqjyw9i2ib/b/blog/o/',
   cloudinaryHeaderUrl: 'https://res.cloudinary.com/strozstuff/image/fetch/c_fit,w_650/',
+  cloudinaryPreviewUrl: 'https://res.cloudinary.com/strozstuff/image/fetch/c_fit,w_250/',
   cloudinaryUrl: 'https://res.cloudinary.com/strozstuff/image/fetch/',
   cloudianryVideoUrl: 'https://res.cloudinary.com/strozstuff/video/fetch/',
   // Website title, shown in left sidebar and in page title
