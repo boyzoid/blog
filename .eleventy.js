@@ -202,6 +202,10 @@ module.exports = function (eleventyConfig) {
     return siteconfig.cloudianryVideoUrl + siteconfig.cloudUrl + text
   });
 
+  eleventyConfig.addShortcode("imgPath", (path, img) => {
+    return siteconfig.cloudinaryUrl + siteconfig.cloudUrl + path + img;
+  });
+
   // Add 3rd party plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginToc);
