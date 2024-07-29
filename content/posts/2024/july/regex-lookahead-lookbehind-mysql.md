@@ -8,7 +8,7 @@ series: reg-ex-mysql
 description: Using lookahead and lookbehind as part of a regular expression in MySQL.
 ---
 
-Regular expressions are powerful but often misunderstood tools for developers. In recent posts, we have discussed [subexpressions] (/posts/2024/july/regex-subexpressions-mysql) and [back references] (/posts/2024/july/regex-back-references-mysql) (which are special types of subexpressions). This post will show examples of two other special subexpressions: look ahead and look behind.
+Regular expressions are powerful but often misunderstood tools for developers. In recent posts, we have discussed [subexpressions](/posts/2024/july/regex-subexpressions-mysql) and [back references](/posts/2024/july/regex-back-references-mysql) (which are special types of subexpressions). This post will show examples of two other special subexpressions: look ahead and look behind.
 
 ## The Requirement
 
