@@ -398,6 +398,6 @@ As we can see, all the non-system schemas were copied to the new instance.
 
 ## Wrap Up
 
-MySQL Shell offers various ways to copy or move data from one instance to another. Some of these require two steps - one that dumps or exports the data and one that loads or imports the data. Using the `copy` methods in the `util` object, we can copy data from one MySQL instance to another in a single command/step. To get more information about the commands we discussed, head on over to the [documentation](https://dev.mysql.com/doc/mysql-shell/9.0/en/mysql-shell-utils-copy.html)
+MySQL Shell offers various ways to copy or move data from one instance to another. Some of these require two steps - one that dumps or exports the data and one that loads or imports the data. Using the `copy` methods in the `util` object, we can copy data from one MySQL instance to another in a single command/step. To get more information about the commands we discussed, head on over to the [documentation](https://dev.mysql.com/doc/mysql-shell/9.0/en/mysql-shell-utils-copy.html).
 
 Image by <a href="https://pixabay.com/users/manuelwagner0-875119/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=686304">manuelwagner0</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=686304">Pixabay</a>
