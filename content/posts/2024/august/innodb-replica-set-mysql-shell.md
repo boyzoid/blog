@@ -115,7 +115,7 @@ The next step in creating an InnoDB replica set is to add one or more secondary 
 rs.addInstance('root@localhost:5556')
 ```
 
-This command calls the `addInstance()` method on our new replica set object, ' rs`. When we call this method, we pass a single argument: the connection string to the instance we wish to add. In this case, we want to connect to an instance on our local system on port 5556 using the user `root`.
+This command calls the `addInstance()` method on our new replica set object, `rs`. When we call this method, we pass a single argument: the connection string to the instance we wish to add. In this case, we want to connect to an instance on our local system on port 5556 using the user `root`.
 
 **Note:** *I am using the `root` user in this example for ease of use. In an actual production system, you should avoid using a `root` for any processes, including replication.*
 
