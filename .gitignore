@@ -48,3 +48,4 @@ assets/js/min.*
 /aws dump load.md
 /.eleventyignore
 /blog_images/
+/.idea/
