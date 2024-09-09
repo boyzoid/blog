@@ -1,6 +1,6 @@
 ---
 title: Creating and Connecting to A HeatWave MySQL Always Free Instance
-date: 2024-09-20T06:00:00
+date: 2024-09-13T06:00:00
 image: 2024/heatwave-mysql-always-free/header.jpg
 image-path: 2024/heatwave-mysql-always-free/
 tags: [ "MySQL", "HeatWave-MySQL", "Oracle-Cloud" ]
