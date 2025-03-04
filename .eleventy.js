@@ -1,6 +1,7 @@
 const { format, formatISO, getYear } = require("date-fns");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginToc = require("eleventy-plugin-toc");
+const { JSDOM } = require("jsdom");
 const { MD5 } = require("crypto-js");
 const { URL } = require("url");
 const { readFileSync } = require("fs");
@@ -176,7 +177,7 @@ module.exports = function (eleventyConfig) {
 
   });
 
-  eleventyConfig.addFilter("getSeries", function(series, posts, page) {
+  eleventyConfig.addFilter("getSeries", function(series, posts) {
 
     let related = []
      if( series ){
@@ -203,6 +204,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("videourl", function (text) {
     return siteconfig.cloudianryVideoUrl + siteconfig.cloudUrl + text
+  });
+
+  eleventyConfig.addFilter("stripHTML", function(content) {
+    const dom = new JSDOM(content);
+    return dom.window.document.body.textContent || "";
   });
 
   eleventyConfig.addShortcode("imgPath", (path, img) => {
