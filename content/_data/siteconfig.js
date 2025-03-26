@@ -39,7 +39,7 @@ module.exports = {
   // See: https://github.com/algolia/algoliasearch-netlify
   algoliaSearch: {
     // When enabled shows the search bar in the UI
-    enabled: false,
+    enabled: true,
     // You'll have to set this manually in your build settings.
     // The value comes from Algolia, and is either visible in the
     // UI for the Crawler Plugin or the Algolia Dashboard.
