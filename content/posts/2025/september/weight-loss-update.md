@@ -1,6 +1,6 @@
 ---
 title: "Milestone Achieved: Breaking the 300 Barrier"
-date: 2025-09-02T08:00:00
+date: 2025-09-02T00:00:00
 image: 2025/milestone/header.jpg
 tags: ["Weight Loss", "Exercise", "Things About Me"]
 series: getting-in-shape
