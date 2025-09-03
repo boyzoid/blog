@@ -198,6 +198,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("imgurlheader", function (text) {
     return siteconfig.cloudinaryHeaderUrl + siteconfig.cloudUrl + text
   });
+
+  eleventyConfig.addFilter("imgurlmeta", function (text) {
+    return siteconfig.cloudUrl + text
+  });
+
   eleventyConfig.addFilter("imgurlpreview", function (text) {
     return siteconfig.cloudinaryHeaderUrl + siteconfig.cloudUrl + text
   });
