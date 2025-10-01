@@ -26,7 +26,7 @@ Picking your columns in just the right order lets the database know which bit of
 Ready to officially welcome your first library member? Here’s an example with the trusty `students` table:
 
 ```sql
-INSERT INTO students (id, name, email, enrollment_date) 
+INSERT INTO student (id, name, email, enrollment_date) 
 VALUES (1, 'Alice Johnson', 'alice@example.com', '2024-06-08');
 ```
 
@@ -35,7 +35,7 @@ This statement registers student number 1, Alice Johnson, with her email and the
 A quick note for tables where the `id` is set to auto-increment: MySQL can generate these unique IDs for you. That means you don’t need to provide an `id`—just skip it! For example:
 
 ```sql
-INSERT INTO students (name, email, enrollment_date) 
+INSERT INTO student (name, email, enrollment_date) 
 VALUES ('Jamie Lee', 'jamie@example.com', '2024-07-01');
 ```
 The database will assign Jamie a shiny new ID all on its own—a true welcome gift in any library.
@@ -45,7 +45,7 @@ The database will assign Jamie a shiny new ID all on its own—a true welcome gi
 Why enter library members one by one when you can hold a group orientation? MySQL lets you insert several records with a single command:
 
 ```sql
-INSERT INTO students (id, name, email, enrollment_date) VALUES 
+INSERT INTO student (id, name, email, enrollment_date) VALUES 
 (2, 'Bob Smith', 'bob@example.com', '2024-06-09'), 
 (3, 'Carla Diaz', 'carla@example.com', '2024-06-10');
 ```
@@ -65,13 +65,13 @@ Inserting data is simple, but it pays to keep a sharp librarian’s eye out for 
 Want to see your shiny new library roster? Peek at all your students like this:
 
 ```sql
-SELECT * FROM students;
+SELECT * FROM student;
 ```
 
 For a quick headcount—how many readers are currently enrolled?—use:
 
 ```sql
-SELECT COUNT(*) FROM students;
+SELECT COUNT(*) FROM student;
 ```
 
 It’s instant feedback for your digital librarian skills!
