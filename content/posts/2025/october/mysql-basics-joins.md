@@ -115,4 +115,4 @@ Ready to show off your new skills? Try:
 
 JOINs are your ticket to relational database magic, letting tables team up and reveal the bigger story. Experiment, ask new questions, and watch your skills grow—JOINs are where SQL really starts to feel like superpowers.
 
-Want to keep the adventure going? Next up: we’ll talk about transactions—how to keep your database’s storylines consistent, no matter how wild the plot twists. What would you like to explore after that?
+Ready to level up further? Next up, we’ll dive into aggregating and grouping data—learning how to count, sum, and categorize your library records for even more insightful reports. Stay tuned!
