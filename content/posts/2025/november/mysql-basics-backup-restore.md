@@ -1,7 +1,7 @@
 ---
 {
 "title": "MySQL Basics: Don’t Lose It—Backing Up and Restoring Your Database",
-"date": "2025-10-31T06:00:00",
+"date": "2025-11-06T06:00:00",
 "image": "2025/mysql-basics-backup-restore/header.jpg",
 "tags": ["MySQL", "Database", "SQL"],
 "series": "mysql-basics",
