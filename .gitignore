@@ -50,3 +50,4 @@ assets/js/min.*
 /blog_images/
 /.idea/
 /.oca/custom_code_review_guidelines.txt
+/blog.iml
