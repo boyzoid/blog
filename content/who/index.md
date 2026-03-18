@@ -4,14 +4,18 @@ layout: page.njk
 title: Who Am I?
 ---
 
-<div style="margin-bottom: 2rem">
-  <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-50 mb-3">Hi, I'm Scott.</h2>
-  <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">I've been slinging code professionally since before the term "full stack developer" has existed. I love to tinker, I have an unquenchable thirst for knowledge, and I get genuinely excited about learning something new.</p><p>This blog is where I share what I figure out — so you can learn from my mistakes.</p>
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-6" style="margin-bottom: 2rem">
+  <img src="{{ "opengraph.jpg" | imgurl }}" alt="Scott Stroz" class="rounded-full w-32 h-32 object-cover shadow-md shrink-0" style="margin:0" />
+  <div>
+    <h2 class="text-2xl font-semibold text-gray-800 dark:text-gray-50 mb-3" style="margin-top:0">Hi, I'm Scott.</h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed" style="padding:0">I've been slinging code professionally since before the term "full stack developer" has existed. I love to tinker, I have an unquenchable thirst for knowledge, and I get genuinely excited about learning something new.</p>
+    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed" style="padding:0">This blog is where I share what I figure out — so you can learn from my mistakes.</p>
+  </div>
 </div>
 
 <div style="margin: 2rem 0">
   <blockquote class="border-l-4 border-giants-800 dark:border-giants-400 pl-5 py-1" style="margin:0">
-    <p class="text-lg text-gray-700 dark:text-gray-200 italic leading-relaxed" style="padding:0">"I don't believe adversity builds character. I believe adversity <strong>reveals</strong> character."</p>
+    <p class="text-lg text-gray-700 dark:text-gray-200 italic leading-relaxed" style="padding:0">"Adversity does not build character. It <strong>reveals</strong> it."</p>
     <footer class="text-sm text-gray-500 dark:text-gray-400 not-italic" style="margin-top:0.5rem">— Me</footer>
   </blockquote>
 </div>
