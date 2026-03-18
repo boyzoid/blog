@@ -7,25 +7,24 @@ meta:
     value: noindex
 ---
 
-<div class="postlist pb-8 mt-8 font-light dark:font-extralight pt-4">
+<div class="postlist pb-8 mt-8 pt-4">
     {% for post in collections.posts | reverse %}
         {% set currentYear = post | year %}
         {% set previousYear = collections.posts | getPreviousCollectionItem(post) | year %}
         {% if loop.first %}
-        <span class="text-2xl">{{ currentYear }}</span>
-        <ul class="mt-3">
+        <span class="text-2xl font-semibold text-gray-800 dark:text-gray-100">{{ currentYear }}</span>
+        <ul class="mt-3 mb-6 list-none pl-0">
         {% endif %}
-            <li class="bg-gradient-to-r from-white via-gray-100 to-white dark:via-dark-middle dark:from-dark-outer dark:to-dark-outer mb-4 px-6 py-2 truncate">
-                <span class="text-lg tabular-nums">{{ post.date | day }}</span>
-                <span class="text-sm font-extralight">{{ post.date | month }}</span>
-                <a href="{{ post.url }}" class="ml-6">{{ post.data.title }}</a>
+            <li class="mb-2 px-4 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors truncate">
+                <span class="text-sm tabular-nums text-gray-400 dark:text-gray-400 mr-2">{{ post.date | day }} {{ post.date | month }}</span>
+                <a href="{{ post.url }}" class="text-gray-700 dark:text-gray-200 hover:text-giants-800 dark:hover:text-giants-200 no-underline transition-colors">{{ post.data.title }}</a>
             </li>
         {% if loop.last %}
         </ul>
         {% elif currentYear != previousYear %}
         </ul>
-        <span class="text-2xl">{{ previousYear }}</span>
-        <ul class="mt-3">
+        <span class="text-2xl font-semibold text-gray-800 dark:text-gray-100">{{ previousYear }}</span>
+        <ul class="mt-3 mb-6 list-none pl-0">
         {% endif %}
     {% endfor %}
 </div>

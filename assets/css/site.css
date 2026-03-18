@@ -2,194 +2,181 @@
 @tailwind components;
 @tailwind utilities;
 
-img {
-  @apply rounded-lg shadow-lg block mx-auto h-auto;
+/* =====================
+   Layout
+   ===================== */
+
+.page-wrapper {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* Left sidebar */
-
-.sidebar .navitem {
-  @apply text-gray-400 hover:text-white px-1;
-}
-
-.sidebar .navitem.active {
-  @apply text-white;
-  font-weight: bold;
-}
-
-.sidebar .navitem:hover {
-  font-weight: bold;
-}
-
-div.menu li {
-  @apply leading-12;
-}
-
-div.menu ul > li:last-child > a {
-  margin-right: -3px;
-  max-width: calc(100% - 3px);
-}
-
-/*div.menu ul > li:last-child::after {
-    visibility: hidden;
-    content: "";
-    position: relative;
-    right: -8.8rem;
-    width: 3px;
-    background-color: white;
-    pointer-events: none;
-    border-right: solid 2px white;
-    transition: top 0.5s ease;
-}*/
-
-@media screen and (max-width: 1280px) {
-  div.menu ul > li:last-child::after {
-    right: -6.8rem;
+@media (min-width: 640px) {
+  .page-wrapper {
+    padding: 0 1.5rem;
   }
 }
 
-div.menu ul > li.active:nth-child(1) ~ li:last-child::after,
-div.menu ul > li.navitem:nth-child(1):hover ~ li:last-child::after {
-  top: -12rem;
-  visibility: visible;
-}
-div.menu ul > li.active:nth-child(2) ~ li:last-child::after,
-div.menu ul > li.navitem:nth-child(2):hover ~ li:last-child::after {
-  top: -9rem;
-  visibility: visible;
-}
-div.menu ul > li.active:nth-child(3) ~ li:last-child::after,
-div.menu ul > li.navitem:nth-child(3):hover ~ li:last-child::after {
-  top: -6rem;
-  visibility: visible;
-}
-/*div.menu ul > li.active:nth-child(4):last-child::after,
-div.menu ul > li.navitem:nth-child(4):last-child:hover::after {
-    top: -3rem;
-    visibility: visible;
-}*/
-
-div.menu > * {
-  transition: transform 0.4s ease;
+@media (min-width: 1024px) {
+  .page-wrapper {
+    padding: 0 2rem;
+  }
 }
 
-/* SVGs */
-
-
-html:not(.dark) svg.twitter {
-  fill: #1da1f2;
-  stroke: #1da1f2;
+.content-grid {
+  display: grid;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 
-html:not(.dark) svg.twitter:hover {
-  fill: #1b90d8;
-  stroke: #1b90d8;
+@media (min-width: 1280px) {
+  .content-grid {
+    grid-template-columns: 1fr 16rem;
+  }
 }
 
-html:not(.dark) svg.facebook {
-  fill: #4267b2;
-  stroke: #4267b2;
+/* =====================
+   Navigation
+   ===================== */
+
+.nav-link {
+  @apply text-sm text-gray-600 dark:text-gray-300 hover:text-giants-800 dark:hover:text-giants-200 transition-colors;
 }
 
-html:not(.dark) svg.facebook:hover {
-  fill: #375593;
-  stroke: #375593;
+.nav-link.active {
+  @apply text-giants-800 dark:text-giants-200 font-medium;
 }
 
-html:not(.dark) svg.linkedin {
-  fill: #0072b1;
-  stroke: #0072b1;
+.mobile-nav-link {
+  @apply block py-1.5 text-sm text-gray-700 dark:text-gray-200 hover:text-giants-800 dark:hover:text-giants-200 transition-colors;
 }
 
-html:not(.dark) svg.linkedin:hover {
-  fill: #006398;
-  stroke: #006398;
+.mobile-nav-link.active {
+  @apply text-giants-800 dark:text-giants-200 font-medium;
 }
 
-
-html:not(.dark) svg.lighttoggle {
-  @apply hidden;
+.nav-icon {
+  @apply text-gray-400 dark:text-gray-400 hover:text-giants-800 dark:hover:text-giants-200 transition-colors;
 }
 
-.sidebar svg {
-  fill: #9ca3af;
-  stroke: #9ca3af;
-  @apply transition duration-200 ease-in;
-}
-
-.sidebar svg:hover {
-  fill: #fff;
-  stroke: #fff;
-}
-
-/* Content area */
+/* =====================
+   Content area
+   ===================== */
 
 .content,
 .postlist {
-  @apply mt-8 mx-8 lg:mr-32 lg:ml-32 leading-relaxed tracking-wider;
+  @apply leading-relaxed;
 }
 
 .content a {
-  @apply text-myblue-500 underline;
-  font-weight: bold;
+  @apply text-giants-800 dark:text-giants-200 underline font-medium;
+}
+
+.content a:hover {
+  @apply text-giants-700 dark:text-giants-200;
 }
 
 .content p {
-  @apply pb-4 pt-2 font-light ;
-  line-height: 35px;
+  @apply pb-4 pt-2;
+  line-height: 1.85;
 }
 
 .content blockquote {
-  @apply border-l-2 border-gray-300 ;
+  @apply border-l-2 border-gray-300 dark:border-gray-600 pl-4 my-4 text-gray-600 dark:text-gray-400 italic;
 }
 
 .content blockquote > p {
-  @apply ml-4 py-2;
+  @apply py-1;
 }
 
 .content h1 {
-  @apply text-2xl py-6 mt-4;
+  @apply text-2xl font-semibold py-4 mt-4 text-gray-800 dark:text-gray-50;
 }
 
 .content h2 {
-  @apply text-xl mt-6;
+  @apply text-xl font-semibold mt-8 mb-2 text-gray-800 dark:text-gray-50;
 }
 
 .content h3 {
-  @apply text-lg mt-6;
+  @apply text-lg font-medium mt-6 mb-2 text-gray-800 dark:text-gray-50;
 }
 
 .content ol {
-  @apply list-decimal pl-10 leading-8;
+  @apply list-decimal pl-8 leading-8 mb-4;
 }
 
 .content ul {
-  @apply list-disc pl-10 leading-8;
+  @apply list-disc pl-8 leading-8 mb-4;
 }
 
 .content table {
-  @apply table-auto w-full;
+  @apply table-auto w-full text-sm mb-6;
 }
 
 .content table thead tr {
-  @apply leading-12;
+  @apply border-b border-gray-300 dark:border-gray-600;
 }
 
+.content table thead th {
+  @apply py-2 pr-4 text-left font-medium text-gray-700 dark:text-gray-300;
+}
 
 .content table tbody tr:nth-child(odd) {
-  @apply bg-gray-100;
+  @apply bg-gray-50 dark:bg-gray-800;
+}
+
+.content table tbody td {
+  @apply py-2 pr-4;
 }
 
 .content img {
-  max-width: 100%;
+  @apply rounded-lg shadow-md block mx-auto h-auto max-w-full;
+}
+
+img.preview {
+  @apply rounded shadow-sm;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+b,
+strong {
+  @apply font-semibold;
+}
+
+/* =====================
+   Post list (homepage, archive, tags)
+   ===================== */
+
+.postlistheading {
+  @apply text-giants-800 dark:text-giants-200 hover:text-giants-700 dark:hover:text-giants-200 transition-colors;
+}
+
+/* =====================
+   Tags
+   ===================== */
+
+.tag a {
+  @apply text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full px-2 py-0.5 hover:bg-giants-50 dark:hover:bg-giants-900 hover:text-giants-800 dark:hover:text-giants-200 transition-colors no-underline;
+}
+
+/* =====================
+   Social share bar (post footer)
+   ===================== */
+
+.social {
+  @apply flex flex-row-reverse mt-8 mb-4 items-center gap-1;
 }
 
 .social svg {
-  @apply h-5 ml-2 mr-3;
+  @apply h-5 w-5;
+  fill: currentColor;
 }
 
 .social a {
-  position: relative;
+  @apply relative text-giants-800 dark:text-white hover:text-giants-600 dark:hover:text-gray-300 transition-colors;
 }
 
 .social a::before {
@@ -199,23 +186,20 @@ html:not(.dark) svg.lighttoggle {
   top: -42px;
   left: -45px;
   width: 150px;
-  padding: 10px;
-  background: #000;
-  border-radius: 0.3rem;
+  padding: 6px 10px;
+  background: #18181b;
+  border-radius: 0.25rem;
   color: #fff;
   text-align: center;
   opacity: 0;
-  font-size: 12px;
-}
-
-.social a.link:active::before {
-  content: "Copied";
-  top: -33px;
+  font-size: 11px;
+  pointer-events: none;
+  white-space: nowrap;
+  width: auto;
 }
 
 .social a:hover::before {
   opacity: 1;
-  display: block;
 }
 
 .social a:hover > span::after {
@@ -223,188 +207,137 @@ html:not(.dark) svg.lighttoggle {
   position: absolute;
   top: -14px;
   left: 7px;
-  margin-bottom: -5px;
   border-width: 8px;
   border-style: solid;
-  border-color: black transparent transparent transparent;
+  border-color: #18181b transparent transparent transparent;
 }
 
-/* Utils */
+/* =====================
+   TOC (right aside)
+   ===================== */
 
-.readingtime {
-  @apply cursor-default;
-  position: relative;
+#toc {
+  animation: fadeup-content 0.5s;
 }
 
-.content.post > p > a:hover,
-.content.page a:hover,
-a.postlistheading:hover,
-.postlist a:hover,
-#recents a:hover,
-#top-bar a:hover,
-.tag a:hover {
-  @apply text-red-500 underline;
+nav.toc {
+  @apply text-sm;
 }
+
+nav.toc ol {
+  @apply list-none pl-0;
+}
+
+nav.toc li {
+  @apply leading-7;
+}
+
+nav.toc a {
+  @apply no-underline block text-gray-500 dark:text-gray-400 hover:text-giants-800 dark:hover:text-giants-200 transition-colors;
+  padding-left: 12px;
+  border-left: 2px solid transparent;
+}
+
+nav.toc a:hover,
+nav.toc a.active {
+  @apply text-giants-800 dark:text-giants-200;
+  border-left-color: #0B2265;
+}
+
+html.dark nav.toc a.active,
+html.dark nav.toc a:hover {
+  border-left-color: #9eafd4;
+}
+
+nav.toc ol ol a {
+  padding-left: 22px;
+}
+
+/* =====================
+   Recents (right aside)
+   ===================== */
+
+#recents {
+  @apply text-sm mb-8;
+}
+
+#recents a {
+  @apply text-gray-600 dark:text-gray-300 hover:text-giants-800 dark:hover:text-giants-200 transition-colors no-underline;
+}
+
+/* =====================
+   Pagination
+   ===================== */
+
+ul.pagination div {
+  @apply h-8 w-8 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-giants-800 hover:text-white hover:border-giants-800 dark:hover:bg-giants-700 rounded-full text-center leading-8 text-sm transition-colors cursor-pointer;
+}
+
+ul.pagination div.active {
+  @apply bg-giants-800 text-white border-giants-800 dark:bg-giants-700 dark:border-giants-700;
+}
+
+/* =====================
+   Post navigation (prev/next)
+   ===================== */
+
+.post-nav-btn {
+  @apply block border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center transition-colors;
+}
+
+.post-nav-btn:hover {
+  @apply border-giants-800 dark:border-giants-600 bg-gray-50 dark:bg-gray-800;
+}
+
+/* =====================
+   Search
+   ===================== */
 
 input[type="search"]::-webkit-search-cancel-button {
   display: none;
 }
 
-/* Right sidebar */
-
-#toc {
-  transition: top 0.2s ease-in-out;
-  animation: fadeup-content 0.8s;
+#search-results li {
+  @apply bg-gray-50 dark:bg-gray-800 rounded px-3 py-2;
 }
 
-nav.toc {
-  margin-left: 8px;
-}
-
-nav.toc ol {
-  @apply list-none;
-  transition: top 0.4s ease;
-}
-
-nav.toc li {
-  @apply leading-8;
-}
-
-nav.toc a {
-  @apply no-underline block;
-  padding-left: 18px;
-  margin-left: -9px;
-}
-
-nav.toc a:active,
-nav.toc a:hover {
-  @apply text-myblue-500 ;
-  border-left: 1px solid;
-  padding-left: 17px;
-}
-
-nav.toc a.active {
-  @apply text-myblue-500  font-bold;
-  border-left: 2px solid;
-  padding-left: 16px;
-}
-
-nav.toc ol ol a,
-nav.toc ol ol a:hover,
-nav.toc ol ol a:active,
-nav.toc ol ol a.active {
-  padding-left: 26px;
-}
-
-nav.toc ol ol a:active,
-nav.toc ol ol a:hover {
-  padding-left: 25px;
-}
-
-nav.toc ol ol a.active {
-  padding-left: 24px;
-}
-
-/* Collection pagination */
-
-ul.pagination div {
-  @apply h-8 w-8 border-1  bg-white  hover:bg-myblue-500  border-gray-600 hover:text-white rounded-full text-center;
-}
-
-html:not(.dark) ul.pagination div.active {
-  @apply text-white bg-myblue-500;
-  box-shadow: 0 0 8px 0 rgba(55, 48, 163);
+#search-results a {
+  @apply text-giants-800 dark:text-giants-200 no-underline hover:underline;
 }
 
 ::placeholder {
-  @apply text-gray-800;
+  @apply text-gray-400 dark:text-gray-400;
 }
 
-:-ms-input-placeholder {
-  @apply text-gray-800;
-}
-
-#top-bar.hide {
-  @apply transform -translate-y-12;
-}
-
-.additions a {
-  @apply no-underline;
-}
-
-.additions div {
-  @apply text-gray-700  bg-white  border-gray-600 no-underline;
-}
-
-.additions div:hover {
-  @apply no-underline;
-}
+/* =====================
+   Scroll to top button
+   ===================== */
 
 .scroll {
-  @apply bg-white  w-12 h-12 border-myblue-600 border-solid border-1;
+  @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 text-gray-500 dark:text-gray-300;
   position: fixed;
   display: none;
   justify-content: center;
-  align-content: center;
   align-items: center;
-  bottom: 80px;
-  right: 60px;
-  opacity: 0.8;
+  bottom: 2rem;
+  right: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
-  z-index: 9;
+  z-index: 50;
+  opacity: 0.9;
   cursor: pointer;
-  transition: opacity 0.2s ease-in-out;
-  animation: fadeup-scrolltop 0.7s;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
-@media all and (max-width: 400px) {
-  .scroll {
-    bottom: 40px;
-    right: 40px;
-    animation: fadeup-scrolltop-mobile 0.7s;
-  }
+.scroll:hover {
+  opacity: 1;
 }
 
-.scroll svg {
-  @apply stroke-current fill-current;
-}
-
-@keyframes fadeup-content {
-  0% {
-    opacity: 0;
-    position: relative;
-    top: 2rem;
-  }
-  100% {
-    opacity: 1;
-    position: relative;
-    top: 0;
-  }
-}
-
-@keyframes fadeup-scrolltop {
-  0% {
-    opacity: 0;
-    bottom: 20px;
-  }
-  100% {
-    opacity: 0.8;
-    bottom: 80px;
-  }
-}
-
-@keyframes fadeup-scrolltop-mobile {
-  0% {
-    opacity: 0;
-    bottom: 20px;
-  }
-  100% {
-    opacity: 0.8;
-    bottom: 40px;
-  }
-}
-
-/* Syntax highlighting */
+/* =====================
+   Syntax highlighting
+   ===================== */
 
 pre {
   @apply rounded-md;
@@ -427,21 +360,41 @@ div.code-toolbar > .toolbar span {
   border-radius: unset;
 }
 
+div .code-toolbar {
+  max-height: 500px;
+  overflow: auto;
+}
+
+.copy-to-clipboard-button {
+  margin-right: 1em;
+}
+
+/* =====================
+   Animations
+   ===================== */
+
+@keyframes fadeup-content {
+  0% {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   Print
+   ===================== */
+
 @media print {
-  #sidebar #sidebar-contents {
+  header.top-nav {
     display: none;
   }
 
-  #right-area #top-bar {
-    display: none;
-  }
-
-  .grid {
-    display: block;
-  }
-
-  #scroll {
-    visibility: hidden;
+  .scroll {
+    display: none !important;
   }
 
   aside {
@@ -452,35 +405,7 @@ div.code-toolbar > .toolbar span {
     display: none;
   }
 
-  main .content .social {
-    display: none;
-  }
-
-  main .content.border-b-1,
-  main .block.border-b-1 {
-    border-bottom-width: 0px;
-  }
-
-  main .content .additions {
+  .social {
     display: none;
   }
 }
-
-.copy-to-clipboard-button {
-  margin-right: 1em;
-}
-
-div .code-toolbar{
-  max-height: 500px;
-  overflow: auto;
-}
-
-b, strong{
-  font-weight: bold;
-}
-
-img.preview{
-  margin-left: 0;
-  margin-right: 0;
-}
-

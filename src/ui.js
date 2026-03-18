@@ -1,17 +1,19 @@
 const scrollToTop = () => {
-  document.getElementById("right-area").scroll({
-    top: 0,
-    left: 0,
-    behavior: "smooth"
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-const slideLeftSidebar = () => {
-  const elSidebar = document.getElementById("sidebar");
-  const elRightArea = document.getElementById("right-area");
-  elSidebar.classList.toggle("-translate-x-56");
-  elSidebar.classList.toggle("translate-x-0");
-  elRightArea.classList.toggle("translate-x-56");
+const toggleDarkMode = () => {
+  const isDark = document.documentElement.classList.toggle("dark");
+  try {
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  } catch (e) {}
 };
 
-export { scrollToTop, slideLeftSidebar };
+const toggleMobileMenu = () => {
+  const menu = document.getElementById("mobile-menu");
+  if (menu) {
+    menu.classList.toggle("hidden");
+  }
+};
+
+export { scrollToTop, toggleDarkMode, toggleMobileMenu };

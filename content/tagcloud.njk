@@ -1,0 +1,21 @@
+---
+eleventyExcludeFromCollections: true
+layout: base.njk
+title: Tags
+permalink: /tags/
+meta:
+  robots:
+    value: noindex
+---
+
+<div class="content page pt-6 pb-12">
+    <h1 class="text-2xl font-semibold mb-2 text-gray-900 dark:text-gray-50">Tags</h1>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">{{ collections.tagsSortedByCount.length }} tags across all posts</p>
+
+    <p class="leading-loose">
+        {% for item in collections.tagsSortedByCount %}
+        <a href="/tags/{{ item.tag | slugTag }}/"
+           class="inline-block no-underline text-gray-700 dark:text-gray-200 hover:text-giants-800 dark:hover:text-giants-200 transition-colors">{{ item.tag | labelTag }}<span class="text-xs text-gray-400 dark:text-gray-400 ml-0.5">({{ item.count }})</span></a>{% if not loop.last %}<span class="text-gray-300 dark:text-gray-600 mx-1">&middot;</span>{% endif %}
+        {% endfor %}
+    </p>
+</div>

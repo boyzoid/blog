@@ -68,6 +68,11 @@ module.exports = function (eleventyConfig) {
     return url.length > 1 && url.startsWith(pattern) ? "active" : "";
   });
 
+  // Returns CSS class for exact URL match
+  eleventyConfig.addNunjucksFilter("isExactLink", function (url, pattern) {
+    return url === pattern ? "active" : "";
+  });
+
   // Format dates for sitemap
   eleventyConfig.addNunjucksFilter("sitemapdate", function (date) {
     return format(date, "yyyy-MM-dd");
@@ -108,6 +113,16 @@ module.exports = function (eleventyConfig) {
   //Set text to lower case
   eleventyConfig.addNunjucksFilter("lowercase", function (text) {
     return text.toLowerCase();
+  });
+
+  // Clean a tag for use in a URL: strip straight and curly quotes, lowercase
+  eleventyConfig.addNunjucksFilter("slugTag", function (tag) {
+    return tag.replace(/[\u201C\u201D"]/g, "").toLowerCase();
+  });
+
+  // Clean a tag for display: strip straight and curly quotes, replace _ and - with spaces
+  eleventyConfig.addNunjucksFilter("labelTag", function (tag) {
+    return tag.replace(/[\u201C\u201D"]/g, "").replace(/[_-]/g, " ");
   });
   //Set text to upper case
   eleventyConfig.addNunjucksFilter("uppercase", function (text) {
@@ -160,6 +175,21 @@ module.exports = function (eleventyConfig) {
     });
 
     return filterTagList([...tagSet]);
+  });
+
+  // Tags sorted by post count (most to least)
+  eleventyConfig.addCollection("tagsSortedByCount", function (collection) {
+    const tagCounts = {};
+    collection.getAll().filter(livePosts).forEach((item) => {
+      (item.data.tags || []).forEach((tag) => {
+        if (["all", "nav", "post", "posts"].indexOf(tag) === -1) {
+          tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+        }
+      });
+    });
+    return Object.entries(tagCounts)
+      .sort((a, b) => b[1] - a[1])
+      .map(([tag, count]) => ({ tag, count }));
   });
 
   eleventyConfig.addFilter("getRelated", function(relatedPosts, posts) {

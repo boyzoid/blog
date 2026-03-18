@@ -1,80 +1,168 @@
 <!doctype html>
-<html lang="en" class="light">
+<html lang="en">
     <head>
         {% include "head.njk" %}
         {% include "json-ld.njk" %}
     </head>
-    <body class="bg-white text-gray-900 tracking-wider font-light overflow-x-hidden sm:overflow-auto">
-        <div class="grid grid-flow-col grid-cols-small sm:grid-cols-regular h-screen">
-            <div id="sidebar" class="sidebar transition-transform transform -translate-x-56 sm:translate-x-0  sm:transition-none">
-                {% include "sidebar.njk" %}
-            </div>
-            <div id="right-area" class="overflow-x-hidden sm:overflow-auto transition-transform transform sm:translate-x-0 sm:transition-none">
-                <div id="top-bar" class="h-12 z-10 bg-white  transition-transform duration-200 ease-in sm:sticky top-0 border-gray-600 border-b-1  border-opacity-30 shadow-lg">
-                    <div class="grid grid-flow-col grid-cols-auto md:grid-cols-topbar max-w-content">
-                        <div id="mobile-top-bar" class="flex leading-12 sm:hidden col-span-2">
-                            <svg viewBox="0 0 100 80" class="block align-middle h-12 leading-12 ml-3 py-3 pt-4" onclick="slideLeftSidebar()">
-                                <rect width="60" height="7"></rect>
-                                <rect y="30" width="60" height="7"></rect>
-                                <rect y="60" width="60" height="7"></rect>
+    <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen antialiased">
+
+        <!-- Top Navigation -->
+        <header class="top-nav sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+            <div class="max-w-content mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-4">
+
+                <!-- Brand -->
+                <a href="/" class="text-giants-800 dark:text-giants-200 font-semibold text-lg tracking-tight shrink-0 hover:opacity-75 transition-opacity">
+                    {{ siteconfig.title }}
+                </a>
+
+                <!-- Desktop nav links -->
+                <nav class="hidden sm:flex items-center gap-6">
+                    <a href="/" class="nav-link {{ page.url | isHomeLink('/') }}">Home</a>
+                    <a href="/who/" class="nav-link {{ page.url | isActiveLink('/who') }}">Who am I?</a>
+                    <a href="/archive/" class="nav-link {{ page.url | isActiveLink('/archive') }}">Archive</a>
+                    <a href="/tags/" class="nav-link {{ page.url | isExactLink('/tags/') }}">Tags</a>
+                </nav>
+
+                <!-- Search input (desktop) -->
+                {% if siteconfig.algoliaSearch and siteconfig.algoliaSearch.enabled %}
+                <div class="hidden sm:block">
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Search…"
+                        oninput="searchContent(event)"
+                        autocomplete="off"
+                        class="text-sm px-3 py-1 rounded-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-giants-800 dark:focus:ring-giants-400 w-36 focus:w-52 transition-all duration-200"
+                    />
+                </div>
+                {% endif %}
+
+                <!-- Right actions: social icons + dark toggle + mobile hamburger -->
+                <div class="flex items-center gap-2 sm:gap-3">
+
+                    <!-- Social icons (desktop only) -->
+                    <div class="hidden sm:flex items-center gap-3">
+                        {% if siteconfig.socialGitHub %}
+                        <a href="https://github.com/{{ siteconfig.socialGitHub }}" aria-label="Open GitHub profile" target="_blank" rel="noopener" class="nav-icon">
+                            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current" aria-hidden="true">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
                             </svg>
-                            <p class="flex-grow inline align-middle leading-12 text-xl text-center font-medium">{{ siteconfig.title }}</p>
-                            {% if siteconfig.algoliaSearch and siteconfig.algoliaSearch.enabled %}
-                            <svg viewBox="0 0 32 32" class="block align-middle h-12 leading-12 mr-3 py-3 pt-3" onclick="toggleSearch()">
-                                <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_223_" />
-                            </svg>
-                            {% else %}
-                            <div class="w-12"></div>
-                            {% endif %}
-                        </div>
-                        <div id="topbar-desktop-title" class="hidden sm:inline-block leading-12 align-middle ml-8 lg:ml-32 text-base text-gray-500  pr-8 truncate">
-                            {% if date %}<a href="/" class="text-myblue-500  font-normal ">Home</a> › {% endif %}{{ title }}</div>
-                        <div id="search-desktop-title" class="hidden sm:hidden leading-12 align-middle ml-8 lg:ml-32 text-base text-gray-500 ">
-                        </div>
-                        {% if siteconfig.algoliaSearch and siteconfig.algoliaSearch.enabled %}
-                        <div id="search-box-bar" class="hidden sm:inline-block mr-6 ml-6 sm:mx-0 pt-3 col-span-2 sm:col-auto">
-                            <input id="search-box" type="search" autocomplete="off" spellcheck="false" autocorrect="off" onkeyup="searchContent(event)" class="bg-white  text-gray-800  font-light shadow rounded-full border-0 ring-1 ring-gray-300 focus:ring-myblue-400   pl-2 h-6 w-2/3 sm:float-right sm:mr-6 md:float-none md:w-56 focus:outline-none" placeholder="Search..." aria-label="Search box">
-                            <span id="mobile-search-cancel" class="hidden sm:hidden ml-4" onclick="toggleSearch()">Cancel</span>
-                        </div>
+                        </a>
                         {% endif %}
+                        {% if siteconfig.socialLinkedIn %}
+                        <a href="https://linkedin.com/in/{{ siteconfig.socialLinkedIn }}" aria-label="Open LinkedIn profile" target="_blank" rel="noopener" class="nav-icon">
+                            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        {% endif %}
+                        {% if siteconfig.socialTwitter %}
+                        <a href="https://twitter.com/{{ siteconfig.socialTwitter }}" aria-label="Open Twitter profile" target="_blank" rel="noopener" class="nav-icon">
+                            <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current" aria-hidden="true">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        {% endif %}
+                        <a href="{{ '/feed.xml' | absoluteUrl }}" aria-label="Open RSS feed" target="_blank" rel="noopener" class="nav-icon">
+                            <svg viewBox="0 -256 1792 1792" class="h-4 w-4 fill-current" aria-hidden="true">
+                                <g transform="matrix(1,0,0,-1,212.61017,1346.1695)">
+                                    <path d="M 384,192 Q 384,112 328,56 272,0 192,0 112,0 56,56 0,112 0,192 q 0,80 56,136 56,56 136,56 80,0 136,-56 56,-56 56,-136 z M 896,69 Q 898,41 879,21 861,0 832,0 H 697 Q 672,0 654,16.5 636,33 634,58 612,287 449.5,449.5 287,612 58,634 33,636 16.5,654 0,672 0,697 v 135 q 0,29 21,47 17,17 43,17 h 5 Q 229,883 375,815.5 521,748 634,634 748,521 815.5,375 883,229 896,69 z m 512,-2 Q 1410,40 1390,20 1372,0 1344,0 H 1201 Q 1175,0 1156.5,17.5 1138,35 1137,60 1125,275 1036,468.5 947,662 804.5,804.5 662,947 468.5,1036 275,1125 60,1138 35,1139 17.5,1157.5 0,1176 0,1201 v 143 q 0,28 20,46 18,18 44,18 h 3 Q 329,1395 568.5,1288 808,1181 994,994 1181,808 1288,568.5 1395,329 1408,67 z"/>
+                                </g>
+                            </svg>
+                        </a>
                     </div>
-                    <div></div>
-                </div>
-                <div class=" grid grid-flow-col grid-cols-auto xl:grid-cols-topbar max-w-content mb-12">
-                    <main class="min-w-0">
-                        {{ content | safe }}
-                    </main>
-                    <div id="search-container" class="hidden truncate">
-                        <div class="postlist pb-8 mt-8 font-light  pt-4 min-w-0">
-                            <div id="search-mobile-title" class="hidden leading-12 align-middle text-gray-500 ">
-                            </div>
-                            <ul id="search-results" class="mt-3">
-                            </ul>
-                            <span id="search-no-results" class="mt-3 hidden">
-                                No data found for the given query.
-                            </span>
-                            <img src="/assets/images/algolia.png" alt="Search powered by Algolia" />
-                        </div>
-                    </div>
-                    <aside class="hidden xl:block w-72 float-right">
-                        {% include "recents.njk" %}
-                        {% include "toc.njk" %}
-                    </aside>
+
+                    <!-- Dark mode toggle -->
+                    <button onclick="toggleDarkMode()" aria-label="Toggle dark mode" class="p-1.5 rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <!-- Sun (shown in dark mode) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                        <!-- Moon (shown in light mode) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile hamburger -->
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu" class="sm:hidden p-1.5 rounded-md text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+
                 </div>
             </div>
+
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-200 dark:border-gray-800 px-4 py-3">
+                <nav class="flex flex-col gap-1 mb-3">
+                    <a href="/" class="mobile-nav-link {{ page.url | isHomeLink('/') }}">Home</a>
+                    <a href="/who/" class="mobile-nav-link {{ page.url | isActiveLink('/who') }}">Who am I?</a>
+                    <a href="/archive/" class="mobile-nav-link {{ page.url | isActiveLink('/archive') }}">Archive</a>
+                    <a href="/tags/" class="mobile-nav-link {{ page.url | isExactLink('/tags/') }}">Tags</a>
+                </nav>
+                {% if siteconfig.algoliaSearch and siteconfig.algoliaSearch.enabled %}
+                <div class="mb-3">
+                    <input
+                        type="search"
+                        placeholder="Search…"
+                        oninput="searchContent(event)"
+                        autocomplete="off"
+                        class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-giants-800 dark:focus:ring-giants-400"
+                    />
+                </div>
+                {% endif %}
+                <div class="flex items-center gap-4 pt-2 border-t border-gray-100 dark:border-gray-800">
+                    {% if siteconfig.socialGitHub %}
+                    <a href="https://github.com/{{ siteconfig.socialGitHub }}" aria-label="GitHub" target="_blank" rel="noopener" class="nav-icon">
+                        <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                    {% endif %}
+                    {% if siteconfig.socialLinkedIn %}
+                    <a href="https://linkedin.com/in/{{ siteconfig.socialLinkedIn }}" aria-label="LinkedIn" target="_blank" rel="noopener" class="nav-icon">
+                        <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    {% endif %}
+                    {% if siteconfig.socialTwitter %}
+                    <a href="https://twitter.com/{{ siteconfig.socialTwitter }}" aria-label="Twitter" target="_blank" rel="noopener" class="nav-icon">
+                        <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current" aria-hidden="true"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                    </a>
+                    {% endif %}
+                    <a href="{{ '/feed.xml' | absoluteUrl }}" aria-label="RSS" target="_blank" rel="noopener" class="nav-icon">
+                        <svg viewBox="0 -256 1792 1792" class="h-4 w-4 fill-current" aria-hidden="true"><g transform="matrix(1,0,0,-1,212.61017,1346.1695)"><path d="M 384,192 Q 384,112 328,56 272,0 192,0 112,0 56,56 0,112 0,192 q 0,80 56,136 56,56 136,56 80,0 136,-56 56,-56 56,-136 z M 896,69 Q 898,41 879,21 861,0 832,0 H 697 Q 672,0 654,16.5 636,33 634,58 612,287 449.5,449.5 287,612 58,634 33,636 16.5,654 0,672 0,697 v 135 q 0,29 21,47 17,17 43,17 h 5 Q 229,883 375,815.5 521,748 634,634 748,521 815.5,375 883,229 896,69 z m 512,-2 Q 1410,40 1390,20 1372,0 1344,0 H 1201 Q 1175,0 1156.5,17.5 1138,35 1137,60 1125,275 1036,468.5 947,662 804.5,804.5 662,947 468.5,1036 275,1125 60,1138 35,1139 17.5,1157.5 0,1176 0,1201 v 143 q 0,28 20,46 18,18 44,18 h 3 Q 329,1395 568.5,1288 808,1181 994,994 1181,808 1288,568.5 1395,329 1408,67 z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page wrapper -->
+        <div class="page-wrapper">
+            <div class="content-grid">
+                <main id="main-content" class="min-w-0">
+                    {{ content | safe }}
+                </main>
+                <div id="search-container" class="hidden min-w-0">
+                    <div class="postlist pb-8 mt-8 pt-4">
+                        <div id="search-mobile-title" class="hidden text-gray-500 dark:text-gray-400 mb-2"></div>
+                        <ul id="search-results" class="mt-3 space-y-3 list-none pl-0"></ul>
+                        <span id="search-no-results" class="mt-3 hidden text-gray-500 dark:text-gray-400">No results found.</span>
+                        <img src="/assets/images/algolia.png" alt="Search powered by Algolia" class="mt-6" />
+                    </div>
+                </div>
+                <aside class="hidden xl:block w-64 shrink-0">
+                    {% include "recents.njk" %}
+                    {% include "toc.njk" %}
+                </aside>
+            </div>
         </div>
-        <div id="scroll" class="scroll" onclick="scrollToTop()">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1000 1000"
-	        	class="h-6 w-6"
-            >
-                <g>
-                    <path
-                        d="M990,699.9c0,8.1,0,16.3-8.1,24.4c-16.3,16.3-40.7,16.3-56.9,0L502,350.2L79.1,732.4c-16.3,16.3-40.7,16.3-56.9,0c-16.3-16.3-16.3-40.7,0-56.9l447.3-406.6c24.4-16.3,40.7-16.3,56.9-8.1l447.3,406.6C981.9,675.5,990,691.8,990,699.9z"
-                    ></path>
-                </g>
+
+        <!-- Scroll to top -->
+        <button id="scroll" class="scroll" onclick="scrollToTop()" aria-label="Scroll to top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" class="h-4 w-4 fill-current" aria-hidden="true">
+                <g><path d="M990,699.9c0,8.1,0,16.3-8.1,24.4c-16.3,16.3-40.7,16.3-56.9,0L502,350.2L79.1,732.4c-16.3,16.3-40.7,16.3-56.9,0c-16.3-16.3-16.3-40.7,0-56.9l447.3-406.6c24.4-16.3,40.7-16.3,56.9-8.1l447.3,406.6C981.9,675.5,990,691.8,990,699.9z"></path></g>
             </svg>
-        </div>
+        </button>
+
     </body>
 </html>

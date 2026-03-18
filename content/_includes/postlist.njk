@@ -1,13 +1,8 @@
-<ul reversed >
+<ul class="list-none pl-0">
     {% for post in postslist | reverse %}
-        <li class="bg-gradient-to-r from-white via-gray-100 to-white mb-4 px-6 py-2 truncate">
-            <div>
-                <span class="text-lg tabular-nums">{{ post.date | readableDate }}</span>
-                <a href="{{ post.url }}" class="ml-6">{{ post.data.title }}</a>
-            </div>
-            <div>
-
-            </div>
+        <li class="mb-3 px-4 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+            <span class="text-sm tabular-nums text-gray-400 dark:text-gray-400 mr-3">{{ post.date | readableDate }}</span>
+            <a href="{{ post.url }}" class="text-gray-700 dark:text-gray-200 hover:text-giants-800 dark:hover:text-giants-200 no-underline transition-colors">{{ post.data.title }}</a>
         </li>
     {% endfor %}
 </ul>

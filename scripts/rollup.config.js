@@ -22,10 +22,10 @@ export default {
     siteconfig.algoliaSearch &&
       siteconfig.algoliaSearch.enabled &&
       replace({
-        "process.env.ALGOLIA_INDEX": `netlify_${siteconfig.algoliaSearch.siteId}_${siteconfig.algoliaSearch.branch}_all`,
-        "process.env.ALGOLIA_APP_ID": siteconfig.algoliaSearch.appId,
-        "process.env.ALGOLIA_SEARCH_API_KEY":
-          siteconfig.algoliaSearch.searchApiKey
+        preventAssignment: true,
+        "process.env.ALGOLIA_INDEX": JSON.stringify(siteconfig.algoliaSearch.indexName),
+        "process.env.ALGOLIA_APP_ID": JSON.stringify(siteconfig.algoliaSearch.appId),
+        "process.env.ALGOLIA_SEARCH_API_KEY": JSON.stringify(siteconfig.algoliaSearch.searchApiKey)
       })
   ]
 };

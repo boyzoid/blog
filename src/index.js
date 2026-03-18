@@ -1,13 +1,17 @@
-import { scrollToTop, slideLeftSidebar } from "./ui";
-import { searchContent, toggleSearch } from "./search";
+import { scrollToTop, toggleDarkMode, toggleMobileMenu } from "./ui";
+import { searchContent } from "./search";
 import { copyUrlToClipboard } from "./utils";
 
 window.scrollToTop = function () {
   scrollToTop();
 };
 
-window.slideLeftSidebar = function () {
-  slideLeftSidebar();
+window.toggleDarkMode = function () {
+  toggleDarkMode();
+};
+
+window.toggleMobileMenu = function () {
+  toggleMobileMenu();
 };
 
 window.searchContent = function (e) {
@@ -17,50 +21,36 @@ window.searchContent = function (e) {
   }, 300);
 };
 
-window.toggleSearch = function () {
-  toggleSearch();
-};
-
 window.copyUrlToClipboard = function () {
   copyUrlToClipboard();
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(".content h2,.content h3");
+  const sections = document.querySelectorAll(".content h2, .content h3");
   const menu = document.querySelectorAll("nav.toc a");
 
-  const hash = window.location.hash;
-
-  if (hash) {
-    for (const item of menu) {
-      if (menu.href === hash) {
-        item.classList.add("active");
-      }
-    }
-  }
-
   const makeActive = (link) => {
-    if (menu[link]) {
-      menu[link].classList.add("active");
-    }
+    if (menu[link]) menu[link].classList.add("active");
   };
-  const removeActive = (link) => menu[link].classList.remove("active");
+  const removeActive = (link) => {
+    if (menu[link]) menu[link].classList.remove("active");
+  };
   const removeAllActive = () =>
     [...Array(sections.length).keys()].forEach((link) => removeActive(link));
 
   let currentActive = 0;
 
-  document.getElementById("right-area").addEventListener("scroll", function () {
-    {
-      const areaEl = document.getElementById("right-area");
-      const barEl = document.getElementById("top-bar");
-      const scrollEl = document.getElementById("scroll");
-      const scrollTop = areaEl.scrollTop;
+  window.addEventListener("scroll", function () {
+    const scrollTop = window.scrollY;
+    const scrollEl = document.getElementById("scroll");
 
+    // TOC active section tracking
+    if (sections.length > 0 && menu.length > 0) {
+      const navHeight = 56; // sticky nav height in px
       const currentHeading =
         sections.length -
         [...sections].reverse().findIndex((section) => {
-          return section.offsetTop - 45 <= scrollTop;
+          return section.offsetTop - navHeight - 8 <= scrollTop;
         }) -
         1;
 
@@ -69,19 +59,14 @@ document.addEventListener("DOMContentLoaded", function () {
         currentActive = currentHeading;
         makeActive(currentHeading);
       }
+    }
 
-      if (scrollTop >= 45) {
-        barEl.classList.add("hide");
+    // Scroll-to-top button
+    if (scrollEl) {
+      if (scrollTop > window.innerHeight) {
+        scrollEl.style.display = "flex";
       } else {
-        barEl.classList.remove("hide");
-      }
-
-      if (scrollEl) {
-        if (scrollTop > window.innerHeight) {
-          scrollEl.style.display = "flex";
-        } else {
-          scrollEl.style.display = "none";
-        }
+        scrollEl.style.display = "none";
       }
     }
   });

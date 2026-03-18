@@ -1,4 +1,15 @@
 <meta charset="utf-8">
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem("theme");
+      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (stored === "dark" || (!stored && prefersDark)) {
+        document.documentElement.classList.add("dark");
+      }
+    } catch (e) {}
+  })();
+</script>
 <title>{% if title %}{{ title }} | {% endif %}{{ siteconfig.title }}</title>
 {% if siteconfig.googleAnalytics %}
 <!-- Global site tag (gtag.js) - Google Analytics -->

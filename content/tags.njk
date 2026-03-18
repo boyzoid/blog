@@ -9,16 +9,17 @@ pagination:
     - post
     - posts
     - tagList
+    - tagsSortedByCount
+    - recents
   addAllPagesToCollections: true
 layout: base.njk
 eleventyComputed:
-  title: Tagged “{{ tag }}”
-permalink: /tags/{{ tag | slug }}/
+  title: "Tagged: {{ tag | labelTag }}"
+permalink: /tags/{{ tag | slugTag }}/
 ---
-<div class="content post border-solid border-b-1 border-gray-700 pb-6">
-<h1>Tagged “{{ tag }}”</h1>
+<div class="content post pb-8">
+    <h1>Tagged: {{ tag | labelTag }}</h1>
 
-{% set postslist = collections[ tag ] %}
-{% include "postlist.njk" %}
-
+    {% set postslist = collections[ tag ] %}
+    {% include "postlist.njk" %}
 </div>

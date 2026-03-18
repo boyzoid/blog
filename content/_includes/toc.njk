@@ -1,9 +1,9 @@
 {% set outline = content | toc %}
 {% if outline %}
-<div id="toc" class="list-none ml-1 pt-2 pr-2 border-solid border-l-1 border-gray-300  text-gray-800  sticky top-8">
-    <span class="pl-2">Content</span>
-    <div class="text-xs pt-2 pr-4">
+<div id="toc" class="sticky top-20">
+    <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-400 mb-3">On this page</p>
+    <nav class="toc text-sm">
         {{ outline | safe }}
-    </div>
+    </nav>
 </div>
 {% endif %}

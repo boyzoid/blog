@@ -29,8 +29,6 @@ module.exports = {
   socialGitHub: "boyzoid",
   // LinkedIn ID  (optional, remove it not needed), used for link in the left sidebar
   socialLinkedIn: "scott-stroz",
-  // Twitter ID  (optional, remove it not needed), used for link in the left sidebar, and for OpenGraph sharing information
-  socialTwitter: "@boyzoid",
   // YouTube ID/Channel  (optional, remove it not needed), used for link in the left sidebar
   //socialYouTube: "UCH60RRaY2GI9m62z1loLjcA",
   // Google Analytics ID  (optional, remove it not needed), used for... well, Google Analytics
@@ -39,21 +37,12 @@ module.exports = {
   // See: https://github.com/algolia/algoliasearch-netlify
   algoliaSearch: {
     // When enabled shows the search bar in the UI
-    enabled: false,
-    // You'll have to set this manually in your build settings.
-    // The value comes from Algolia, and is either visible in the
-    // UI for the Crawler Plugin or the Algolia Dashboard.
+    enabled: true,
+    // Algolia Application ID
     appId: process.env.ALGOLIA_APP_ID,
-    // You'll have to set this manually in your build settings.
-    // The value comes from Algolia, and is either visible in the
-    // UI for the Crawler Plugin or the Algolia Dashboard.
+    // Algolia Search-only API Key (safe to expose in frontend)
     searchApiKey: process.env.ALGOLIA_SEARCH_API_KEY,
-    // You'll have to set this manually in your build settings.
-    // The value comes from Algolia, and is either visible in the
-    // UI for the Crawler Plugin or the Algolia Dashboard.
-    siteId: process.env.ALGOLIA_SITE_ID,
-    // Assuming that you deploy your "main" branch. Otherwise you
-    // can either override or configure this (using process.env.HEAD)
-    branch: "main"
+    // Algolia index name
+    indexName: process.env.ALGOLIA_INDEX || "stroz_blog"
   }
 };
