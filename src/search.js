@@ -37,6 +37,9 @@ const searchContent = (e) => {
     .then((r) => r.json())
     .then((json) => {
       const ulEl = document.getElementById("search-results");
+      const isDark = document.documentElement.classList.contains("dark");
+      const titleColor = isDark ? "#9eafd4" : "#0B2265";
+      const excerptColor = isDark ? "#9ca3af" : "#6b7280";
       while (ulEl.lastChild) ulEl.lastChild.remove();
       if (json.hits.length === 0) {
         noResultsEl.classList.remove("hidden");
@@ -46,7 +49,32 @@ const searchContent = (e) => {
           const liEl = document.createElement("li");
           const aEl = document.createElement("a");
           aEl.setAttribute("href", item.url);
-          aEl.textContent = item.title;
+          aEl.setAttribute("style", "display:flex;gap:0.75rem;align-items:flex-start;padding:0.75rem;text-decoration:none;");
+
+          if (item.image) {
+            const imgEl = document.createElement("img");
+            imgEl.setAttribute("src", item.image);
+            imgEl.setAttribute("alt", item.title);
+            imgEl.setAttribute("style", "width:200px;height:140px;object-fit:cover;border-radius:0.25rem;flex-shrink:0;margin:0;display:block;");
+            aEl.appendChild(imgEl);
+          }
+
+          const bodyEl = document.createElement("div");
+          bodyEl.setAttribute("style", "flex:1;min-width:0;");
+
+          const titleEl = document.createElement("div");
+          titleEl.setAttribute("style", `font-size:1.125rem;font-weight:700;color:${titleColor};margin-bottom:0.5rem;`);
+          titleEl.textContent = item.title;
+          bodyEl.appendChild(titleEl);
+
+          if (item.excerpt) {
+            const excerptEl = document.createElement("div");
+            excerptEl.setAttribute("style", `font-size:0.9rem;line-height:1.5;color:${excerptColor};overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;`);
+            excerptEl.textContent = item.excerpt;
+            bodyEl.appendChild(excerptEl);
+          }
+
+          aEl.appendChild(bodyEl);
           liEl.appendChild(aEl);
           ulEl.appendChild(liEl);
         }
