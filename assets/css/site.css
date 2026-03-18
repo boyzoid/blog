@@ -306,7 +306,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #search-results .result-img {
-  @apply rounded object-cover shrink-0;
+  @apply rounded object-cover flex-shrink-0;
   width: 96px;
   height: 72px;
 }
