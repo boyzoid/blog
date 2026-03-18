@@ -33,4 +33,4 @@ jobs:
 
       # Build
       - name: "Build"
-        run: URL=https://test.build.url yarn build
+        run: URL=https://test.build.url yarn build:site
