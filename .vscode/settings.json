@@ -2,4 +2,18 @@
   "css.customData": [".vscode/css_custom_data.json"],
   "css.validate": false,
   "npm-scripts.showStartNotification": false,
+  "filewatcher.commands": [
+    {
+      "match": "blog_images/",
+      "isAsync": true,
+      "event": "onFolderCreate",
+      "cmd": "/opt/homebrew/bin/oci os object sync -bn blog --src-dir ${workspaceRoot}/blog_images --exclude '*.DS_Store' 2>&1 || echo 'OCI sync failed' >&2",
+    },
+    {
+      "match": "blog_images/",
+      "isAsync": true,
+      "event": "onFolderChange",
+      "cmd": "/opt/homebrew/bin/oci os object sync -bn blog --src-dir ${workspaceRoot}/blog_images --exclude '*.DS_Store' 2>&1 || echo 'OCI sync failed' >&2",
+    },
+  ],
 }

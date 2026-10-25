@@ -2,6 +2,7 @@
     "recommendations": [
         "DavidAnson.vscode-markdownlint",
         "esbenp.prettier-vscode",
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "appulate.filewatcher"
     ]
 }
