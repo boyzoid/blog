@@ -7,6 +7,21 @@ const toggleDarkMode = () => {
   try {
     localStorage.setItem("theme", isDark ? "dark" : "light");
   } catch (e) {}
+  const giscusFrame = document.querySelector("iframe.giscus-frame");
+  if (giscusFrame) {
+    giscusFrame.contentWindow.postMessage(
+      {
+        giscus: {
+          setConfig: {
+            theme: `${location.origin}/assets/css/giscus-${
+              isDark ? "dark" : "light"
+            }.css`
+          }
+        }
+      },
+      "https://giscus.app"
+    );
+  }
 };
 
 const toggleMobileMenu = () => {

@@ -12,6 +12,12 @@
 	max-age=3600,
 	public'''
 
+# The giscus iframe loads the custom comment themes cross-origin
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+	Access-Control-Allow-Origin = "*"
+
 [[headers]]
   for = "/assets/*"
   [headers.values]

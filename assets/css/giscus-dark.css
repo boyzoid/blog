@@ -1,0 +1,41 @@
+/* giscus theme matching the site's dark mode (Tailwind v2 grays + giants palette) */
+@import url("https://giscus.app/themes/dark.css");
+
+main {
+  --color-fg-default: #f3f4f6;
+  --color-fg-muted: #9ca3af;
+  --color-fg-subtle: #6b7280;
+  --color-canvas-default: #111827;
+  --color-canvas-overlay: #1f2937;
+  --color-canvas-inset: #111827;
+  --color-canvas-subtle: #1f2937;
+  --color-border-default: #374151;
+  --color-border-muted: #1f2937;
+  --color-neutral-muted: #4b556366;
+  --color-accent-fg: #9eafd4;
+  --color-accent-emphasis: #2f58a9;
+  --color-accent-muted: #5273b666;
+  --color-accent-subtle: #5273b61a;
+  --color-btn-text: #e5e7eb;
+  --color-btn-bg: #1f2937;
+  --color-btn-border: #374151;
+  --color-btn-hover-bg: #374151;
+  --color-btn-hover-border: #4b5563;
+  --color-btn-active-bg: #374151;
+  --color-btn-selected-bg: #111827;
+  --color-btn-primary-text: #ffffff;
+  --color-btn-primary-bg: #162f82;
+  --color-btn-primary-border: #162f82;
+  --color-btn-primary-hover-bg: #1f4099;
+  --color-btn-primary-hover-border: #1f4099;
+  --color-btn-primary-selected-bg: #162f82;
+  --color-btn-primary-disabled-bg: #162f8299;
+  --color-btn-primary-disabled-border: #162f8299;
+  --color-segmented-control-button-bg: #111827;
+  --color-scale-gray-7: #374151;
+  --color-scale-blue-8: #162f82;
+  --color-social-reaction-bg-hover: #374151;
+  --color-social-reaction-bg-reacted-hover: #162f82;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}

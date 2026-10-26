@@ -25,6 +25,9 @@ module.exports = function (eleventyConfig) {
   // Define passthrough for assets
   eleventyConfig.addPassthroughCopy("assets");
 
+  // Allow the giscus iframe to load the custom comment themes in dev
+  eleventyConfig.setBrowserSyncConfig({ cors: true });
+
   // Add watch target for JS files (needed for JS bundling in dev mode)
   eleventyConfig.addWatchTarget("./assets/js/");
   // And to make this work we've to disable the .gitignore usage of eleventy.

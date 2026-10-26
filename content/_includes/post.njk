@@ -79,6 +79,10 @@ layout: base.njk
 
     {% include "social.njk" %}
 
+    {% if comments !== false %}
+    {% include "comments.njk" %}
+    {% endif %}
+
     <!-- Post navigation -->
     <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
         {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}

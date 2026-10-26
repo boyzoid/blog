@@ -1,0 +1,25 @@
+<div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
+    <h2 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-50">Comments</h2>
+    <div class="giscus"></div>
+    <script>
+      (function () {
+        var s = document.createElement("script");
+        s.src = "https://giscus.app/client.js";
+        s.setAttribute("data-repo", "boyzoid/blog");
+        s.setAttribute("data-repo-id", "R_kgDOG95Gug");
+        s.setAttribute("data-category", "Comments");
+        s.setAttribute("data-category-id", "DIC_kwDOG95Gus4DJqKb");
+        s.setAttribute("data-mapping", "pathname");
+        s.setAttribute("data-strict", "1");
+        s.setAttribute("data-reactions-enabled", "1");
+        s.setAttribute("data-emit-metadata", "0");
+        s.setAttribute("data-input-position", "top");
+        s.setAttribute("data-theme", location.origin + "/assets/css/giscus-" + (document.documentElement.classList.contains("dark") ? "dark" : "light") + ".css");
+        s.setAttribute("data-lang", "en");
+        s.setAttribute("data-loading", "lazy");
+        s.crossOrigin = "anonymous";
+        s.async = true;
+        document.currentScript.parentNode.appendChild(s);
+      })();
+    </script>
+</div>
